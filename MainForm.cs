@@ -182,68 +182,133 @@ private async void ScanButton_Click(object sender, EventArgs e)
 {
     resultsList.Items.Clear();
     using var folderDialog = new FolderBrowserDialog();
+    
     if (folderDialog.ShowDialog() != DialogResult.OK) return;
 
     string folderPath = folderDialog.SelectedPath;
-    ((Button)sender).Enabled = false;
+    
+    // Configurazione inizializzazione come in DiskScan
+    cancellationTokenSource = new CancellationTokenSource();
+    var token = cancellationTokenSource.Token;
+
+    SetUiState(false); // Disabilita i tasti e abilita "Annulla"
+    resultsList.Items.Add($"SCANSIONE CARTELLA: {folderPath}");
+    
+    scanProgressBar.Value = 0;
+    progressLabel.Text = "Preparazione...";
+
+    // Progress reporter per aggiornare la UI in modo thread-safe
+    var progress = new Progress<ScanProgress>(p => {
+        if (p.Message != null) progressLabel.Text = p.Message;
+        scanProgressBar.Value = p.Percent;
+        if (p.NewLog != null) resultsList.Items.Add(p.NewLog);
+        
+        // Auto-scroll della lista
+        if (resultsList.Items.Count > 0)
+            resultsList.TopIndex = resultsList.Items.Count - 1;
+    });
 
     try
     {
-        // 1. Recupero dei file in modo sicuro (senza crash se l'accesso è negato)
-        resultsList.Items.Add("Recupero lista file...");
-        var files = await Task.Run(() => SafeGetFiles(folderPath));
+        // 1. Recupero file (senza bloccare UI e con supporto annullamento)
+        progressLabel.Text = "Conteggio file...";
+        var allFiles = await Task.Run(() => SafeGetFiles(folderPath, token), token);
+        
+        int totalFiles = allFiles.Count;
+        resultsList.Items.Add($"File totali trovati: {totalFiles}");
 
+        if (totalFiles == 0) {
+            resultsList.Items.Add("Nessun file trovato nella cartella.");
+            return;
+        }
+
+        // 2. Scansione parallela ottimizzata
+        int filesScanned = 0;
+        int threatsFound = 0;
         var clam = new ClamClient("localhost", 3310);
-        int found = 0;
-        var options = new ParallelOptions { MaxDegreeOfParallelism = 8 };
+        
+        var parallelOptions = new ParallelOptions { 
+            MaxDegreeOfParallelism = 8, 
+            CancellationToken = token 
+        };
 
-        // 2. Scansione parallela
-        await Task.Run(() => Parallel.ForEach(files, options, (file) =>
+        await Task.Run(() => Parallel.ForEach(allFiles, parallelOptions, (file) =>
         {
             try 
             {
+                // Scansione veloce (invia solo il path)
                 var scanResult = clam.ScanFileOnServerAsync(file).Result;
+                Interlocked.Increment(ref filesScanned);
 
-                this.Invoke(new MethodInvoker(() =>
+                // Calcolo percentuale
+                int pct = (int)((double)filesScanned / totalFiles * 100);
+
+                if (scanResult.Result == ClamScanResults.VirusDetected)
                 {
-                    if (scanResult.Result == ClamScanResults.VirusDetected)
-                    {
-                        resultsList.Items.Add($"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}");
-                        found++;
-                    }
-                }));
+                    Interlocked.Increment(ref threatsFound);
+                    ((IProgress<ScanProgress>)progress).Report(new ScanProgress { 
+                        NewLog = $"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}",
+                        Percent = pct
+                    });
+                }
+                
+                // Aggiorna la label ogni 10 file per non saturare la UI
+                if (filesScanned % 10 == 0 || filesScanned == totalFiles)
+                {
+                    ((IProgress<ScanProgress>)progress).Report(new ScanProgress { 
+                        Message = $"Analisi: {filesScanned}/{totalFiles}",
+                        Percent = pct
+                    });
+                }
             }
-            catch { /* Ignora errori sui singoli file durante la scansione */ }
-        }));
+            catch (Exception) { /* Salta file che ClamAV non riesce a leggere al momento */ }
+        }), token);
 
-        resultsList.Items.Add($"--- Terminata. Trovati: {found} su {files.Count} file ---");
+        resultsList.Items.Add($"--- Scansione completata. Minacce: {threatsFound} ---");
+    }
+    catch (OperationCanceledException)
+    {
+        resultsList.Items.Add("⚠️ SCANSIONE ANNULLATA DALL'UTENTE");
+        progressLabel.Text = "Annullata";
     }
     catch (Exception ex)
     {
-        MessageBox.Show($"Errore critico: {ex.Message}");
+        resultsList.Items.Add($"❌ Errore critico: {ex.Message}");
     }
     finally
     {
-        ((Button)sender).Enabled = true;
+        SetUiState(true); // Riabilita l'interfaccia
+        cancellationTokenSource?.Dispose();
+        cancellationTokenSource = null;
     }
 }
 
-// FUNZIONE DI SUPPORTO: Scansiona le cartelle saltando quelle protette
-private List<string> SafeGetFiles(string path)
+// Funzione SafeGetFiles aggiornata con supporto al CancellationToken
+private List<string> SafeGetFiles(string path, CancellationToken token)
 {
     var files = new List<string>();
-    try
+    var stack = new Stack<string>();
+    stack.Push(path);
+
+    while (stack.Count > 0)
     {
-        files.AddRange(Directory.GetFiles(path));
-        foreach (var directory in Directory.GetDirectories(path))
+        if (token.IsCancellationRequested) break;
+
+        string currentDir = stack.Pop();
+        try
         {
-            // Ricorsione sicura
-            files.AddRange(SafeGetFiles(directory));
+            files.AddRange(Directory.GetFiles(currentDir));
+            foreach (string d in Directory.GetDirectories(currentDir))
+            {
+                // Ignora link simbolici (ReparsePoints) per evitare loop infiniti
+                DirectoryInfo di = new DirectoryInfo(d);
+                if ((di.Attributes & FileAttributes.ReparsePoint) == 0)
+                    stack.Push(d);
+            }
         }
+        catch (UnauthorizedAccessException) { } // Salta cartelle protette
+        catch (Exception) { }
     }
-    catch (UnauthorizedAccessException) { /* Salta silenziosamente cartelle protette */ }
-    catch (Exception) { /* Salta altri errori minori */ }
-    
     return files;
 }
 
