@@ -460,3 +460,10 @@ WARNING: File path check failure on: C:\DumpStack.log.tmp
 WARNING: File path check failure for: C:\pagefile.sys
 WARNING: File path check failure on: C:\pagefile.sys
 WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
