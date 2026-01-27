@@ -16,3 +16,4 @@ C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c0851
 C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\obj\Debug\net8.0-windows\SalDefender.genruntimeconfig.cache
 C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\obj\Debug\net8.0-windows\ref\SalDefender.dll
 C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\bin\Debug\net8.0-windows\bison_logo.png
+C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\obj\Debug\net8.0-windows\SalDefender.sourcelink.json

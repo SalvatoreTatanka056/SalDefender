@@ -178,64 +178,74 @@ namespace SalDefender
             resultsList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             this.Controls.Add(resultsList);
         }
+private async void ScanButton_Click(object sender, EventArgs e)
+{
+    resultsList.Items.Clear();
+    using var folderDialog = new FolderBrowserDialog();
+    if (folderDialog.ShowDialog() != DialogResult.OK) return;
 
-        private async void ScanButton_Click(object sender, EventArgs e)
+    string folderPath = folderDialog.SelectedPath;
+    ((Button)sender).Enabled = false;
+
+    try
+    {
+        // 1. Recupero dei file in modo sicuro (senza crash se l'accesso è negato)
+        resultsList.Items.Add("Recupero lista file...");
+        var files = await Task.Run(() => SafeGetFiles(folderPath));
+
+        var clam = new ClamClient("localhost", 3310);
+        int found = 0;
+        var options = new ParallelOptions { MaxDegreeOfParallelism = 8 };
+
+        // 2. Scansione parallela
+        await Task.Run(() => Parallel.ForEach(files, options, (file) =>
         {
-            resultsList.Items.Clear();
-            using (var folderDialog = new FolderBrowserDialog())
+            try 
             {
-                folderDialog.Description = "Seleziona la cartella da scansionare";
-                if (folderDialog.ShowDialog() == DialogResult.OK)
+                var scanResult = clam.ScanFileOnServerAsync(file).Result;
+
+                this.Invoke(new MethodInvoker(() =>
                 {
-                    string folderPath = folderDialog.SelectedPath;
-                    resultsList.Items.Add($"Scansione di: {folderPath}");
-
-                    ClamClient clam = new ClamClient("localhost", 3310);
-                    int found = 0;
-
-                    try
+                    if (scanResult.Result == ClamScanResults.VirusDetected)
                     {
-                        var files = Directory.GetFiles(folderPath, "*.*", SearchOption.AllDirectories);
-                        foreach (var file in files)
-                        {
-                            resultsList.Items.Add($"Analisi: {file}...");
-                            Application.DoEvents(); 
-
-                            var scanResult = await clam.ScanFileOnServerAsync(file);
-
-                            switch (scanResult.Result)
-                            {
-                                case ClamScanResults.Clean:
-                                    break;
-                                case ClamScanResults.VirusDetected:
-                                    resultsList.Items.Add($"MINACCIA RILEVATA: {file} - {scanResult.RawResult}");
-                                    found++;
-                                    break;
-                                case ClamScanResults.Error:
-                                    resultsList.Items.Add($"ERRORE durante la scansione di {file}: {scanResult.RawResult}");
-                                    break;
-                                case ClamScanResults.Unknown:
-                                    resultsList.Items.Add($"Sconosciuto: {file}");
-                                    break;
-                            }
-                        }
-
-                        if (found == 0)
-                            resultsList.Items.Add("Scansione completata: Nessuna minaccia rilevata.");
-                        else
-                            resultsList.Items.Add($"Scansione completata: {found} minaccia(e) rilevata(e).");
+                        resultsList.Items.Add($"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}");
+                        found++;
                     }
-                    catch (Exception ex)
-                    {
-                        resultsList.Items.Add($"Errore generale durante la scansione: {ex.Message}");
-                    }
-                }
-                else
-                {
-                    resultsList.Items.Add("Scansione annullata.");
-                }
+                }));
             }
+            catch { /* Ignora errori sui singoli file durante la scansione */ }
+        }));
+
+        resultsList.Items.Add($"--- Terminata. Trovati: {found} su {files.Count} file ---");
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show($"Errore critico: {ex.Message}");
+    }
+    finally
+    {
+        ((Button)sender).Enabled = true;
+    }
+}
+
+// FUNZIONE DI SUPPORTO: Scansiona le cartelle saltando quelle protette
+private List<string> SafeGetFiles(string path)
+{
+    var files = new List<string>();
+    try
+    {
+        files.AddRange(Directory.GetFiles(path));
+        foreach (var directory in Directory.GetDirectories(path))
+        {
+            // Ricorsione sicura
+            files.AddRange(SafeGetFiles(directory));
         }
+    }
+    catch (UnauthorizedAccessException) { /* Salta silenziosamente cartelle protette */ }
+    catch (Exception) { /* Salta altri errori minori */ }
+    
+    return files;
+}
 
         private async void DownloadScanButton_Click(object sender, EventArgs e)
         {
@@ -417,155 +427,122 @@ namespace SalDefender
             MessageBox.Show("Impostazioni non ancora disponibili.", "SalDefender");
         }
 
-        private async void DiskScanButton_Click(object sender, EventArgs e)
+   private async void DiskScanButton_Click(object sender, EventArgs e)
+  {
+    if (driveComboBox.SelectedItem == null)
+    {
+        MessageBox.Show("Seleziona un disco.", "SalDefender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        return;
+    }
+
+    resultsList.Items.Clear();
+    string drivePath = driveComboBox.SelectedItem.ToString().Substring(0, 3);
+    cancellationTokenSource = new CancellationTokenSource();
+    var token = cancellationTokenSource.Token;
+
+    // UI Setup
+    SetUiState(false); // Funzione helper per disabilitare bottoni
+    resultsList.Items.Add($"AVVIO SCANSIONE DISCO: {drivePath}");
+
+    var progress = new Progress<ScanProgress>(p => {
+        progressLabel.Text = p.Message;
+        scanProgressBar.Value = p.Percent;
+        if (p.NewLog != null) resultsList.Items.Add(p.NewLog);
+        if (resultsList.Items.Count > 100) resultsList.TopIndex = resultsList.Items.Count - 1;
+    });
+
+    try
+    {
+        // 1. Recupero file (senza bloccare UI)
+        ((IProgress<ScanProgress>)progress).Report(new ScanProgress { Message = "Indicizzazione file..." });
+        var allFiles = await Task.Run(() => GetAllFilesRecursive(drivePath, token));
+        int totalFiles = allFiles.Count;
+        resultsList.Items.Add($"File trovati: {totalFiles}");
+
+        // 2. Scansione Parallela (il vero boost)
+        int filesScanned = 0;
+        int threatsFound = 0;
+        var clam = new ClamClient("localhost", 3310);
+        
+        // Limitiamo il parallelismo per non saturare i thread di ClamAV (configurati prima)
+        var parallelOptions = new ParallelOptions { 
+            MaxDegreeOfParallelism = 8, 
+            CancellationToken = token 
+        };
+
+        await Task.Run(() => Parallel.ForEach(allFiles, parallelOptions, (file) =>
         {
-            if (driveComboBox.SelectedItem == null)
+            try 
             {
-                MessageBox.Show("Seleziona un disco da scansionare.", "SalDefender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                // Scansione veloce via Path
+                var scanResult = clam.ScanFileOnServerAsync(file).Result; 
+                Interlocked.Increment(ref filesScanned);
 
-            resultsList.Items.Clear();
-            
-            string selectedDrive = driveComboBox.SelectedItem.ToString();
-            string drivePath = selectedDrive.Substring(0, 3); 
-
-            resultsList.Items.Add("SCANSIONE DISCO COMPLETA: " + drivePath);
-            resultsList.Items.Add("");
-            
-            cancellationTokenSource = new CancellationTokenSource();
-            
-            diskScanButton.Enabled = false;
-            scanButton.Enabled = false;
-            downloadScanButton.Enabled = false;
-            cancelScanButton.Enabled = true;
-            
-            scanProgressBar.Value = 0;
-            progressLabel.Text = "Preparazione scansione...";
-
-            ClamClient clam = new ClamClient("localhost", 3310);
-            int filesScanned = 0;
-            int threatsFound = 0;
-            int errors = 0;
-
-            try
-            {
-                progressLabel.Text = "Conteggio file in corso...";
-                Application.DoEvents();
-
-                List<string> allFiles = new List<string>();
-                await Task.Run(() =>
+                if (scanResult.Result == ClamScanResults.VirusDetected)
                 {
-                    try
-                    {
-                        allFiles = GetAllFilesRecursive(drivePath, cancellationTokenSource.Token);
-                    }
-                    catch
-                    {
-                    }
-                }, cancellationTokenSource.Token);
-
-                int totalFiles = allFiles.Count;
-                resultsList.Items.Add($"File totali da scansionare: {totalFiles}");
-                resultsList.Items.Add("");
-
-                foreach (var file in allFiles)
-                {
-                    if (cancellationTokenSource.Token.IsCancellationRequested)
-                    {
-                        resultsList.Items.Add("");
-                        resultsList.Items.Add("SCANSIONE ANNULLATA DALL'UTENTE");
-                        break;
-                    }
-
-                    filesScanned++;
-                    
-                    if (filesScanned % 10 == 0 || filesScanned == 1)
-                    {
-                        progressLabel.Text = $"File: {filesScanned}/{totalFiles} - {Path.GetFileName(file)}";
-                        scanProgressBar.Value = Math.Min(100, (int)((double)filesScanned / totalFiles * 100));
-                        Application.DoEvents();
-                    }
-
-                    try
-                    {
-                        var scanResult = await clam.ScanFileOnServerAsync(file);
-
-                        switch (scanResult.Result)
-                        {
-                            case ClamScanResults.Clean:
-                                break;
-                            case ClamScanResults.VirusDetected:
-                                resultsList.Items.Add($"MINACCIA: {file}");
-                                resultsList.Items.Add($"   Tipo: {scanResult.RawResult}");
-                                threatsFound++;
-                                break;
-                            case ClamScanResults.Error:
-                                errors++;
-                                if (errors <= 10) 
-                                {
-                                    resultsList.Items.Add($"ERRORE: {file}");
-                                }
-                                break;
-                        }
-
-                        if (resultsList.Items.Count > 0)
-                            resultsList.TopIndex = resultsList.Items.Count - 1;
-                    }
-                    catch (UnauthorizedAccessException)
-                    {
-                        errors++;
-                    }
-                    catch (Exception ex)
-                    {
-                        errors++;
-                        if (errors <= 10)
-                        {
-                            resultsList.Items.Add($"Eccezione su {Path.GetFileName(file)}: {ex.Message}");
-                        }
-                    }
+                    Interlocked.Increment(ref threatsFound);
+                    ((IProgress<ScanProgress>)progress).Report(new ScanProgress { 
+                        NewLog = $"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}",
+                        Percent = (int)((double)filesScanned / totalFiles * 100)
+                    });
                 }
 
-                if (!cancellationTokenSource.Token.IsCancellationRequested)
+                // Aggiorna progresso ogni 50 file per non sovraccaricare la UI
+                if (filesScanned % 50 == 0)
                 {
-                    resultsList.Items.Add("");
-                    resultsList.Items.Add($"File scansionati: {filesScanned}");
-                    resultsList.Items.Add($"Minacce rilevate: {threatsFound}");
-                    
-                    if (threatsFound == 0)
-                    {
-                        resultsList.Items.Add("SISTEMA PULITO!");
-                    }
-                    else
-                    {
-                        resultsList.Items.Add("ATTENZIONE: Minacce rilevate!");
-                    }
-
-                    progressLabel.Text = $"Completato: {filesScanned} file, {threatsFound} minacce";
-                    scanProgressBar.Value = 100;
+                    ((IProgress<ScanProgress>)progress).Report(new ScanProgress { 
+                        Message = $"Analizzati: {filesScanned}/{totalFiles}",
+                        Percent = (int)((double)filesScanned / totalFiles * 100)
+                    });
                 }
             }
-            catch (OperationCanceledException)
-            {
-                resultsList.Items.Add("Scansione annullata.");
-                progressLabel.Text = "Scansione annullata";
-            }
-            catch (Exception ex)
-            {
-                resultsList.Items.Add($"Errore critico durante la scansione disco: {ex.Message}");
-                progressLabel.Text = "Errore durante la scansione";
-            }
-            finally
-            {
-                diskScanButton.Enabled = true;
-                scanButton.Enabled = true;
-                downloadScanButton.Enabled = true;
-                cancelScanButton.Enabled = false;
-                
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
-            }
-        }
+            catch { /* Gestione errori silenziosa per file inaccessibili */ }
+        }));
+
+        resultsList.Items.Add($"Scansione completata. Minacce: {threatsFound}");
+    }
+    catch (OperationCanceledException) { resultsList.Items.Add("⚠️ Scansione interrotta."); }
+    catch (Exception ex) { MessageBox.Show($"Errore: {ex.Message}"); }
+    finally { SetUiState(true); }
+}
+
+private void SetUiState(bool isReady)
+{
+    // Se isReady è true, la scansione è finita/pronta (Abilita i controlli)
+    // Se isReady è false, la scansione è in corso (Disabilita i controlli)
+
+    // Pulsanti di avvio scansione
+    diskScanButton.Enabled = isReady;
+    scanButton.Enabled = isReady;
+    downloadScanButton.Enabled = isReady;
+    driveComboBox.Enabled = isReady;
+
+    // Pulsante di annullamento (attivo solo se la scansione è in corso)
+    cancelScanButton.Enabled = !isReady;
+
+    // Feedback visivo sulla ProgressBar
+    if (isReady)
+    {
+        // Se vuoi resettare dopo la fine, scommenta la riga sotto
+        // scanProgressBar.Value = 0; 
+        progressLabel.ForeColor = Color.Black;
+    }
+    else
+    {
+        progressLabel.ForeColor = Color.DarkBlue;
+        resultsList.Items.Add("------------------------------------------");
+    }
+
+    // Forza l'aggiornamento immediato della UI
+    this.Refresh();
+}
+
+// Classe di supporto per il progresso
+public class ScanProgress {
+    public string Message { get; set; }
+    public int Percent { get; set; }
+    public string NewLog { get; set; }
+}
 
         private List<string> GetAllFilesRecursive(string path, CancellationToken token)
         {

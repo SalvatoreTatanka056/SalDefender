@@ -164,3 +164,299 @@ WARNING: File path check failure for: C:\pagefile.sys
 WARNING: File path check failure on: C:\pagefile.sys
 WARNING: File path check failure for: C:\swapfile.sys
 WARNING: File path check failure on: C:\swapfile.sys
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Program Files\TeamViewer\rolloutfile.tv13
+WARNING: File path check failure for: C:\Program Files\TeamViewer\TeamViewer15_Logfile.log
+WARNING: File path check failure for: C:\Program Files\TeamViewer\TVNetwork.log
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Program Files (x86)\Google\GoogleUpdater\crx_cache\0ce22617f3ad0a0727e2abf9155fc950228565462edc45e87a9f9abf40f11792
+WARNING: File path check failure for: C:\Program Files (x86)\Google\GoogleUpdater\crx_cache\49f8b46535eca091d0f1cec932fa434fb314b4d843e86997544e7796c7d5e169
+WARNING: File path check failure for: C:\Program Files (x86)\Google\GoogleUpdater\crx_cache\b3656b6507626e13406a27b61ae6d8dc21cf26b87aa150475fd2ee0951f1d2c4
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\ProgramData\ntuser.pol
+WARNING: File path check failure for: C:\ProgramData\Dell\Bradbury API Sub Agent\BradburyAPISubAgentService.00.log
+WARNING: File path check failure for: C:\ProgramData\Dell\CoreServices.Client\CoreServices.Client.log
+WARNING: File path check failure for: C:\ProgramData\Dell\Dell TechHub\DellTechHub.log
+WARNING: File path check failure for: C:\ProgramData\Dell\DTP\Logs\DTM.Transmission\DTM.Transmission.log
+WARNING: File path check failure for: C:\ProgramData\Dell\DTP\Logs\DTP.Analytics.SubAgent\DTP.Analytics.SubAgent.02.log
+WARNING: File path check failure for: C:\ProgramData\Dell\DTP\Logs\DTP.DataManager.SubAgent\DTP.DataManager.SubAgent.01.log
+WARNING: File path check failure for: C:\ProgramData\Dell\DTP\Logs\DTP.Diagnostics.SubAgent\DTP.Diagnostics.SubAgent.00.log
+WARNING: File path check failure for: C:\ProgramData\Dell\DTP\Logs\DTP.Instrumentation.SubAgent\DTP.Instrumentation.SubAgent.03.log
+WARNING: File path check failure for: C:\ProgramData\Dell\DTP\Logs\DTP.Instrumentation.UserProcess\S-1-5-18\DTP.Instrumentation.UserProcess.00.log
+WARNING: File path check failure for: C:\ProgramData\Dell\MyDell Notification Manager\MyDell Notification Manager.log
+WARNING: File path check failure for: C:\ProgramData\Dell\orca\deviceq\20260127_090533.log
+WARNING: File path check failure for: C:\ProgramData\Dell\orca\deviceq\20260127_090611.log
+WARNING: File path check failure for: C:\ProgramData\Dell\orca\deviceq\20260127_0937.log
+WARNING: File path check failure for: C:\ProgramData\Dell\SupportAssistServiceSubAgent\SupportAssistService.00.log
+WARNING: File path check failure for: C:\ProgramData\Dell\SupportAssistSoftwareDiagnosticsSubAgent\SoftwareDiagnostics.00.log
+WARNING: File path check failure for: C:\ProgramData\Dell\UIEngine\WrapperLog.Dell.TechHub.Diagnostics.SubAgent.exe.0.log
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\00a452b16a54bd753832b3e62e0624d3_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\0240e0d8e61822e3c9a37e3b08076ada_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\03745dca6e33523887a62540be4d2830_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\0449f1547ca900f5a394e26bc3b5c2e6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\06501f9db266b2df77431a7720ec13d9_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\0821be400b89287990587c415d1bc73a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\0c52e6b3576d153954818ef2932c7201_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\19933de01e2dd7d023c6f58b71af33b0_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\1ba874400c2b4037a4ccffe474aadeef_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\1e0c8dc6a79e3664a89019a136a420dd_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\2010f72ca5983f7a5dfc2fcef84d4d27_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\27dbcedcba36778f42f4be857995fcdc_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\2e1aa72deec56c35ffde084c34cddf3c_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\2fbf1cfa6602071f2c9c7d8a7fc1def6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\38964152b33f4ec83126643e03056f13_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\3b98e4f4875a106781a97d49fb1af900_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\3c85e6bbbb8de1d882e910cce6731a62_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\3f4088bd5ac956ffbb374d69be1af4a8_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\43612d1cb519ba30033ab4a2fa3fa79e_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\494cfea46e57ee397336102fb8b3d71f_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\4a761b1d55fd9b0fe087e4524611e701_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\4b50eb8b0b28584a1ae55c12afb82b91_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\4d7232dbffd7d6549a5cd51c99ca436a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\4df880360cadc8d2a4df69a0dfad45fd_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\5dfd6047c873f66cb495e2accffab569_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\5e7161d58ee02b1394f3b877334621de_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\5ea289367f3c97a613e1da0c5b9190fa_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\6121092529b7564ffa239e5dc31c4300_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\61ef811582b1ad923e16326d95234045_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\640e571ad336187d7e8dfb9a1843f082_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\647f4ca707428c96bf14e5b44691cd82_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\650c7c7ecfe07e8ffa6819c6cf312a49_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\681b99451e26241a14d6b3b0b52af505_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\689fffbcd2c77d577f9e1da47cbde30a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\76fd6e3bd0d2f4fb2cdf8dad7a9d7182_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\7da39de8ec84832f94e587414c42b90a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\89bee74bdc76edd82081ed385c93f952_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\8ad4f349bc3de154d7a15aa6c965c51c_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\90b17b7f2acbdd16a41c41b18de88688_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\9155b7ab6252db8fdf68cd11ee695b49_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\917294b2b0d145d5495b822261933109_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\918257a02325700d3dc2b70af90cf8f5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\92236278af24a3c5128c62c2c2414aa5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\96792e9d84385b58ebe35eb2cf610942_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\a23c251bfa5488bf23f2f4635c25a060_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\a315c55a8405cdc885a14d9f89f596b5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\a504ed1e62ed283fdfa3679126ce269f_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\aa967fc0be0f33d8f126adb07f824ed9_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\b07730f553f84bd3b70187b55184446e_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\b3fb7af2c7617bdc8feccdc2c130a7b8_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\b6c56a89c6cc07eba6f7507350cee289_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\b935e1e25732e22e06d30da7eb7ca054_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\bf367199f2a4f6f72195e744cfd1e377_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\c15f9f0a373e4d0002950a19b2b09974_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\c6fa77ec412e528a08a5febce7b9c79f_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\c77584909754eabecc4ece92be175af6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\cd2736f3163122d535e5f941395cd48a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\d955b5a009a9d14a25f77560f281e9e7_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\e6cbaace999e2551b24441b8882fac1a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\ead5f4f06162b2a659f9fbd70d8d9efe_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\f12e1bc544fe1bdb8448fbe1f1bc1a2d_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\f665c09eddcd1a7545933e7c95f80ebc_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\fa9c7935510f8ccbe83cff0e2ae5f440_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\fba52baa950af3892b46e6bc67b7c9c5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\Keys\fd3c7d8ee13f5b554e72c42593e7e6f6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys\c250507da5a9cb6d97133bf746452980_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Windows\LfSvc\Geofence\GeofenceApplicationID.dat
+WARNING: File path check failure for: C:\ProgramData\Microsoft\Windows Defender\IMpService77BDAF73-B396-481F-9042-AD358843EC24.lock
+WARNING: File path check failure for: C:\ProgramData\USOShared\Logs\System\MoUxCoreWorker.b00f875a-71f2-4473-926a-d543bcd749db.2.etl
+WARNING: File path check failure for: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_15_23_724.json
+WARNING: File path check failure on: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_15_23_724.json
+WARNING: File path check failure for: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_46_24_002.json
+WARNING: File path check failure on: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_46_24_002.json
+WARNING: File path check failure for: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_19_24_264.json
+WARNING: File path check failure on: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_19_24_264.json
+WARNING: File path check failure for: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_50_24_502.json
+WARNING: File path check failure on: C:\ProgramData\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_50_24_502.json
+WARNING: File path check failure for: C:\ProgramData\Windows Master Store\Common\MSPCManager.log
+WARNING: File path check failure for: C:\ProgramData\Windows Master Store\Common\MSPCManagerCore.log
+WARNING: File path check failure for: C:\ProgramData\Windows Master Store\Common\SmartTips.db
+WARNING: File path check failure for: C:\Users\All Users\ntuser.pol
+WARNING: File path check failure for: C:\Users\All Users\Dell\Bradbury API Sub Agent\BradburyAPISubAgentService.00.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\CoreServices.Client\CoreServices.Client.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\Dell TechHub\DellTechHub.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\DTP\Logs\DTM.Transmission\DTM.Transmission.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\DTP\Logs\DTP.Analytics.SubAgent\DTP.Analytics.SubAgent.02.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\DTP\Logs\DTP.DataManager.SubAgent\DTP.DataManager.SubAgent.01.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\DTP\Logs\DTP.Diagnostics.SubAgent\DTP.Diagnostics.SubAgent.00.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\DTP\Logs\DTP.Instrumentation.SubAgent\DTP.Instrumentation.SubAgent.03.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\DTP\Logs\DTP.Instrumentation.UserProcess\S-1-5-18\DTP.Instrumentation.UserProcess.00.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\MyDell Notification Manager\MyDell Notification Manager.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\orca\deviceq\20260127_090533.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\orca\deviceq\20260127_090611.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\orca\deviceq\20260127_0937.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\SupportAssistServiceSubAgent\SupportAssistService.00.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\SupportAssistSoftwareDiagnosticsSubAgent\SoftwareDiagnostics.00.log
+WARNING: File path check failure for: C:\Users\All Users\Dell\UIEngine\WrapperLog.Dell.TechHub.Diagnostics.SubAgent.exe.0.log
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\00a452b16a54bd753832b3e62e0624d3_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\0240e0d8e61822e3c9a37e3b08076ada_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\03745dca6e33523887a62540be4d2830_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\0449f1547ca900f5a394e26bc3b5c2e6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\06501f9db266b2df77431a7720ec13d9_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\0821be400b89287990587c415d1bc73a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\0c52e6b3576d153954818ef2932c7201_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\19933de01e2dd7d023c6f58b71af33b0_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\1ba874400c2b4037a4ccffe474aadeef_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\1e0c8dc6a79e3664a89019a136a420dd_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\2010f72ca5983f7a5dfc2fcef84d4d27_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\27dbcedcba36778f42f4be857995fcdc_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\2e1aa72deec56c35ffde084c34cddf3c_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\2fbf1cfa6602071f2c9c7d8a7fc1def6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\38964152b33f4ec83126643e03056f13_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\3b98e4f4875a106781a97d49fb1af900_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\3c85e6bbbb8de1d882e910cce6731a62_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\3f4088bd5ac956ffbb374d69be1af4a8_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\43612d1cb519ba30033ab4a2fa3fa79e_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\494cfea46e57ee397336102fb8b3d71f_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\4a761b1d55fd9b0fe087e4524611e701_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\4b50eb8b0b28584a1ae55c12afb82b91_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\4d7232dbffd7d6549a5cd51c99ca436a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\4df880360cadc8d2a4df69a0dfad45fd_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\5dfd6047c873f66cb495e2accffab569_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\5e7161d58ee02b1394f3b877334621de_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\5ea289367f3c97a613e1da0c5b9190fa_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\6121092529b7564ffa239e5dc31c4300_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\61ef811582b1ad923e16326d95234045_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\640e571ad336187d7e8dfb9a1843f082_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\647f4ca707428c96bf14e5b44691cd82_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\650c7c7ecfe07e8ffa6819c6cf312a49_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\681b99451e26241a14d6b3b0b52af505_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\689fffbcd2c77d577f9e1da47cbde30a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\76fd6e3bd0d2f4fb2cdf8dad7a9d7182_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\7da39de8ec84832f94e587414c42b90a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\89bee74bdc76edd82081ed385c93f952_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\8ad4f349bc3de154d7a15aa6c965c51c_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\90b17b7f2acbdd16a41c41b18de88688_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\9155b7ab6252db8fdf68cd11ee695b49_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\917294b2b0d145d5495b822261933109_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\918257a02325700d3dc2b70af90cf8f5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\92236278af24a3c5128c62c2c2414aa5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\96792e9d84385b58ebe35eb2cf610942_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\a23c251bfa5488bf23f2f4635c25a060_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\a315c55a8405cdc885a14d9f89f596b5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\a504ed1e62ed283fdfa3679126ce269f_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\aa967fc0be0f33d8f126adb07f824ed9_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\b07730f553f84bd3b70187b55184446e_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\b3fb7af2c7617bdc8feccdc2c130a7b8_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\b6c56a89c6cc07eba6f7507350cee289_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\b935e1e25732e22e06d30da7eb7ca054_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\bf367199f2a4f6f72195e744cfd1e377_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\c15f9f0a373e4d0002950a19b2b09974_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\c6fa77ec412e528a08a5febce7b9c79f_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\c77584909754eabecc4ece92be175af6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\cd2736f3163122d535e5f941395cd48a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\d955b5a009a9d14a25f77560f281e9e7_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\e6cbaace999e2551b24441b8882fac1a_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\ead5f4f06162b2a659f9fbd70d8d9efe_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\f12e1bc544fe1bdb8448fbe1f1bc1a2d_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\f665c09eddcd1a7545933e7c95f80ebc_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\fa9c7935510f8ccbe83cff0e2ae5f440_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\fba52baa950af3892b46e6bc67b7c9c5_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\Keys\fd3c7d8ee13f5b554e72c42593e7e6f6_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Crypto\RSA\MachineKeys\c250507da5a9cb6d97133bf746452980_01042a4a-5aa1-4db9-b190-d92785ced588
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Windows\LfSvc\Geofence\GeofenceApplicationID.dat
+WARNING: File path check failure for: C:\Users\All Users\Microsoft\Windows Defender\IMpService77BDAF73-B396-481F-9042-AD358843EC24.lock
+WARNING: File path check failure for: C:\Users\All Users\USOShared\Logs\System\MoUxCoreWorker.b00f875a-71f2-4473-926a-d543bcd749db.2.etl
+WARNING: File path check failure for: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_15_23_724.json
+WARNING: File path check failure on: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_15_23_724.json
+WARNING: File path check failure for: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_46_24_002.json
+WARNING: File path check failure on: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_12_46_24_002.json
+WARNING: File path check failure for: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_19_24_264.json
+WARNING: File path check failure on: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_19_24_264.json
+WARNING: File path check failure for: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_50_24_502.json
+WARNING: File path check failure on: C:\Users\All Users\Whesvc\pool_tags_summary\pool_tags_summary_2026-01-27_13_50_24_502.json
+WARNING: File path check failure for: C:\Users\All Users\Windows Master Store\Common\MSPCManager.log
+WARNING: File path check failure for: C:\Users\All Users\Windows Master Store\Common\MSPCManagerCore.log
+WARNING: File path check failure for: C:\Users\All Users\Windows Master Store\Common\SmartTips.db
+WARNING: File path check failure for: C:\Users\Avangarde\NTUSER.DAT
+WARNING: File path check failure for: C:\Users\Avangarde\ntuser.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\ntuser.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TM.blf
+WARNING: File path check failure for: C:\Users\Avangarde\NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000001.regtrans-ms
+WARNING: File path check failure for: C:\Users\Avangarde\NTUSER.DAT{2ad838bc-efea-11ee-a54d-000d3a94eaa1}.TMContainer00000000000000000002.regtrans-ms
+C:\Users\Avangarde\.android\avd\Medium_Phone.avd\userdata-qemu.img.qcow2: Can't get file status ERROR
+C:\Users\Avangarde\.android\avd\Medium_Phone.avd\snapshots\default_boot\ram.img: Can't get file status ERROR
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
++++ Started at Tue Jan 27 22:15:26 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627272 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 30
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 419430400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
