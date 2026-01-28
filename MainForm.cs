@@ -17,6 +17,15 @@ namespace SalDefender
 {
     public class MainForm : Form
     {
+
+        private bool isDarkMode = false;
+
+        // Definizione Palette
+        private readonly Color DarkBg = Color.FromArgb(32, 32, 32);
+        private readonly Color DarkPanel = Color.FromArgb(45, 45, 45);
+        private readonly Color DarkText = Color.WhiteSmoke;
+        private readonly Color LightBg = Color.White;
+        private readonly Color LightText = Color.FromArgb(45, 45, 45);
         private Button scanButton;
         private Button updateButton;
         private Button settingsButton;
@@ -45,6 +54,64 @@ namespace SalDefender
             this.MinimumSize = new Size(500, 650);
 
             InitUI();
+        }
+
+        private void ApplyTheme()
+        {
+            this.BackColor = isDarkMode ? DarkBg : LightBg;
+            this.ForeColor = isDarkMode ? DarkText : Color.Black;
+
+            // Aggiorna titolo
+            titleLabel.ForeColor = isDarkMode ? Color.White : LightText;
+
+            // Aggiorna controlli specifici
+            UpdateControlTheme(this);
+        }
+
+        private void UpdateControlTheme(Control parent)
+        {
+            foreach (Control c in parent.Controls)
+            {
+                if (c is Button btn)
+                {
+                    btn.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.ControlLight);
+                    btn.ForeColor = isDarkMode ? Color.White : Color.Black;
+                    btn.FlatAppearance.BorderColor = isDarkMode ? Color.Gray : Color.LightGray;
+                }
+                else if (c is ListBox || c is TextBox || c is ComboBox)
+                {
+                    c.BackColor = isDarkMode ? Color.FromArgb(60, 60, 60) : Color.White;
+                    c.ForeColor = isDarkMode ? Color.White : Color.Black;
+                }
+                else if (c is GroupBox gb)
+                {
+                    gb.ForeColor = isDarkMode ? Color.SkyBlue : Color.Black;
+                    UpdateControlTheme(gb); // Ricorsivo per i controlli dentro il GroupBox
+                }
+                else if (c is Panel || c is TableLayoutPanel || c is FlowLayoutPanel)
+                {
+                    UpdateControlTheme(c); // Ricorsivo
+                }
+            }
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            // Creazione di un menu contestuale rapido per le impostazioni
+            ContextMenuStrip settingsMenu = new ContextMenuStrip();
+            
+            var themeToggle = new ToolStripMenuItem(isDarkMode ? "Passa a Tema Chiaro" : "Passa a Tema Scuro");
+            themeToggle.Click += (s, args) => {
+                isDarkMode = !isDarkMode;
+                ApplyTheme();
+            };
+
+            settingsMenu.Items.Add(themeToggle);
+            settingsMenu.Items.Add(new ToolStripSeparator());
+            settingsMenu.Items.Add("Info SalDefender", null, (s, args) => MessageBox.Show("SalDefender v1.0\nProtezione basata su ClamAV", "Informazioni"));
+
+            // Mostra il menu sopra il pulsante
+            settingsMenu.Show(settingsButton, new Point(0, settingsButton.Height));
         }
 
         /*   private void InitUI()
@@ -703,10 +770,6 @@ namespace SalDefender
             }
         }
 
-        private void SettingsButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Impostazioni non ancora disponibili.", "SalDefender");
-        }
 
         private async void DiskScanButton_Click(object sender, EventArgs e)
         {
