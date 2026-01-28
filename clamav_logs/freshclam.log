@@ -21,3 +21,8 @@ bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builde
 daily.cvd database is up-to-date (version: 27893, sigs: 354856, f-level: 90, builder: svc.clamav-publisher)
 main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
 bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily database available for update (local version: 27893, remote version: 27894)
+daily.cld updated (version: 27894, sigs: 354861, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
