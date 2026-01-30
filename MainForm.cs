@@ -43,6 +43,20 @@ namespace SalDefender
 
         private NotifyIcon trayIcon;
         private ContextMenuStrip trayMenu;
+        private Process clamdProcess; // Questa è la variabile che mancava
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern bool SetLayeredWindowAttributes(IntPtr hWnd, uint crKey, byte bAlpha, uint dwFlags);
+
+        private const int GWL_EXSTYLE = -20;
+        private const int WS_EX_LAYERED = 0x80000;
+        private const int LWA_ALPHA = 0x2;
 
         public MainForm()
         {
@@ -55,6 +69,67 @@ namespace SalDefender
 
             this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
             InitUI();
+        }
+        private void StartClamd()
+        {
+            try
+            {
+                // 1. Verifica che i processi precedenti siano chiusi per evitare conflitti di porta
+                foreach (var proc in Process.GetProcessesByName("clamd"))
+                {
+                    try { proc.Kill(); } catch { }
+                }
+
+                string exePath = @"C:\Program Files\ClamAV\clamd.exe";
+                string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamd.conf");
+
+                if (!File.Exists(exePath))
+                {
+                    MessageBox.Show($"File non trovato: {exePath}");
+                    return;
+                }
+
+                clamdProcess = new Process();
+                clamdProcess.StartInfo.FileName = exePath;
+
+                // FONDAMENTALE: Passiamo il percorso config racchiuso tra virgolette doppie escape
+                clamdProcess.StartInfo.Arguments = $"--config-file=\"{configPath}\" --foreground";
+
+                clamdProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(exePath);
+                clamdProcess.StartInfo.UseShellExecute = true; // Necessario per avere MainWindowHandle
+                clamdProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+
+                clamdProcess.Start();
+
+                // Aspetta un istante che la finestra venga creata effettivamente dal sistema
+                Task.Run(async () =>
+                {
+                    await Task.Delay(1000);
+                    this.Invoke(new Action(() =>
+                    {
+                        if (this.WindowState == FormWindowState.Minimized)
+                            SetShellTransparency(true);
+                    }));
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante l'avvio di clamd: " + ex.Message);
+            }
+        }
+
+        private void SetShellTransparency(bool transparent)
+        {
+            if (clamdProcess == null || clamdProcess.MainWindowHandle == IntPtr.Zero) return;
+
+            IntPtr hWnd = clamdProcess.MainWindowHandle;
+
+            // Imposta lo stile della finestra come "Layered"
+            SetWindowLong(hWnd, GWL_EXSTYLE, GetWindowLong(hWnd, GWL_EXSTYLE) | WS_EX_LAYERED);
+
+            // bAlpha: 0 = Completamente trasparente, 255 = Completamente opaco
+            byte alpha = transparent ? (byte)0 : (byte)255;
+            SetLayeredWindowAttributes(hWnd, 0, alpha, LWA_ALPHA);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -256,8 +331,57 @@ namespace SalDefender
             };
             mainLayout.Controls.Add(resultsList, 0, 4);
 
+            // --- All'interno di InitUI() ---
+
+            // 1. Avvia il processo
+            StartClamd();
+
+            // 2. Gestione Riduzione a icona
+            this.Resize += (s, e) =>
+            {
+                if (this.WindowState == FormWindowState.Minimized)
+                {
+                    this.Hide();
+                    SetShellTransparency(true); // Rendi la shell invisibile
+                }
+            };
+
+            // 3. Gestione Riapertura (Tray Icon)
+            trayIcon.DoubleClick += (s, e) =>
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+                SetShellTransparency(false); // Rendi la shell visibile
+            };
+
+            // 4. CHIUSURA TOTALE (Fondamentale!)
+            this.FormClosing += (s, e) =>
+            {
+                if (clamdProcess != null && !clamdProcess.HasExited)
+                {
+                    try { clamdProcess.Kill(); } catch { }
+                }
+            };
+
             LoadDrives();
         }
+
+
+        private void SetScanningMode(bool isScanning)
+        {
+            // Disabilita i pulsanti di avvio durante la scansione
+            diskScanButton.Enabled = !isScanning;
+            scanButton.Enabled = !isScanning;
+            downloadScanButton.Enabled = !isScanning;
+            updateButton.Enabled = !isScanning; // <--- Questo disabilita l'aggiornamento firme
+
+            // Disabilita anche la selezione del disco
+            driveComboBox.Enabled = !isScanning;
+
+            // Abilita il tasto Annulla solo se stiamo scansionando
+            cancelScanButton.Enabled = isScanning;
+        }
+
         private void SetupScanOptions(GroupBox container)
         {
             var layout = new TableLayoutPanel
@@ -471,6 +595,7 @@ namespace SalDefender
             finally
             {
                 SetUiState(true); // Riabilita l'interfaccia
+                SetScanningMode(false);
                 cancellationTokenSource?.Dispose();
                 cancellationTokenSource = null;
             }
@@ -691,6 +816,8 @@ namespace SalDefender
                 return;
             }
 
+            
+
             resultsList.Items.Clear();
             string drivePath = driveComboBox.SelectedItem.ToString().Substring(0, 3);
             cancellationTokenSource = new CancellationTokenSource();
@@ -698,6 +825,7 @@ namespace SalDefender
 
             // UI Setup
             SetUiState(false); // Funzione helper per disabilitare bottoni
+            SetScanningMode(true);
             resultsList.Items.Add($"AVVIO SCANSIONE DISCO: {drivePath}");
 
             var progress = new Progress<ScanProgress>(p =>
@@ -763,7 +891,7 @@ namespace SalDefender
             }
             catch (OperationCanceledException) { resultsList.Items.Add("⚠️ Scansione interrotta."); }
             catch (Exception ex) { MessageBox.Show($"Errore: {ex.Message}"); }
-            finally { SetUiState(true); }
+            finally { SetUiState(true);SetScanningMode(false); }
         }
 
         private void SetUiState(bool isReady)
