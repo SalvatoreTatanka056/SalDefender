@@ -237,10 +237,11 @@ namespace SalDefender
             trayMenu.Items.Add("-");
             trayMenu.Items.Add("Esci", null, (s, e) => Application.Exit());
 
-            string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bison_logo.ico");
+            string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bison_logo-removebg-preview.ico");
+
             if (File.Exists(iconPath))
             {
-                this.Icon = new Icon(iconPath);
+                this.Icon = new Icon(iconPath, 32, 32);
             }
 
             trayIcon = new NotifyIcon
@@ -816,7 +817,7 @@ namespace SalDefender
                 return;
             }
 
-            
+
 
             resultsList.Items.Clear();
             string drivePath = driveComboBox.SelectedItem.ToString().Substring(0, 3);
@@ -891,7 +892,7 @@ namespace SalDefender
             }
             catch (OperationCanceledException) { resultsList.Items.Add("⚠️ Scansione interrotta."); }
             catch (Exception ex) { MessageBox.Show($"Errore: {ex.Message}"); }
-            finally { SetUiState(true);SetScanningMode(false); }
+            finally { SetUiState(true); SetScanningMode(false); }
         }
 
         private void SetUiState(bool isReady)
@@ -968,5 +969,35 @@ namespace SalDefender
                 cancelScanButton.Enabled = false;
             }
         }
+
+
+        public void EnableWeeklyScan(string time, string day)
+        {
+            // Esempio: time = "09:00", day = "MON"
+            string exePath = AppDomain.CurrentDomain.BaseDirectory + "SalDefender.exe";
+            string cmd = $"/Create /SC WEEKLY /D {day} /TN \"SalDefenderScan\" /TR \"'{exePath}' --silent-scan\" /ST {time} /F";
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "schtasks",
+                Arguments = cmd,
+                CreateNoWindow = true,
+                WindowStyle = ProcessWindowStyle.Hidden
+            });
+        }
+
+        public void DisableWeeklyScan()
+        {
+            string cmd = "/Delete /TN \"SalDefenderScan\" /F";
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "schtasks",
+                Arguments = cmd,
+                CreateNoWindow = true,
+                WindowStyle = ProcessWindowStyle.Hidden
+            });
+        }
+
     }
 }
