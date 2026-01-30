@@ -3042,3 +3042,677 @@ XMLDOCS support enabled.
 HWP3 support enabled.
 OneNote support enabled.
 Self checking every 600 seconds.
++++ Started at Thu Jan 29 15:56:25 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627279 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Thu Jan 29 22:05:08 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627279 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
++++ Started at Fri Jan 30 08:57:07 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627279 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 12:10:51 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627279 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 12:12:54 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627279 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
+WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
++++ Started at Fri Jan 30 12:15:02 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\usrClass.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\usrClass.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\usrClass.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\usrClass.dat{6099b7a5-8866-11ef-b860-9843fadcc1ba}.TM.blf
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\usrClass.dat{6099b7a5-8866-11ef-b860-9843fadcc1ba}.TMContainer00000000000000000001.regtrans-ms
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\usrClass.dat{6099b7a5-8866-11ef-b860-9843fadcc1ba}.TMContainer00000000000000000002.regtrans-ms
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\WebCacheLock.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\iconcache_16.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\iconcache_256.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\iconcache_32.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\iconcache_48.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\iconcache_idx.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\thumbcache_16.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\thumbcache_256.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\thumbcache_32.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\thumbcache_96.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Explorer\thumbcache_idx.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Notifications\WPNPRMRY.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\WebCache\V01.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\WebCache\V01tmp.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.jfm
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\ActionsMcpHost.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\bash.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\GameBarElevatedFT_Alias.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\GetHelp.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\idle.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\idle3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\idle3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\microsoftstore.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftWindows.DesktopStickerEditorCentennial.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\mspaint.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\notepad.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\OracleLinux94.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pbrush.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pip.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pip3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pip3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\python.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\python3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\python3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pythonw.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pythonw3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\pythonw3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\SnippingTool.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Spotify.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\store.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\VisualAssist.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\windows365.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\WindowsPackageManagerMCPServer.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\WindowsPackageManagerServer.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\winget.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\wsl.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\wslconfig.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\wt.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\3810OracleAmericaInc.OracleLinux9.4_dm28ctvqnhe9g\OracleLinux94.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\python.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\python3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\WindowsPackageManagerMCPServer.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\WindowsPackageManagerServer.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\winget.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.GetHelp_8wekyb3d8bbwe\GetHelp.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.Paint_8wekyb3d8bbwe\mspaint.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.Paint_8wekyb3d8bbwe\pbrush.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.ScreenSketch_8wekyb3d8bbwe\SnippingTool.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsNotepad_8wekyb3d8bbwe\notepad.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsStore_8wekyb3d8bbwe\microsoftstore.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsStore_8wekyb3d8bbwe\store.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.WindowsTerminal_8wekyb3d8bbwe\wt.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\Microsoft.XboxGamingOverlay_8wekyb3d8bbwe\GameBarElevatedFT_Alias.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftCorporationII.Windows365_8wekyb3d8bbwe\windows365.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftCorporationII.WindowsSubsystemForLinux_8wekyb3d8bbwe\bash.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftCorporationII.WindowsSubsystemForLinux_8wekyb3d8bbwe\wsl.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftCorporationII.WindowsSubsystemForLinux_8wekyb3d8bbwe\wslconfig.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\ActionsMcpHost.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\MicrosoftWindows.DesktopStickerEditorCentennial.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\VisualAssist.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\idle.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\idle3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\idle3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\pip.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\pip3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\pip3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\pythonw.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\pythonw3.13.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\pythonw3.exe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\WindowsApps\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\Spotify.exe
+C:\Users\Avangarde\AppData\Local\Packages\3810OracleAmericaInc.OracleLinux9.4_dm28ctvqnhe9g\LocalState\ext4.vhdx: Can't get file status ERROR
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\CrashpadMetrics-active.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\lockfile
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\BrowserMetrics\BrowserMetrics-697C62F7-4108.pma
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\BrowsingTopicsSiteData
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\DashTrackerDatabase
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\DIPS
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\DIPS-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\ExtensionActivityComp
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\ExtensionActivityEdge
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\ExtensionActivityEdge-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Favicons
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Favicons-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\heavy_ad_intervention_opt_out.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\History
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\History-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Login Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Login Data For Account
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Network Action Predictor
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\ServerCertificate
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\SharedStorage
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\SharedStorage-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Top Sites
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Vpn Tokens
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Web Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Cache\Cache_Data\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Cache\Cache_Data\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Cache\Cache_Data\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Cache\Cache_Data\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\4436a0f49fe66776\ActivitiesCache.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\4436a0f49fe66776\ActivitiesCache.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\4436a0f49fe66776\ActivitiesCache.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\AAD.a5e5427a-ba43-4b37-93cc-b546e0a2a9bf\ActivitiesCache.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\AAD.a5e5427a-ba43-4b37-93cc-b546e0a2a9bf\ActivitiesCache.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\AAD.a5e5427a-ba43-4b37-93cc-b546e0a2a9bf\ActivitiesCache.db-wal
++++ Started at Fri Jan 30 12:49:54 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 12:52:03 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
++++ Started at Fri Jan 30 12:57:06 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 12:57:54 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 13:04:16 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 13:06:48 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Jan 30 13:10:06 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
++++ Started at Fri Jan 30 13:11:13 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627282 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.

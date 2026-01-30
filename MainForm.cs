@@ -53,7 +53,43 @@ namespace SalDefender
             this.MaximizeBox = true;
             this.MinimumSize = new Size(500, 650);
 
+            this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
             InitUI();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                // Rimuove l'icona dalla tray prima di chiudere (evita icone fantasma)
+                if (trayIcon != null)
+                {
+                    trayIcon.Visible = false;
+                    trayIcon.Dispose();
+                }
+
+                // Cerca tutti i processi chiamati "clamd"
+                Process[] processes = Process.GetProcessesByName("clamd");
+
+                foreach (Process proc in processes)
+                {
+                    // Tenta una chiusura gentile prima
+                    proc.CloseMainWindow();
+
+                    // Se non si chiude entro 2 secondi, forza il termine
+                    if (!proc.WaitForExit(2000))
+                    {
+                        proc.Kill();
+                    }
+
+                    proc.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Opzionale: logga l'errore se necessario
+                Debug.WriteLine("Errore durante la chiusura di clamd: " + ex.Message);
+            }
         }
 
         private void ApplyTheme()
@@ -99,9 +135,10 @@ namespace SalDefender
         {
             // Creazione di un menu contestuale rapido per le impostazioni
             ContextMenuStrip settingsMenu = new ContextMenuStrip();
-            
+
             var themeToggle = new ToolStripMenuItem(isDarkMode ? "Passa a Tema Chiaro" : "Passa a Tema Scuro");
-            themeToggle.Click += (s, args) => {
+            themeToggle.Click += (s, args) =>
+            {
                 isDarkMode = !isDarkMode;
                 ApplyTheme();
             };
@@ -114,237 +151,102 @@ namespace SalDefender
             settingsMenu.Show(settingsButton, new Point(0, settingsButton.Height));
         }
 
-        /*   private void InitUI()
-           {
-               logoBox = new PictureBox();
-               logoBox.Size = new Size(64, 64);
-               logoBox.Location = new Point(20, 20);
-               logoBox.SizeMode = PictureBoxSizeMode.Zoom;
-               logoBox.BackColor = Color.Transparent;
 
-               string logoPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bison_logo.png");
-               if (File.Exists(logoPath))
-               {
-                   try
-                   {
-                       Bitmap bmp = new Bitmap(logoPath);
-                       logoBox.Image = bmp;
-                       IntPtr hIcon = bmp.GetHicon();
-                       this.Icon = Icon.FromHandle(hIcon);
-                   }
-                   catch
-                   {
-                       logoBox.BackColor = Color.LightGray;
-                   }
-               }
-               else
-               {
-                   logoBox.BackColor = Color.LightGray;
-               }
 
-               this.Controls.Add(logoBox);
-
-               titleLabel = new Label();
-               titleLabel.Text = "SalDefender";
-               titleLabel.Font = new Font("Segoe UI", 20, FontStyle.Bold);
-               titleLabel.Location = new Point(100, 30);
-               titleLabel.AutoSize = true;
-               this.Controls.Add(titleLabel);
-
-               scanButton = new Button();
-               scanButton.Text = "Scansiona Cartella"; 
-               scanButton.Location = new Point(20, 100);
-               scanButton.Size = new Size(120, 40);
-               scanButton.Click += ScanButton_Click;
-               this.Controls.Add(scanButton);
-
-               updateButton = new Button();
-               updateButton.Text = "Aggiorna Firme";
-               updateButton.Location = new Point(160, 100);
-               updateButton.Size = new Size(120, 40);
-               updateButton.Click += UpdateButton_Click;
-               this.Controls.Add(updateButton);
-
-               settingsButton = new Button();
-               settingsButton.Text = "Impostazioni";
-               settingsButton.Location = new Point(300, 100);
-               settingsButton.Size = new Size(120, 40);
-               settingsButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-               settingsButton.Click += SettingsButton_Click;
-               this.Controls.Add(settingsButton);
-
-               urlTextBox = new TextBox();
-               urlTextBox.PlaceholderText = "Inserisci URL del file da scaricare e scansionare";
-               urlTextBox.Location = new Point(20, 155);
-               urlTextBox.Size = new Size(300, 25);
-               urlTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-               this.Controls.Add(urlTextBox);
-
-               downloadScanButton = new Button();
-               downloadScanButton.Text = "Download & Scansiona";
-               downloadScanButton.Location = new Point(325, 150);
-               downloadScanButton.Size = new Size(135, 35);
-               downloadScanButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-               downloadScanButton.Click += DownloadScanButton_Click;
-               this.Controls.Add(downloadScanButton);
-
-               Label diskScanLabel = new Label();
-               diskScanLabel.Text = "Scansione Disco Completa:";
-               diskScanLabel.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-               diskScanLabel.Location = new Point(20, 200);
-               diskScanLabel.AutoSize = true;
-               this.Controls.Add(diskScanLabel);
-
-               driveComboBox = new ComboBox();
-               driveComboBox.Location = new Point(20, 225);
-               driveComboBox.Size = new Size(100, 25);
-               driveComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-
-               foreach (DriveInfo drive in DriveInfo.GetDrives())
-               {
-                   if (drive.IsReady)
-                   {
-                       driveComboBox.Items.Add($"{drive.Name} ({drive.DriveType})");
-                   }
-               }
-               if (driveComboBox.Items.Count > 0)
-                   driveComboBox.SelectedIndex = 0;
-
-               this.Controls.Add(driveComboBox);
-
-               diskScanButton = new Button();
-               diskScanButton.Text = "Scansiona Disco";
-               diskScanButton.Location = new Point(130, 220);
-               diskScanButton.Size = new Size(120, 35);
-               diskScanButton.Click += DiskScanButton_Click;
-               this.Controls.Add(diskScanButton);
-
-               cancelScanButton = new Button();
-               cancelScanButton.Text = "Annulla";
-               cancelScanButton.Location = new Point(260, 220);
-               cancelScanButton.Size = new Size(80, 35);
-               cancelScanButton.Click += CancelScanButton_Click;
-               cancelScanButton.Enabled = false;
-               this.Controls.Add(cancelScanButton);
-
-               progressLabel = new Label();
-               progressLabel.Text = "Pronto";
-               progressLabel.Location = new Point(20, 265);
-               progressLabel.Size = new Size(440, 20);
-               progressLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-               progressLabel.ForeColor = Color.DarkBlue;
-               this.Controls.Add(progressLabel);
-
-               scanProgressBar = new ProgressBar();
-               scanProgressBar.Location = new Point(20, 290);
-               scanProgressBar.Size = new Size(440, 25);
-               scanProgressBar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-               scanProgressBar.Style = ProgressBarStyle.Continuous;
-               this.Controls.Add(scanProgressBar);
-
-               resultsList = new ListBox();
-               resultsList.Location = new Point(20, 325);
-               resultsList.Size = new Size(440, 280);
-               resultsList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-               this.Controls.Add(resultsList);
-           }*/
 
         private void InitUI()
         {
-
-                        // Configurazione Menu Contestuale della Tray Icon
+            // --- CONFIGURAZIONE TRAY ICON & ICONA FORM ---
             trayMenu = new ContextMenuStrip();
             trayMenu.Items.Add("Apri SalDefender", null, (s, e) => { this.Show(); this.WindowState = FormWindowState.Normal; });
-            trayMenu.Items.Add("-"); // Separatore
+            trayMenu.Items.Add("-");
             trayMenu.Items.Add("Esci", null, (s, e) => Application.Exit());
 
             string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bison_logo.ico");
-
             if (File.Exists(iconPath))
             {
-                // Carica l'icona direttamente dal file
                 this.Icon = new Icon(iconPath);
             }
 
-            // Configurazione della NotifyIcon
-            trayIcon = new NotifyIcon {
-                Icon = this.Icon, // Usa la stessa icona del form
+            trayIcon = new NotifyIcon
+            {
+                Icon = this.Icon,
                 ContextMenuStrip = trayMenu,
                 Text = "SalDefender - Protezione Attiva",
                 Visible = true
             };
 
-        
-
-            // Evento per riaprire con doppio click sulla tray icon
-            trayIcon.DoubleClick += (s, e) => {
+            trayIcon.DoubleClick += (s, e) =>
+            {
                 this.Show();
                 this.WindowState = FormWindowState.Normal;
             };
 
-            // Gestione della riduzione a icona
-            this.Resize += (s, e) => {
-                if (this.WindowState == FormWindowState.Minimized) {
-                    this.Hide(); // Nasconde l'app dalla barra delle applicazioni
+            this.Resize += (s, e) =>
+            {
+                if (this.WindowState == FormWindowState.Minimized)
+                {
+                    this.Hide();
                     trayIcon.ShowBalloonTip(3000, "SalDefender", "L'app è ora attiva in background.", ToolTipIcon.Info);
                 }
             };
 
-            // 1. Configurazione Form Principale
+            // --- CONFIGURAZIONE FORM PRINCIPALE ---
             this.Text = "SalDefender - Security Suite";
-            this.MinimumSize = new Size(600, 700);
+            this.MinimumSize = new Size(600, 750); // Leggermente più alto per le nuove opzioni
             this.Padding = new Padding(15);
             this.Font = new Font("Segoe UI", 9f);
             this.BackColor = Color.White;
 
-            // 2. Layout Radice (TableLayoutPanel per fluidità)
+
+            // 2. Layout Radice
             var mainLayout = new TableLayoutPanel
             {
                 Dock = DockStyle.Fill,
                 ColumnCount = 1,
                 RowCount = 5
             };
+            // All'interno di InitUI()...
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80f));  // Header
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Actions
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 120f)); // Scan Options
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Action Bar
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 200f)); // <--- Alzato a 200f per sicurezza visiva
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Progress
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));  // Results List
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));  // Results
 
             this.Controls.Add(mainLayout);
 
-            // --- HEADER SECTION ---
+            // --- 0: HEADER SECTION ---
             var headerPanel = new Panel { Dock = DockStyle.Fill };
             SetupHeader(headerPanel);
             mainLayout.Controls.Add(headerPanel, 0, 0);
 
-            // --- BUTTON BAR (Action Bar) ---
-            //var actionBar = new FlowLayoutPanel { Dock = DockStyle.Fill, Gaps = new Padding(0, 10, 0, 0) };
-            // CORREZIONE 1: FlowLayoutPanel non ha "Gaps", usa Padding
-            var actionBar = new FlowLayoutPanel { 
-                Dock = DockStyle.Fill, 
-                Padding = new Padding(0, 10, 0, 0) // Spazio interno
+            // --- 1: ACTION BAR (Solo pulsanti di sistema) ---
+            var actionBar = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                Padding = new Padding(0, 10, 0, 0)
             };
 
-            StyleActionButton(scanButton = new Button { Text = "Scansiona Cartella", Width = 140 }, ScanButton_Click);
+            // Rimosso scanButton da qui
             StyleActionButton(updateButton = new Button { Text = "Aggiorna Firme", Width = 140 }, UpdateButton_Click);
             StyleActionButton(settingsButton = new Button { Text = "Impostazioni", Width = 140 }, SettingsButton_Click);
 
-            actionBar.Controls.AddRange(new Control[] { scanButton, updateButton, settingsButton });
+            actionBar.Controls.AddRange(new Control[] { updateButton, settingsButton });
             mainLayout.Controls.Add(actionBar, 0, 1);
 
-            // --- SCAN OPTIONS (URL & Disk) ---
+            // --- 2: OPZIONI DI SCANSIONE (Incluso pulsante Cartella) ---
             var optionsPanel = new GroupBox { Text = "Opzioni di Scansione", Dock = DockStyle.Fill, Padding = new Padding(10) };
             SetupScanOptions(optionsPanel);
             mainLayout.Controls.Add(optionsPanel, 0, 2);
 
-            // --- PROGRESS SECTION ---
+            // --- 3: PROGRESS SECTION ---
             var progressPanel = new Panel { Dock = DockStyle.Fill };
             progressLabel = new Label { Text = "Pronto", Dock = DockStyle.Top, Height = 25, ForeColor = Color.DimGray };
             scanProgressBar = new ProgressBar { Dock = DockStyle.Bottom, Height = 20, Style = ProgressBarStyle.Continuous };
             progressPanel.Controls.AddRange(new Control[] { progressLabel, scanProgressBar });
             mainLayout.Controls.Add(progressPanel, 0, 3);
 
-            // --- RESULTS ---
+            // --- 4: RESULTS ---
             resultsList = new ListBox
             {
                 Dock = DockStyle.Fill,
@@ -356,52 +258,62 @@ namespace SalDefender
 
             LoadDrives();
         }
-
-        // CORREZIONE 2: Aggiungi il metodo SetupScanOptions che mancava
         private void SetupScanOptions(GroupBox container)
         {
-            var layout = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 2 };
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70f));
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30f));
+            var layout = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                ColumnCount = 2,
+                RowCount = 3,
+                Padding = new Padding(5)
+            };
 
-            // Riga 1: URL Download
-            urlTextBox = new TextBox { 
-                PlaceholderText = "URL file...", 
-                Dock = DockStyle.Fill,
-                Margin = new Padding(0, 5, 5, 5)
-            };
-            downloadScanButton = new Button { 
-                Text = "Download & Scan", 
-                Dock = DockStyle.Fill,
-                Height = 30 
-            };
+            // Proporzioni colonne: 65% input/testo, 35% pulsanti
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65f));
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35f));
+
+            // Altezza uniforme per le 3 righe
+            for (int i = 0; i < 3; i++)
+                layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 45f));
+
+            // --- Riga 0: URL Download ---
+            urlTextBox = new TextBox { PlaceholderText = "URL file...", Dock = DockStyle.Fill, Margin = new Padding(0, 8, 5, 0) };
+            downloadScanButton = new Button { Text = "Download & Scan", Dock = DockStyle.Fill, Height = 30 };
             downloadScanButton.Click += DownloadScanButton_Click;
 
-            // Riga 2: Disk Scan
-            driveComboBox = new ComboBox { 
-                DropDownStyle = ComboBoxStyle.DropDownList, 
-                Dock = DockStyle.Fill,
-                Margin = new Padding(0, 5, 5, 5)
-            };
-            
-            var diskBtnLayout = new FlowLayoutPanel { Dock = DockStyle.Fill, Margin = new Padding(0) };
-            diskScanButton = new Button { Text = "Scan Disco", Width = 90 };
-            cancelScanButton = new Button { Text = "Annulla", Width = 70, Enabled = false };
-            
+            layout.Controls.Add(urlTextBox, 0, 0);
+            layout.Controls.Add(downloadScanButton, 1, 0);
+
+            // --- Riga 1: Disk Scan (Fix per il pulsante Annulla) ---
+            driveComboBox = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill, Margin = new Padding(0, 8, 5, 0) };
+
+            // Usiamo un TableLayoutPanel interno invece di FlowLayoutPanel per precisione millimetrica
+            var diskButtonsTable = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1, Margin = new Padding(0) };
+            diskButtonsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
+            diskButtonsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
+
+            diskScanButton = new Button { Text = "Scan Disco", Dock = DockStyle.Fill, Margin = new Padding(2) };
+            cancelScanButton = new Button { Text = "Annulla", Dock = DockStyle.Fill, Enabled = false, Margin = new Padding(2) };
+
             diskScanButton.Click += DiskScanButton_Click;
             cancelScanButton.Click += CancelScanButton_Click;
 
-            diskBtnLayout.Controls.AddRange(new Control[] { diskScanButton, cancelScanButton });
+            diskButtonsTable.Controls.Add(diskScanButton, 0, 0);
+            diskButtonsTable.Controls.Add(cancelScanButton, 1, 0);
 
-            // Aggiunta al layout
-            layout.Controls.Add(urlTextBox, 0, 0);
-            layout.Controls.Add(downloadScanButton, 1, 0);
             layout.Controls.Add(driveComboBox, 0, 1);
-            layout.Controls.Add(diskBtnLayout, 1, 1);
+            layout.Controls.Add(diskButtonsTable, 1, 1);
+
+            // --- Riga 2: Scansione Cartella ---
+            Label folderLabel = new Label { Text = "Analizza una cartella specifica:", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill };
+            scanButton = new Button { Text = "Sfoglia Cartella", Dock = DockStyle.Fill, Height = 30 };
+            scanButton.Click += ScanButton_Click;
+
+            layout.Controls.Add(folderLabel, 0, 2);
+            layout.Controls.Add(scanButton, 1, 2);
 
             container.Controls.Add(layout);
         }
-
         private void SetupHeader(Panel p)
         {
             logoBox = new PictureBox { Size = new Size(64, 64), Location = new Point(0, 0), SizeMode = PictureBoxSizeMode.Zoom };
