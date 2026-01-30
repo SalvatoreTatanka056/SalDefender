@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+  <OutputType>WinExe</OutputType>
+  <TargetFramework>net8.0-windows</TargetFramework>
+  <Nullable>enable</Nullable>
+  <UseWPF>true</UseWPF> <ApplicationIcon>bison_logo.ico</ApplicationIcon>
+  <UseWindowsForms>true</UseWindowsForms>
+  <ImplicitUsings>enable</ImplicitUsings>
+</PropertyGroup>
   <ItemGroup>
     <PackageReference Include="nClam" Version="9.0.0" />
   </ItemGroup>
@@ -14,4 +15,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+  <None Update="bison_logo.ico">
+    <Pack>True</Pack>
+  </None>
+</ItemGroup>
 </Project>
