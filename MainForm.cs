@@ -97,9 +97,9 @@ namespace SalDefender
 
                 clamdProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(exePath);
                 clamdProcess.StartInfo.UseShellExecute = true; // Necessario per avere MainWindowHandle
-                clamdProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+                clamdProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 clamdProcess.StartInfo.CreateNoWindow = true; // Nasconde la finestra
-                
+
 
                 clamdProcess.Start();
 
@@ -118,6 +118,29 @@ namespace SalDefender
             {
                 MessageBox.Show("Errore durante l'avvio di clamd: " + ex.Message);
             }
+
+            VerifyClamdStatus();
+        }
+
+        private void VerifyClamdStatus()
+        {
+            // Cerchiamo i processi attivi con il nome "clamd"
+            var processes = Process.GetProcessesByName("clamd");
+
+            while (processes.Length < 0)
+            {
+                resultsList.Items.Add("Attendere avvio clamd...");
+                System.Threading.Thread.Sleep(2000); // Attende mezzo secondo prima di ricontrollare
+            }
+
+            var proc = processes[0];
+            // Verifichiamo che non sia bloccato o in fase di chiusura
+            if (!proc.HasExited)
+            {
+                resultsList.Items.Add($"CLAMD -> ATTIVO (PID: {proc.Id}, RAM: {proc.WorkingSet64 / 1024 / 1024} MB)");
+
+            }
+
         }
 
         private void SetShellTransparency(bool transparent)
