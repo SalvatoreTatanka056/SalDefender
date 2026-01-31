@@ -41,6 +41,9 @@ namespace SalDefender
         private Button cancelScanButton;
         private CancellationTokenSource cancellationTokenSource;
 
+        // Dichiarazione in alto con le altre variabili
+        private Label liveStatusLabel;
+
         private NotifyIcon trayIcon;
         private ContextMenuStrip trayMenu;
         private Process clamdProcess; // Questa è la variabile che mancava
@@ -63,23 +66,32 @@ namespace SalDefender
 
         private void SetupLiveProtection(string pathToCheck)
         {
-            liveWatcher = new FileSystemWatcher();
-            liveWatcher.Path = pathToCheck;
+            try
+            {
+                liveWatcher = new FileSystemWatcher();
+                liveWatcher.Path = pathToCheck;
+                liveWatcher.IncludeSubdirectories = true;
+                liveWatcher.Created += OnFileCreated;
+                liveWatcher.EnableRaisingEvents = true;
 
-            // Monitora la creazione di nuovi file e le modifiche
-            liveWatcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
 
-            // Includi sottocartelle
-            liveWatcher.IncludeSubdirectories = true;
 
-            // Evento scatenato alla creazione di un file
-            liveWatcher.Created += OnFileCreated;
 
-            // Filtro (opzionale, es. tutti i file)
-            liveWatcher.Filter = "*.*";
+                // Aggiungi un messaggio alla lista risultati
+                resultsList.Items.Insert(0, $"[{DateTime.Now:HH:mm:ss}] Protezione Real-time attivata su: {pathToCheck}");
 
-            // Abilita l'ascolto degli eventi
-            liveWatcher.EnableRaisingEvents = true;
+                // Aggiorna il fumetto sulla Tray Icon (se presente)
+                if (trayIcon != null)
+                {
+                    trayIcon.BalloonTipTitle = "SalDefender";
+                    trayIcon.BalloonTipText = "Protezione Live attivata correttamente.";
+                    trayIcon.ShowBalloonTip(3000);
+                }
+            }
+            catch (Exception ex)
+            {
+                resultsList.Items.Insert(0, "Errore attivazione Live: " + ex.Message);
+            }
         }
 
         private async void OnFileCreated(object sender, FileSystemEventArgs e)
@@ -148,6 +160,7 @@ namespace SalDefender
             this.MaximizeBox = true;
             this.MinimumSize = new Size(500, 650);
 
+
             this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
             InitUI();
         }
@@ -202,11 +215,7 @@ namespace SalDefender
 
             VerifyClamdStatus();
 
-            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-            if (Directory.Exists(downloadsPath))
-            {
-                SetupLiveProtection(downloadsPath);
-            }
+
         }
 
         private void VerifyClamdStatus()
@@ -349,6 +358,9 @@ namespace SalDefender
             trayMenu.Items.Add("-");
             trayMenu.Items.Add("Esci", null, (s, e) => Application.Exit());
 
+
+
+
             string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bison_logo-removebg-preview.ico");
 
             if (File.Exists(iconPath))
@@ -475,6 +487,24 @@ namespace SalDefender
                     try { clamdProcess.Kill(); } catch { }
                 }
             };
+
+            // Dentro InitUI()
+            liveStatusLabel = new Label();
+            liveStatusLabel.Text = "Live: Disattivato";
+            liveStatusLabel.ForeColor = Color.Red;
+            liveStatusLabel.Location = new Point(350, 200); // Regola la posizione
+            mainLayout.Controls.Add(liveStatusLabel);
+
+            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            if (Directory.Exists(downloadsPath))
+            {
+                SetupLiveProtection(downloadsPath);
+                // --- SEGNA L'ATTIVAZIONE QUI ---
+                liveStatusLabel.Text = "Live: ATTIVO";
+                liveStatusLabel.ForeColor = Color.Green;
+            }
+
+
 
             LoadDrives();
         }
