@@ -97,7 +97,9 @@ namespace SalDefender
 
                 clamdProcess.StartInfo.WorkingDirectory = Path.GetDirectoryName(exePath);
                 clamdProcess.StartInfo.UseShellExecute = true; // Necessario per avere MainWindowHandle
-                clamdProcess.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                clamdProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+                clamdProcess.StartInfo.CreateNoWindow = true; // Nasconde la finestra
+                
 
                 clamdProcess.Start();
 
