@@ -509,6 +509,40 @@ namespace SalDefender
             LoadDrives();
         }
 
+        public async Task MoveToQuarantineAsync(string originalPath, string quarantineDir, string virusName)
+        {
+            try
+            {
+                if (!Directory.Exists(quarantineDir))
+                    Directory.CreateDirectory(quarantineDir);
+
+                // Genera un nome file sicuro: data_GUID.quarantine
+                string fileId = Guid.NewGuid().ToString("N");
+                string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                string newFileName = $"{timestamp}_{fileId}.quarantine";
+                string destinationPath = Path.Combine(quarantineDir, newFileName);
+
+                // 1. Sposta il file fisico
+                File.Move(originalPath, destinationPath);
+
+                // 2. Crea un file di metadata (Opzionale ma consigliato)
+                // Ti permette di sapere cos'era il file originale senza toccare quello infetto
+                string metadataPath = destinationPath + ".json";
+                string info = $@"{{
+            ""OriginalPath"": ""{originalPath.Replace("\\", "\\\\")}"",
+            ""Detection"": ""{virusName}"",
+            ""Date"": ""{DateTime.Now}""
+        }}";
+
+                await File.WriteAllTextAsync(metadataPath, info);
+
+                Console.WriteLine($"[SICUREZZA] File isolato con ID: {fileId}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERRORE] Impossibile isolare il file: {ex.Message}");
+            }
+        }
 
         private void SetScanningMode(bool isScanning)
         {
@@ -633,7 +667,107 @@ namespace SalDefender
             foreach (var d in drives) driveComboBox.Items.Add($"{d.Name} ({d.DriveType})");
             if (driveComboBox.Items.Count > 0) driveComboBox.SelectedIndex = 0;
         }
+
         private async void ScanButton_Click(object sender, EventArgs e)
+        {
+            resultsList.Items.Clear();
+            using var folderDialog = new FolderBrowserDialog();
+
+            if (folderDialog.ShowDialog() != DialogResult.OK) return;
+
+            string folderPath = folderDialog.SelectedPath;
+
+            // Configurazione inizializzazione come in DiskScan
+            cancellationTokenSource = new CancellationTokenSource();
+            var token = cancellationTokenSource.Token;
+
+            SetUiState(false); // Disabilita i tasti e abilita "Annulla"
+            resultsList.Items.Add($"SCANSIONE CARTELLA: {folderPath}");
+
+            scanProgressBar.Value = 0;
+            progressLabel.Text = "Preparazione...";
+
+            // Progress reporter per aggiornare la UI in modo thread-safe
+            var progress = new Progress<ScanProgress>(p =>
+            {
+                if (p.Message != null) progressLabel.Text = p.Message;
+                scanProgressBar.Value = p.Percent;
+                if (p.NewLog != null) resultsList.Items.Add(p.NewLog);
+
+                // Auto-scroll della lista
+                if (resultsList.Items.Count > 0)
+                    resultsList.TopIndex = resultsList.Items.Count - 1;
+            });
+
+
+            try
+            {
+                var allFiles = await Task.Run(() => SafeGetFiles(folderPath, token), token);
+                int totalFiles = allFiles.Count;
+                if (totalFiles == 0) { /* ... */ return; }
+
+                int filesScanned = 0;
+                int threatsFound = 0;
+                var clam = new ClamClient("localhost", 3310);
+
+                // Opzioni per il parallelismo asincrono
+                var parallelOptions = new ParallelOptions
+                {
+                    MaxDegreeOfParallelism = 8,
+                    CancellationToken = token
+                };
+
+                // Usa ForEachAsync per gestire correttamente i Task
+                await Parallel.ForEachAsync(allFiles, parallelOptions, async (file, ct) =>
+                {
+                    try
+                    {
+                        // Scansione asincrona vera (senza .Result)
+                        var scanResult = await clam.ScanFileOnServerAsync(file, ct);
+
+                        int currentScanned = Interlocked.Increment(ref filesScanned);
+                        int pct = (int)((double)currentScanned / totalFiles * 100);
+
+                        if (scanResult.Result == ClamScanResults.VirusDetected)
+                        {
+                            // ORA ASPETTIAMO che la quarantena finisca davvero
+                            await MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
+
+                            Interlocked.Increment(ref threatsFound);
+                            ((IProgress<ScanProgress>)progress).Report(new ScanProgress
+                            {
+                                NewLog = $"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}",
+                                Percent = pct
+                            });
+                        }
+
+                        if (currentScanned % 10 == 0 || currentScanned == totalFiles)
+                        {
+                            ((IProgress<ScanProgress>)progress).Report(new ScanProgress
+                            {
+                                Message = $"Analisi: {currentScanned}/{totalFiles}",
+                                Percent = pct
+                            });
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Logga l'errore del singolo file senza bloccare tutto
+                        Debug.WriteLine($"Errore file {file}: {ex.Message}");
+                    }
+                });
+
+                resultsList.Items.Add($"--- Scansione completata. Minacce: {threatsFound} ---");
+            }finally{
+                
+                 SetUiState(true); // Riabilita l'interfaccia
+                SetScanningMode(false);
+                cancellationTokenSource?.Dispose();
+                cancellationTokenSource = null;
+            }
+        }
+    // ... [Resto del codice nel catch/finally invariato] ...
+        /*private async void ScanButton_Click(object sender, EventArgs e)
         {
             resultsList.Items.Clear();
             using var folderDialog = new FolderBrowserDialog();
@@ -702,11 +836,15 @@ namespace SalDefender
                         int pct = (int)((double)filesScanned / totalFiles * 100);
 
                         if (scanResult.Result == ClamScanResults.VirusDetected)
-                        {
+                        { 
+                            MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
+
                             Interlocked.Increment(ref threatsFound);
                             ((IProgress<ScanProgress>)progress).Report(new ScanProgress
                             {
                                 NewLog = $"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}",
+
+                            
                                 Percent = pct
                             });
                         }
@@ -721,7 +859,7 @@ namespace SalDefender
                             });
                         }
                     }
-                    catch (Exception) { /* Salta file che ClamAV non riesce a leggere al momento */ }
+                    catch (Exception) { }
                 }), token);
 
                 resultsList.Items.Add($"--- Scansione completata. Minacce: {threatsFound} ---");
@@ -742,7 +880,7 @@ namespace SalDefender
                 cancellationTokenSource?.Dispose();
                 cancellationTokenSource = null;
             }
-        }
+        }*/
 
         // Funzione SafeGetFiles aggiornata con supporto al CancellationToken
         private List<string> SafeGetFiles(string path, CancellationToken token)
