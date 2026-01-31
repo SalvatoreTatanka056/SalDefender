@@ -58,6 +58,87 @@ namespace SalDefender
         private const int WS_EX_LAYERED = 0x80000;
         private const int LWA_ALPHA = 0x2;
 
+        private FileSystemWatcher liveWatcher;
+        private bool isLiveProtectionEnabled = false;
+
+        private void SetupLiveProtection(string pathToCheck)
+        {
+            liveWatcher = new FileSystemWatcher();
+            liveWatcher.Path = pathToCheck;
+
+            // Monitora la creazione di nuovi file e le modifiche
+            liveWatcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
+
+            // Includi sottocartelle
+            liveWatcher.IncludeSubdirectories = true;
+
+            // Evento scatenato alla creazione di un file
+            liveWatcher.Created += OnFileCreated;
+
+            // Filtro (opzionale, es. tutti i file)
+            liveWatcher.Filter = "*.*";
+
+            // Abilita l'ascolto degli eventi
+            liveWatcher.EnableRaisingEvents = true;
+        }
+
+        private async void OnFileCreated(object sender, FileSystemEventArgs e)
+        {
+            string filePath = e.FullPath;
+
+            // Aspetta un istante per assicurarti che il file non sia ancora bloccato dal processo che lo ha creato
+            await Task.Delay(500);
+
+            try
+            {
+                var clamClient = new ClamClient("localhost", 3310);
+                var scanResult = await clamClient.ScanFileOnServerAsync(filePath);
+
+                this.Invoke((MethodInvoker)delegate
+                {
+                    switch (scanResult.Result)
+                    {
+                        case ClamScanResults.Clean:
+                            resultsList.Items.Insert(0, $"[LIVE] Pulito: {e.Name}");
+                            break;
+                        case ClamScanResults.VirusDetected:
+                            resultsList.Items.Insert(0, $"[!!!] MINACCIA: {e.Name} -> {scanResult.RawResult}");
+                            // Qui potresti aggiungere il codice per spostare il file in quarantena
+                            break;
+                        case ClamScanResults.Error:
+                            resultsList.Items.Insert(0, $"[ERRORE] Scansione fallita: {e.Name}");
+                            break;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    resultsList.Items.Insert(0, $"[ERRORE LIVE] {ex.Message}");
+                });
+            }
+        }
+
+        private void LiveProtectionToggle_Click(object sender, EventArgs e)
+        {
+            if (!isLiveProtectionEnabled)
+            {
+                // Esempio: monitora la cartella dell'utente
+                string userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                SetupLiveProtection(userPath);
+                isLiveProtectionEnabled = true;
+                resultsList.Items.Insert(0, ">>> Protezione Live ATTIVATA");
+            }
+            else
+            {
+                liveWatcher.EnableRaisingEvents = false;
+                liveWatcher.Dispose();
+                isLiveProtectionEnabled = false;
+                resultsList.Items.Insert(0, ">>> Protezione Live DISATTIVATA");
+            }
+        }
+
         public MainForm()
         {
             this.Text = "SalDefender";
@@ -120,6 +201,12 @@ namespace SalDefender
             }
 
             VerifyClamdStatus();
+
+            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
+            if (Directory.Exists(downloadsPath))
+            {
+                SetupLiveProtection(downloadsPath);
+            }
         }
 
         private void VerifyClamdStatus()
