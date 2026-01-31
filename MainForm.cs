@@ -699,105 +699,6 @@ namespace SalDefender
                     resultsList.TopIndex = resultsList.Items.Count - 1;
             });
 
-
-            try
-            {
-                var allFiles = await Task.Run(() => SafeGetFiles(folderPath, token), token);
-                int totalFiles = allFiles.Count;
-                if (totalFiles == 0) { /* ... */ return; }
-
-                int filesScanned = 0;
-                int threatsFound = 0;
-                var clam = new ClamClient("localhost", 3310);
-
-                // Opzioni per il parallelismo asincrono
-                var parallelOptions = new ParallelOptions
-                {
-                    MaxDegreeOfParallelism = 8,
-                    CancellationToken = token
-                };
-
-                // Usa ForEachAsync per gestire correttamente i Task
-                await Parallel.ForEachAsync(allFiles, parallelOptions, async (file, ct) =>
-                {
-                    try
-                    {
-                        // Scansione asincrona vera (senza .Result)
-                        var scanResult = await clam.ScanFileOnServerAsync(file, ct);
-
-                        int currentScanned = Interlocked.Increment(ref filesScanned);
-                        int pct = (int)((double)currentScanned / totalFiles * 100);
-
-                        if (scanResult.Result == ClamScanResults.VirusDetected)
-                        {
-                            // ORA ASPETTIAMO che la quarantena finisca davvero
-                            await MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
-
-                            Interlocked.Increment(ref threatsFound);
-                            ((IProgress<ScanProgress>)progress).Report(new ScanProgress
-                            {
-                                NewLog = $"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}",
-                                Percent = pct
-                            });
-                        }
-
-                        if (currentScanned % 10 == 0 || currentScanned == totalFiles)
-                        {
-                            ((IProgress<ScanProgress>)progress).Report(new ScanProgress
-                            {
-                                Message = $"Analisi: {currentScanned}/{totalFiles}",
-                                Percent = pct
-                            });
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        // Logga l'errore del singolo file senza bloccare tutto
-                        Debug.WriteLine($"Errore file {file}: {ex.Message}");
-                    }
-                });
-
-                resultsList.Items.Add($"--- Scansione completata. Minacce: {threatsFound} ---");
-            }finally{
-                
-                 SetUiState(true); // Riabilita l'interfaccia
-                SetScanningMode(false);
-                cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
-            }
-        }
-    // ... [Resto del codice nel catch/finally invariato] ...
-        /*private async void ScanButton_Click(object sender, EventArgs e)
-        {
-            resultsList.Items.Clear();
-            using var folderDialog = new FolderBrowserDialog();
-
-            if (folderDialog.ShowDialog() != DialogResult.OK) return;
-
-            string folderPath = folderDialog.SelectedPath;
-
-            // Configurazione inizializzazione come in DiskScan
-            cancellationTokenSource = new CancellationTokenSource();
-            var token = cancellationTokenSource.Token;
-
-            SetUiState(false); // Disabilita i tasti e abilita "Annulla"
-            resultsList.Items.Add($"SCANSIONE CARTELLA: {folderPath}");
-
-            scanProgressBar.Value = 0;
-            progressLabel.Text = "Preparazione...";
-
-            // Progress reporter per aggiornare la UI in modo thread-safe
-            var progress = new Progress<ScanProgress>(p =>
-            {
-                if (p.Message != null) progressLabel.Text = p.Message;
-                scanProgressBar.Value = p.Percent;
-                if (p.NewLog != null) resultsList.Items.Add(p.NewLog);
-
-                // Auto-scroll della lista
-                if (resultsList.Items.Count > 0)
-                    resultsList.TopIndex = resultsList.Items.Count - 1;
-            });
-
             try
             {
                 // 1. Recupero file (senza bloccare UI e con supporto annullamento)
@@ -824,7 +725,7 @@ namespace SalDefender
                     CancellationToken = token
                 };
 
-                await Task.Run(() => Parallel.ForEach(allFiles, parallelOptions, (file) =>
+                await Task.Run(() => Parallel.ForEach(allFiles, parallelOptions, async (file) =>
                 {
                     try
                     {
@@ -837,7 +738,7 @@ namespace SalDefender
 
                         if (scanResult.Result == ClamScanResults.VirusDetected)
                         { 
-                            MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
+                            await MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
 
                             Interlocked.Increment(ref threatsFound);
                             ((IProgress<ScanProgress>)progress).Report(new ScanProgress
@@ -880,7 +781,7 @@ namespace SalDefender
                 cancellationTokenSource?.Dispose();
                 cancellationTokenSource = null;
             }
-        }*/
+        }
 
         // Funzione SafeGetFiles aggiornata con supporto al CancellationToken
         private List<string> SafeGetFiles(string path, CancellationToken token)
@@ -1170,7 +1071,7 @@ namespace SalDefender
 
                 resultsList.Items.Add($"Scansione completata. Minacce: {threatsFound}");
             }
-            catch (OperationCanceledException) { resultsList.Items.Add("⚠️ Scansione interrotta."); }
+            catch (OperationCanceledException) { resultsList.Items.Add("⚠️ Scansione interrotta dall'utente."); }
             catch (Exception ex) { MessageBox.Show($"Errore: {ex.Message}"); }
             finally { SetUiState(true); SetScanningMode(false); }
         }
