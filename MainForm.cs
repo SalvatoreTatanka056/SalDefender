@@ -64,6 +64,9 @@ namespace SalDefender
         private FileSystemWatcher liveWatcher;
         private bool isLiveProtectionEnabled = false;
 
+
+
+
         private void SetupLiveProtection(string pathToCheck)
         {
             try
@@ -97,8 +100,6 @@ namespace SalDefender
         private async void OnFileCreated(object sender, FileSystemEventArgs e)
         {
             string filePath = e.FullPath;
-
-            // Aspetta un istante per assicurarti che il file non sia ancora bloccato dal processo che lo ha creato
             await Task.Delay(500);
 
             try
@@ -113,10 +114,22 @@ namespace SalDefender
                         case ClamScanResults.Clean:
                             resultsList.Items.Insert(0, $"[LIVE] Pulito: {e.Name}");
                             break;
+
                         case ClamScanResults.VirusDetected:
+                            // --- AGGIUNTA: Notifica e Suono ---
                             resultsList.Items.Insert(0, $"[!!!] MINACCIA: {e.Name} -> {scanResult.RawResult}");
-                            // Qui potresti aggiungere il codice per spostare il file in quarantena
+
+                            // Riproduce il suono di sistema (Beep o Asterisk)
+                            System.Media.SystemSounds.Exclamation.Play();
+
+                            // Mostra il fumetto (Balloon Tip) se la trayIcon è configurata
+                            if (trayIcon != null)
+                            {
+                                trayIcon.ShowBalloonTip(5000, "Virus Rilevato!", $"Minaccia trovata in: {e.Name}", ToolTipIcon.Error);
+                            }
+                            // ----------------------------------
                             break;
+
                         case ClamScanResults.Error:
                             resultsList.Items.Insert(0, $"[ERRORE] Scansione fallita: {e.Name}");
                             break;
@@ -132,6 +145,7 @@ namespace SalDefender
             }
         }
 
+   
         private void LiveProtectionToggle_Click(object sender, EventArgs e)
         {
             if (!isLiveProtectionEnabled)
@@ -153,6 +167,14 @@ namespace SalDefender
 
         public MainForm()
         {
+
+            if (Program.IsAlreadyRunning())
+            {
+                MessageBox.Show("Il programma è già in esecuzione.", "SalDefender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Environment.Exit(0); // Chiude l'istanza corrente
+                return;
+            }
+
             this.Text = "SalDefender";
             this.Size = new Size(500, 650);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -737,7 +759,7 @@ namespace SalDefender
                         int pct = (int)((double)filesScanned / totalFiles * 100);
 
                         if (scanResult.Result == ClamScanResults.VirusDetected)
-                        { 
+                        {
                             await MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
 
                             Interlocked.Increment(ref threatsFound);
@@ -745,7 +767,7 @@ namespace SalDefender
                             {
                                 NewLog = $"🧨 MINACCIA: {Path.GetFileName(file)} - {scanResult.RawResult}",
 
-                            
+
                                 Percent = pct
                             });
                         }

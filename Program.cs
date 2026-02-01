@@ -4,8 +4,31 @@ using SalDefender; // Aggiungi questa riga
 
 namespace SalDefender
 {
+
+     
+
     static class Program
     {
+
+    private static Mutex mutex = null;
+
+    public static bool IsAlreadyRunning()
+    {
+        const string appName = "SalDefenderUniqueName";
+        bool createdNew;
+
+        // Tenta di creare un Mutex con un nome unico
+        mutex = new Mutex(true, appName, out createdNew);
+
+        if (!createdNew)
+        {
+            // Se createdNew è false, significa che il Mutex esiste già
+            // e quindi un'istanza del programma è già attiva
+            return true;
+        }
+        return false;
+    }
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
