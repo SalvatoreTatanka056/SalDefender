@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Threading;
 using nClam;
 using System.Diagnostics;
+using System.Linq.Expressions;
+using System.Collections.Concurrent;
+
 
 namespace SalDefender
 {
@@ -79,10 +82,9 @@ namespace SalDefender
                 liveWatcher.Path = pathToCheck;
                 liveWatcher.IncludeSubdirectories = true;
                 liveWatcher.Created += OnFileCreated;
+                liveWatcher.Renamed +=   OnFileCreated;
                 liveWatcher.EnableRaisingEvents = true;
-
-
-
+                liveWatcher.InternalBufferSize = 65536;
 
                 // Aggiungi un messaggio alla lista risultati
                 resultsList.Items.Insert(0, $"[{DateTime.Now:HH:mm:ss}] Protezione Real-time attivata su: {pathToCheck}");
@@ -103,70 +105,95 @@ namespace SalDefender
 
         private async Task WaitForFileReady(string filePath)
         {
+
             int attempts = 0;
-            while (attempts < 5)
+            while (attempts < 1)
             {
                 try
                 {
                     using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
                     {
+                        resultsList.Items.Insert(0, $"file non bloccato {filePath}");
+                        attempts++;
                         return; // Il file è pronto e accessibile
                     }
                 }
-                catch (IOException)
+                catch (IOException ex)
                 {
+                    // Il file è ancora bloccato, attendi un po' prima di riprovare
+                    await Task.Delay(2000);
                     attempts++;
-                    await Task.Delay(1000); // Attendi 1 secondo prima di riprovare
                 }
             }
         }
 
-        private async void OnFileCreated(object sender, FileSystemEventArgs e)
+
+        // 1. Definisci una coda sicura per i thread
+        private ConcurrentQueue<string> _filesToScan = new ConcurrentQueue<string>();
+        private bool _isProcessing = false;
+
+        private void OnFileCreated(object sender, FileSystemEventArgs e)
         {
-            string filePath = e.FullPath;
-            await WaitForFileReady(filePath);
+            // L'unica cosa che fa l'evento è aggiungere alla coda e uscire subito
+            _filesToScan.Enqueue(e.FullPath);
+            
 
-            try
+            // Avvia il processore se non è già attivo
+            if (!_isProcessing)
             {
-                var clamClient = new ClamClient("localhost", 3310);
-                var scanResult = await clamClient.ScanFileOnServerAsync(filePath);
+                Task.Run(() => ProcessQueue());
+            }
+        }
 
-                this.Invoke((MethodInvoker)delegate
+        private async Task ProcessQueue()
+        {
+            _isProcessing = true;
+
+            while (_filesToScan.TryDequeue(out string filePath))
+            {
+                try
                 {
-                    switch (scanResult.Result)
+                    var clamClient = new ClamClient("localhost", 3310);
+                    var scanResult = await clamClient.ScanFileOnServerAsync(filePath);
+
+                    this.Invoke((MethodInvoker)delegate
                     {
-                        case ClamScanResults.Clean:
-                            resultsList.Items.Insert(0, $"[LIVE] Pulito: {e.Name}");
-                            break;
+                        switch (scanResult.Result)
+                        {
+                            case ClamScanResults.Clean:
+                                resultsList.Items.Insert(0, $"[LIVE] Pulito: {filePath}");
+                                break;
 
-                        case ClamScanResults.VirusDetected:
-                            // --- AGGIUNTA: Notifica e Suono ---
-                            resultsList.Items.Insert(0, $"[!!!] MINACCIA: {e.Name} -> {scanResult.RawResult}");
+                            case ClamScanResults.VirusDetected:
+                                // --- AGGIUNTA: Notifica e Suono ---
+                                resultsList.Items.Insert(0, $"[!!!] MINACCIA: {filePath} -> {scanResult.RawResult}");
 
-                            // Riproduce il suono di sistema (Beep o Asterisk)
-                            System.Media.SystemSounds.Exclamation.Play();
+                                // Riproduce il suono di sistema (Beep o Asterisk)
+                                System.Media.SystemSounds.Exclamation.Play();
 
-                            // Mostra il fumetto (Balloon Tip) se la trayIcon è configurata
-                            if (trayIcon != null)
-                            {
-                                trayIcon.ShowBalloonTip(5000, "Virus Rilevato!", $"Minaccia trovata in: {e.Name}", ToolTipIcon.Error);
-                            }
-                            // ----------------------------------
-                            break;
+                                // Mostra il fumetto (Balloon Tip) se la trayIcon è configurata
+                                if (trayIcon != null)
+                                {
+                                    trayIcon.ShowBalloonTip(5000, "Virus Rilevato!", $"Minaccia trovata in: {filePath}", ToolTipIcon.Error);
+                                }
+                                // ----------------------------------
+                                break;
 
-                        case ClamScanResults.Error:
-                            resultsList.Items.Insert(0, $"[ERRORE] Scansione fallita: {e.Name}");
-                            break;
-                    }
-                });
-            }
-            catch (Exception ex)
-            {
-                this.Invoke((MethodInvoker)delegate
+                            case ClamScanResults.Error:
+                                resultsList.Items.Insert(0, $"[ERRORE] Scansione fallita: {filePath}");
+                                break;
+                        }
+                    });
+                }
+                catch (Exception ex)
                 {
-                    resultsList.Items.Insert(0, $"[ERRORE LIVE] {ex.Message}");
-                });
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        resultsList.Items.Insert(0, $"[ERRORE LIVE] {ex.Message}");
+                    });
+                }
             }
+            _isProcessing = false;
         }
 
 
@@ -208,7 +235,8 @@ namespace SalDefender
             // Inizializzazione Timer e Stopwatch
             stopwatch = new Stopwatch();
             displayTimer = new System.Windows.Forms.Timer { Interval = 1000 };
-            displayTimer.Tick += (s, e) => {
+            displayTimer.Tick += (s, e) =>
+            {
                 statusTimeLabel.Text = $"Tempo scansione: {stopwatch.Elapsed:mm\\:ss}";
             };
 
@@ -228,11 +256,11 @@ namespace SalDefender
 
             this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
 
-      
 
-        // Aggiorna il colore della barra in base al tema
-        statusStrip.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.Control);
-        statusTimeLabel.ForeColor = isDarkMode ? DarkText : LightText;
+
+            // Aggiorna il colore della barra in base al tema
+            statusStrip.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.Control);
+            statusTimeLabel.ForeColor = isDarkMode ? DarkText : LightText;
 
             InitUI();
         }

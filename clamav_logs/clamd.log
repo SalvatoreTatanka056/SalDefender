@@ -1392,3 +1392,1708 @@ SelfCheck: Database status OK.
 SelfCheck: Database status OK.
 WARNING: File path check failure for: C:\Users\Avangarde\Downloads\6d7c2cc8-abd6-4fec-b76e-4212edb9c0e3.tmp
 WARNING: File path check failure on: C:\Users\Avangarde\Downloads\6d7c2cc8-abd6-4fec-b76e-4212edb9c0e3.tmp
++++ Started at Fri Feb 13 15:50:03 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
++++ Started at Fri Feb 13 15:50:10 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\0bae0588-5e62-4e2b-924f-93571f6ecb31.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\0bae0588-5e62-4e2b-924f-93571f6ecb31.tmp
++++ Started at Fri Feb 13 15:51:06 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\c25bb77a-08e6-48c2-8c58-24724ec638e6.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\c25bb77a-08e6-48c2-8c58-24724ec638e6.tmp
++++ Started at Fri Feb 13 15:52:07 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\f909c9dc-4659-468f-b124-32abfe607055.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\f909c9dc-4659-468f-b124-32abfe607055.tmp
++++ Started at Fri Feb 13 15:57:36 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\1f53f684-0e34-4786-b937-f8caec21a384.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\1f53f684-0e34-4786-b937-f8caec21a384.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\dd190c9d-e9dd-453a-97e3-b9e51605e545.tmp
++++ Started at Fri Feb 13 15:59:13 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:01:26 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\c1efc285-b6bf-4dcd-ac71-e63dddffa38d.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\c1efc285-b6bf-4dcd-ac71-e63dddffa38d.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\cc469d30-82fd-4555-afa2-d4ad94d34d84.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\cc469d30-82fd-4555-afa2-d4ad94d34d84.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\02ca982d-90e3-432d-8f23-d665db7d8a0e.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\02ca982d-90e3-432d-8f23-d665db7d8a0e.tmp
++++ Started at Fri Feb 13 16:08:07 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\22c2d798-3326-455d-9e53-21b56e6efdf2.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\22c2d798-3326-455d-9e53-21b56e6efdf2.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\20d947df-e598-4ceb-888d-80355057d73b.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\20d947df-e598-4ceb-888d-80355057d73b.tmp
++++ Started at Fri Feb 13 16:11:36 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\dc0ceb61-a325-4e9c-9acc-392bfa05aab7.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\dc0ceb61-a325-4e9c-9acc-392bfa05aab7.tmp
++++ Started at Fri Feb 13 16:15:56 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:17:07 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\0ea6496c-7457-48a2-961c-694dfc9d6ca8.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\0ea6496c-7457-48a2-961c-694dfc9d6ca8.tmp
++++ Started at Fri Feb 13 16:18:19 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:23:05 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:27:51 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:28:17 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:31:47 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:32:12 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: \certs
+WARNING: File path check failure on: \certs
+WARNING: File path check failure for: \clamav.lib
+WARNING: File path check failure on: \clamav.lib
+WARNING: File path check failure for: \clamav_rust.lib
+WARNING: File path check failure on: \clamav_rust.lib
+WARNING: File path check failure for: \clambc.exe
+WARNING: File path check failure on: \clambc.exe
+WARNING: File path check failure for: \clambc.pdb
+WARNING: File path check failure on: \clambc.pdb
+WARNING: File path check failure for: \clamconf.exe
+WARNING: File path check failure on: \clamconf.exe
+WARNING: File path check failure for: \clamconf.pdb
+WARNING: File path check failure on: \clamconf.pdb
+WARNING: File path check failure for: \clamd.exe
+WARNING: File path check failure on: \clamd.exe
+WARNING: File path check failure for: \clamd.pdb
+WARNING: File path check failure on: \clamd.pdb
+WARNING: File path check failure for: \clamdscan.exe
+WARNING: File path check failure on: \clamdscan.exe
+WARNING: File path check failure for: \clamdscan.pdb
+WARNING: File path check failure on: \clamdscan.pdb
+WARNING: File path check failure for: \clamdtop.exe
+WARNING: File path check failure on: \clamdtop.exe
+WARNING: File path check failure for: \clamdtop.pdb
+WARNING: File path check failure on: \clamdtop.pdb
+WARNING: File path check failure for: \clammspack.lib
+WARNING: File path check failure on: \clammspack.lib
+WARNING: File path check failure for: \clamscan.exe
+WARNING: File path check failure on: \clamscan.exe
+WARNING: File path check failure for: \clamscan.pdb
+WARNING: File path check failure on: \clamscan.pdb
+WARNING: File path check failure for: \clamsubmit.exe
+WARNING: File path check failure on: \clamsubmit.exe
+WARNING: File path check failure for: \clamsubmit.pdb
+WARNING: File path check failure on: \clamsubmit.pdb
+WARNING: File path check failure for: \clamunrar.lib
+WARNING: File path check failure on: \clamunrar.lib
+WARNING: File path check failure for: \clamunrar_iface.lib
+WARNING: File path check failure on: \clamunrar_iface.lib
+WARNING: File path check failure for: \concrt140.dll
+WARNING: File path check failure on: \concrt140.dll
+WARNING: File path check failure for: \conf_examples
+WARNING: File path check failure on: \conf_examples
+WARNING: File path check failure for: \COPYING
+WARNING: File path check failure on: \COPYING
+WARNING: File path check failure for: \COPYING.txt
+WARNING: File path check failure on: \COPYING.txt
+WARNING: File path check failure for: \freshclam.exe
+WARNING: File path check failure on: \freshclam.exe
+WARNING: File path check failure for: \freshclam.lib
+WARNING: File path check failure on: \freshclam.lib
+WARNING: File path check failure for: \freshclam.pdb
+WARNING: File path check failure on: \freshclam.pdb
+WARNING: File path check failure for: \include
+WARNING: File path check failure on: \include
+WARNING: File path check failure for: \json-c.dll
+WARNING: File path check failure on: \json-c.dll
+WARNING: File path check failure for: \libbz2.dll
+WARNING: File path check failure on: \libbz2.dll
+WARNING: File path check failure for: \libclamav.dll
+WARNING: File path check failure on: \libclamav.dll
+WARNING: File path check failure for: \libclamav.pdb
+WARNING: File path check failure on: \libclamav.pdb
+WARNING: File path check failure for: \libclammspack.dll
+WARNING: File path check failure on: \libclammspack.dll
+WARNING: File path check failure for: \libclammspack.pdb
+WARNING: File path check failure on: \libclammspack.pdb
+WARNING: File path check failure for: \libclamunrar.dll
+WARNING: File path check failure on: \libclamunrar.dll
+WARNING: File path check failure for: \libclamunrar.pdb
+WARNING: File path check failure on: \libclamunrar.pdb
+WARNING: File path check failure for: \libclamunrar_iface.dll
+WARNING: File path check failure on: \libclamunrar_iface.dll
+WARNING: File path check failure for: \libclamunrar_iface.pdb
+WARNING: File path check failure on: \libclamunrar_iface.pdb
+WARNING: File path check failure for: \libcrypto-3-x64.dll
+WARNING: File path check failure on: \libcrypto-3-x64.dll
+WARNING: File path check failure for: \libcurl.dll
+WARNING: File path check failure on: \libcurl.dll
+WARNING: File path check failure for: \libfreshclam.dll
+WARNING: File path check failure on: \libfreshclam.dll
+WARNING: File path check failure for: \libfreshclam.pdb
+WARNING: File path check failure on: \libfreshclam.pdb
+WARNING: File path check failure for: \libssh2.dll
+WARNING: File path check failure on: \libssh2.dll
+WARNING: File path check failure for: \libssl-3-x64.dll
+WARNING: File path check failure on: \libssl-3-x64.dll
+WARNING: File path check failure for: \libxml2.dll
+WARNING: File path check failure on: \libxml2.dll
+WARNING: File path check failure for: \msvcp140.dll
+WARNING: File path check failure on: \msvcp140.dll
+WARNING: File path check failure for: \msvcp140_1.dll
+WARNING: File path check failure on: \msvcp140_1.dll
+WARNING: File path check failure for: \msvcp140_2.dll
+WARNING: File path check failure on: \msvcp140_2.dll
+WARNING: File path check failure for: \msvcp140_atomic_wait.dll
+WARNING: File path check failure on: \msvcp140_atomic_wait.dll
+WARNING: File path check failure for: \msvcp140_codecvt_ids.dll
+WARNING: File path check failure on: \msvcp140_codecvt_ids.dll
+WARNING: File path check failure for: \NEWS.md
+WARNING: File path check failure on: \NEWS.md
+WARNING: File path check failure for: \nghttp2.dll
+WARNING: File path check failure on: \nghttp2.dll
+WARNING: File path check failure for: \pcre2-8.dll
+WARNING: File path check failure on: \pcre2-8.dll
+WARNING: File path check failure for: \pdcurses.dll
+WARNING: File path check failure on: \pdcurses.dll
+WARNING: File path check failure for: \pthreadVC3.dll
+WARNING: File path check failure on: \pthreadVC3.dll
+WARNING: File path check failure for: \README.md
+WARNING: File path check failure on: \README.md
+WARNING: File path check failure for: \sigtool.exe
+WARNING: File path check failure on: \sigtool.exe
+WARNING: File path check failure for: \sigtool.pdb
+WARNING: File path check failure on: \sigtool.pdb
+WARNING: File path check failure for: \UserManual
+WARNING: File path check failure on: \UserManual
+WARNING: File path check failure for: \vcruntime140.dll
+WARNING: File path check failure on: \vcruntime140.dll
+WARNING: File path check failure for: \vcruntime140_1.dll
+WARNING: File path check failure on: \vcruntime140_1.dll
++++ Started at Fri Feb 13 16:33:46 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: \certs
+WARNING: File path check failure on: \certs
+WARNING: File path check failure for: \clamav.lib
+WARNING: File path check failure on: \clamav.lib
+WARNING: File path check failure for: \clamav_rust.lib
+WARNING: File path check failure on: \clamav_rust.lib
+WARNING: File path check failure for: \clambc.exe
+WARNING: File path check failure on: \clambc.exe
+WARNING: File path check failure for: \clambc.pdb
+WARNING: File path check failure on: \clambc.pdb
+WARNING: File path check failure for: \clamconf.exe
+WARNING: File path check failure on: \clamconf.exe
+WARNING: File path check failure for: \clamconf.pdb
+WARNING: File path check failure on: \clamconf.pdb
+WARNING: File path check failure for: \clamd.exe
+WARNING: File path check failure on: \clamd.exe
+WARNING: File path check failure for: \clamd.pdb
+WARNING: File path check failure on: \clamd.pdb
+WARNING: File path check failure for: \clamdscan.exe
+WARNING: File path check failure on: \clamdscan.exe
+WARNING: File path check failure for: \clamdscan.pdb
+WARNING: File path check failure on: \clamdscan.pdb
+WARNING: File path check failure for: \clamdtop.exe
+WARNING: File path check failure on: \clamdtop.exe
+WARNING: File path check failure for: \clamdtop.pdb
+WARNING: File path check failure on: \clamdtop.pdb
+WARNING: File path check failure for: \clammspack.lib
+WARNING: File path check failure on: \clammspack.lib
+WARNING: File path check failure for: \clamscan.exe
+WARNING: File path check failure on: \clamscan.exe
+WARNING: File path check failure for: \clamscan.pdb
+WARNING: File path check failure on: \clamscan.pdb
+WARNING: File path check failure for: \clamsubmit.exe
+WARNING: File path check failure on: \clamsubmit.exe
+WARNING: File path check failure for: \clamsubmit.pdb
+WARNING: File path check failure on: \clamsubmit.pdb
+WARNING: File path check failure for: \clamunrar.lib
+WARNING: File path check failure on: \clamunrar.lib
+WARNING: File path check failure for: \clamunrar_iface.lib
+WARNING: File path check failure on: \clamunrar_iface.lib
+WARNING: File path check failure for: \concrt140.dll
+WARNING: File path check failure on: \concrt140.dll
+WARNING: File path check failure for: \conf_examples
+WARNING: File path check failure on: \conf_examples
+WARNING: File path check failure for: \COPYING
+WARNING: File path check failure on: \COPYING
+WARNING: File path check failure for: \COPYING.txt
+WARNING: File path check failure on: \COPYING.txt
+WARNING: File path check failure for: \freshclam.exe
+WARNING: File path check failure on: \freshclam.exe
+WARNING: File path check failure for: \freshclam.lib
+WARNING: File path check failure on: \freshclam.lib
+WARNING: File path check failure for: \freshclam.pdb
+WARNING: File path check failure on: \freshclam.pdb
+WARNING: File path check failure for: \include
+WARNING: File path check failure on: \include
+WARNING: File path check failure for: \json-c.dll
+WARNING: File path check failure on: \json-c.dll
+WARNING: File path check failure for: \libbz2.dll
+WARNING: File path check failure on: \libbz2.dll
+WARNING: File path check failure for: \libclamav.dll
+WARNING: File path check failure on: \libclamav.dll
+WARNING: File path check failure for: \libclamav.pdb
+WARNING: File path check failure on: \libclamav.pdb
+WARNING: File path check failure for: \libclammspack.dll
+WARNING: File path check failure on: \libclammspack.dll
+WARNING: File path check failure for: \libclammspack.pdb
+WARNING: File path check failure on: \libclammspack.pdb
+WARNING: File path check failure for: \libclamunrar.dll
+WARNING: File path check failure on: \libclamunrar.dll
+WARNING: File path check failure for: \libclamunrar.pdb
+WARNING: File path check failure on: \libclamunrar.pdb
+WARNING: File path check failure for: \libclamunrar_iface.dll
+WARNING: File path check failure on: \libclamunrar_iface.dll
+WARNING: File path check failure for: \libclamunrar_iface.pdb
+WARNING: File path check failure on: \libclamunrar_iface.pdb
+WARNING: File path check failure for: \libcrypto-3-x64.dll
+WARNING: File path check failure on: \libcrypto-3-x64.dll
+WARNING: File path check failure for: \libcurl.dll
+WARNING: File path check failure on: \libcurl.dll
+WARNING: File path check failure for: \libfreshclam.dll
+WARNING: File path check failure on: \libfreshclam.dll
+WARNING: File path check failure for: \libfreshclam.pdb
+WARNING: File path check failure on: \libfreshclam.pdb
+WARNING: File path check failure for: \libssh2.dll
+WARNING: File path check failure on: \libssh2.dll
+WARNING: File path check failure for: \libssl-3-x64.dll
+WARNING: File path check failure on: \libssl-3-x64.dll
+WARNING: File path check failure for: \libxml2.dll
+WARNING: File path check failure on: \libxml2.dll
+WARNING: File path check failure for: \msvcp140.dll
+WARNING: File path check failure on: \msvcp140.dll
+WARNING: File path check failure for: \msvcp140_1.dll
+WARNING: File path check failure on: \msvcp140_1.dll
+WARNING: File path check failure for: \msvcp140_2.dll
+WARNING: File path check failure on: \msvcp140_2.dll
+WARNING: File path check failure for: \msvcp140_atomic_wait.dll
+WARNING: File path check failure on: \msvcp140_atomic_wait.dll
+WARNING: File path check failure for: \msvcp140_codecvt_ids.dll
+WARNING: File path check failure on: \msvcp140_codecvt_ids.dll
+WARNING: File path check failure for: \NEWS.md
+WARNING: File path check failure on: \NEWS.md
+WARNING: File path check failure for: \nghttp2.dll
+WARNING: File path check failure on: \nghttp2.dll
+WARNING: File path check failure for: \pcre2-8.dll
+WARNING: File path check failure on: \pcre2-8.dll
+WARNING: File path check failure for: \pdcurses.dll
+WARNING: File path check failure on: \pdcurses.dll
+WARNING: File path check failure for: \pthreadVC3.dll
+WARNING: File path check failure on: \pthreadVC3.dll
+WARNING: File path check failure for: \README.md
+WARNING: File path check failure on: \README.md
+WARNING: File path check failure for: \sigtool.exe
+WARNING: File path check failure on: \sigtool.exe
+WARNING: File path check failure for: \sigtool.pdb
+WARNING: File path check failure on: \sigtool.pdb
+WARNING: File path check failure for: \UserManual
+WARNING: File path check failure on: \UserManual
+WARNING: File path check failure for: \vcruntime140.dll
+WARNING: File path check failure on: \vcruntime140.dll
+WARNING: File path check failure for: \vcruntime140_1.dll
+WARNING: File path check failure on: \vcruntime140_1.dll
++++ Started at Fri Feb 13 16:35:49 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:36:15 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:39:49 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:40:57 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:42:45 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
++++ Started at Fri Feb 13 16:43:04 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:44:59 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\cee69846-fac3-4c9d-9f0c-400ffb29a548.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\cee69846-fac3-4c9d-9f0c-400ffb29a548.tmp
++++ Started at Fri Feb 13 16:47:39 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 16:49:04 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\69d017f4-d2ca-48b6-9e0b-21879b12a118.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\69d017f4-d2ca-48b6-9e0b-21879b12a118.tmp
++++ Started at Fri Feb 13 16:49:41 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\f5ad331a-d8fa-4b95-bb6c-e6c566ee263c.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\f5ad331a-d8fa-4b95-bb6c-e6c566ee263c.tmp
++++ Started at Fri Feb 13 16:52:24 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\98511b95-aca6-416c-95bf-38bb3fdf4e6a.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\98511b95-aca6-416c-95bf-38bb3fdf4e6a.tmp
++++ Started at Fri Feb 13 16:53:17 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
++++ Started at Fri Feb 13 16:53:29 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
++++ Started at Fri Feb 13 16:53:46 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\e5c0c937-3901-443e-9e83-3957d805bf69.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\e5c0c937-3901-443e-9e83-3957d805bf69.tmp
++++ Started at Fri Feb 13 16:54:37 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 17:00:51 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Fri Feb 13 17:02:32 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\cc00e1f1-f261-40da-8d64-92be277d8716.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\cc00e1f1-f261-40da-8d64-92be277d8716.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\4ec53859-e72e-4a17-838b-afd21be03818.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\4ec53859-e72e-4a17-838b-afd21be03818.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\380b6c14-6ba6-4057-82b2-1c22669a9d92.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\380b6c14-6ba6-4057-82b2-1c22669a9d92.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\12791a14-8c87-4eb2-984f-0521be717499.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\13223b03-e091-49e8-8c40-f78a43f8b2de.tmp
++++ Started at Fri Feb 13 17:07:53 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\Non confermato 873509.crdownload
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\Non confermato 873509.crdownload
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\2cb1c6ea-eda4-421f-a7dd-426d9993acb3.tmp
++++ Started at Fri Feb 13 17:10:42 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627375 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
