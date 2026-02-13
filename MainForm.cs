@@ -65,6 +65,10 @@ namespace SalDefender
         private bool isLiveProtectionEnabled = false;
 
 
+        private StatusStrip statusStrip;
+        private ToolStripStatusLabel statusTimeLabel;
+        private System.Windows.Forms.Timer displayTimer;
+        private Stopwatch stopwatch;
 
 
         private void SetupLiveProtection(string pathToCheck)
@@ -97,10 +101,30 @@ namespace SalDefender
             }
         }
 
+        private async Task WaitForFileReady(string filePath)
+        {
+            int attempts = 0;
+            while (attempts < 5)
+            {
+                try
+                {
+                    using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
+                    {
+                        return; // Il file è pronto e accessibile
+                    }
+                }
+                catch (IOException)
+                {
+                    attempts++;
+                    await Task.Delay(1000); // Attendi 1 secondo prima di riprovare
+                }
+            }
+        }
+
         private async void OnFileCreated(object sender, FileSystemEventArgs e)
         {
             string filePath = e.FullPath;
-            await Task.Delay(500);
+            await WaitForFileReady(filePath);
 
             try
             {
@@ -145,7 +169,7 @@ namespace SalDefender
             }
         }
 
-   
+
         private void LiveProtectionToggle_Click(object sender, EventArgs e)
         {
             if (!isLiveProtectionEnabled)
@@ -175,6 +199,25 @@ namespace SalDefender
                 return;
             }
 
+            // Creazione della StatusStrip
+            statusStrip = new StatusStrip();
+            statusTimeLabel = new ToolStripStatusLabel { Text = "Pronto" };
+            statusStrip.Items.Add(statusTimeLabel);
+            this.Controls.Add(statusStrip); // La aggiunge alla Form
+
+            // Inizializzazione Timer e Stopwatch
+            stopwatch = new Stopwatch();
+            displayTimer = new System.Windows.Forms.Timer { Interval = 1000 };
+            displayTimer.Tick += (s, e) => {
+                statusTimeLabel.Text = $"Tempo scansione: {stopwatch.Elapsed:mm\\:ss}";
+            };
+
+
+
+            // Aggiorna il colore della barra in base al tema
+            statusStrip.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.Control);
+            statusTimeLabel.ForeColor = isDarkMode ? DarkText : LightText;
+
             this.Text = "SalDefender";
             this.Size = new Size(500, 650);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -184,6 +227,13 @@ namespace SalDefender
 
 
             this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
+
+      
+
+        // Aggiorna il colore della barra in base al tema
+        statusStrip.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.Control);
+        statusTimeLabel.ForeColor = isDarkMode ? DarkText : LightText;
+
             InitUI();
         }
         private void StartClamd()
