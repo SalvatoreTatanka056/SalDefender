@@ -64,7 +64,7 @@ namespace SalDefender
         private const int WS_EX_LAYERED = 0x80000;
         private const int LWA_ALPHA = 0x2;
 
-        private FileSystemWatcher? liveWatcher;
+        private List<FileSystemWatcher> liveWatchers = new List<FileSystemWatcher>();
         private bool isLiveProtectionEnabled = false;
 
 
@@ -78,28 +78,106 @@ namespace SalDefender
         {
             try
             {
-                liveWatcher = new FileSystemWatcher();
-                liveWatcher.Path = pathToCheck;
-                liveWatcher.IncludeSubdirectories = true;
-                liveWatcher.Created += OnFileCreated;
-                liveWatcher.Renamed +=   OnFileCreated;
-                liveWatcher.EnableRaisingEvents = true;
-                liveWatcher.InternalBufferSize = 65536;
+                Debug.WriteLine($"[LIVE] SetupLiveProtection called per: {pathToCheck}");
+                Debug.WriteLine($"[LIVE] Directory exists: {Directory.Exists(pathToCheck)}");
+
+                var watcher = new FileSystemWatcher();
+                watcher.Path = pathToCheck;
+                watcher.IncludeSubdirectories = true;
+                
+                // Monitora tutti i tipi di evento
+                watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.CreationTime;
+                
+                watcher.Created += OnFileCreated;
+                watcher.Renamed += OnFileRenamed;
+                watcher.Changed += OnFileChanged;
+                
+                // Error handler per il FileSystemWatcher
+                watcher.Error += (s, e) =>
+                {
+                    Debug.WriteLine($"[LIVE] FileSystemWatcher ERROR: {e.GetException()?.Message}");
+                };
+                
+                watcher.InternalBufferSize = 131072;
+                watcher.EnableRaisingEvents = true;
+                
+                // Aggiunta alla lista di watchers
+                liveWatchers.Add(watcher);
+                
+                Debug.WriteLine($"[LIVE] FileSystemWatcher ATTIVATO su {pathToCheck}");
 
                 // Aggiungi un messaggio alla lista risultati
-                resultsList.Items.Insert(0, $"[{DateTime.Now:HH:mm:ss}] Protezione Real-time attivata su: {pathToCheck}");
-
-                // Aggiorna il fumetto sulla Tray Icon (se presente)
-                if (trayIcon != null)
+                this.Invoke((MethodInvoker)delegate
                 {
-                    trayIcon.BalloonTipTitle = "SalDefender";
-                    trayIcon.BalloonTipText = "Protezione Live attivata correttamente.";
-                    trayIcon.ShowBalloonTip(3000);
+                    resultsList.Items.Insert(0, $"[{DateTime.Now:HH:mm:ss}] Protezione Real-time attivata su: {pathToCheck}");
+
+                    // Aggiorna il fumetto sulla Tray Icon (se presente)
+                    if (trayIcon != null)
+                    {
+                        trayIcon.BalloonTipTitle = "SalDefender";
+                        trayIcon.BalloonTipText = "Protezione Live attivata correttamente.";
+                        trayIcon.ShowBalloonTip(3000);
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[LIVE] Errore SetupLiveProtection: {ex.Message}\n{ex.StackTrace}");
+                
+                this.Invoke((MethodInvoker)delegate
+                {
+                    resultsList.Items.Insert(0, "Errore attivazione Live: " + ex.Message);
+                });
+            }
+        }
+
+        private void SetupMultipleLiveProtection()
+        {
+            try
+            {
+                // Pulisci vecchi watchers
+                foreach (var watcher in liveWatchers)
+                {
+                    watcher.EnableRaisingEvents = false;
+                    watcher.Dispose();
+                }
+                liveWatchers.Clear();
+                Debug.WriteLine($"[LIVE] Tutti i watchers precedenti eliminati");
+
+                string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                var pathsToMonitor = new List<string>
+                {
+                    Path.Combine(userProfile, "Downloads"),
+                    Path.Combine(userProfile, "Documents"),
+                    Path.Combine(userProfile, "Desktop"),
+                    userProfile // Monitora anche la radice del profilo per file critici
+                };
+
+                int activatedCount = 0;
+                foreach (var path in pathsToMonitor)
+                {
+                    if (Directory.Exists(path))
+                    {
+                        SetupLiveProtection(path);
+                        activatedCount++;
+                    }
+                }
+
+                isLiveProtectionEnabled = true;
+                
+                // Aggiorna lo status dopo aver attivato tutti
+                if (liveStatusLabel != null)
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        liveStatusLabel.Text = $"Live: ATTIVO ({activatedCount} cartelle)";
+                        liveStatusLabel.ForeColor = Color.Green;
+                    });
                 }
             }
             catch (Exception ex)
             {
-                resultsList.Items.Insert(0, "Errore attivazione Live: " + ex.Message);
+                Debug.WriteLine($"[LIVE] Errore SetupMultipleLiveProtection: {ex.Message}");
             }
         }
 
@@ -137,37 +215,83 @@ namespace SalDefender
 
         private void OnFileCreated(object sender, FileSystemEventArgs e)
         {
-            if (string.IsNullOrEmpty(e.FullPath)) return;
-
             try
             {
-                // Filtro: ignora extension temporanee e di sistema
-                string extension = Path.GetExtension(e.FullPath).ToLower();
-                if (extension == ".tmp" || extension == ".part" || extension == ".lnk" || 
-                    extension == ".sys" || extension == ".temp")
+                string filePath = e.FullPath;
+                Debug.WriteLine($"[LIVE-Created] Evento ricevuto: {Path.GetFileName(filePath)}");
+                
+                EnqueueFileForScanning(filePath);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Errore in OnFileCreated: {ex.Message}");
+            }
+        }
+
+        private void OnFileRenamed(object sender, RenamedEventArgs e)
+        {
+            try
+            {
+                string filePath = e.FullPath;
+                Debug.WriteLine($"[LIVE-Renamed] File rinominato: {e.OldName} -> {Path.GetFileName(filePath)}");
+                
+                EnqueueFileForScanning(filePath);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Errore in OnFileRenamed: {ex.Message}");
+            }
+        }
+
+        private void OnFileChanged(object sender, FileSystemEventArgs e)
+        {
+            try
+            {
+                string filePath = e.FullPath;
+                // Solo per file regolari, non directory
+                if (!File.Exists(filePath))
                     return;
 
+                Debug.WriteLine($"[LIVE-Changed] File modificato: {Path.GetFileName(filePath)}");
+                
+                EnqueueFileForScanning(filePath);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Errore in OnFileChanged: {ex.Message}");
+            }
+        }
+
+        private void EnqueueFileForScanning(string filePath)
+        {
+            try
+            {
                 // Evita duplicati nella coda
                 lock (_queueLock)
                 {
-                    if (_filesInQueue.Contains(e.FullPath))
+                    if (_filesInQueue.Contains(filePath))
+                    {
+                        Debug.WriteLine($"[LIVE] File già in coda, ignorato: {filePath}");
                         return;
-
-                    _filesInQueue.Add(e.FullPath);
+                    }
+                    
+                    _filesInQueue.Add(filePath);
                 }
-
-                _filesToScan.Enqueue(e.FullPath);
+                
+                _filesToScan.Enqueue(filePath);
+                Debug.WriteLine($"[LIVE] File aggiunto alla coda: {Path.GetFileName(filePath)}");
 
                 // Avvia il processore se non è già attivo
                 if (!_isProcessing)
                 {
                     _isProcessing = true;
+                    Debug.WriteLine($"[LIVE] Avvio ProcessQueue");
                     Task.Run(() => ProcessQueue());
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Errore in OnFileCreated: {ex.Message}");
+                Debug.WriteLine($"[LIVE] Errore EnqueueFileForScanning: {ex.Message}");
             }
         }
 
@@ -179,31 +303,40 @@ namespace SalDefender
                 {
                     if (string.IsNullOrEmpty(filePath)) continue;
                     
-                    // Rimuovi dalla lista di deduplicazione
+                    Debug.WriteLine($"[LIVE] Processamento file: {filePath}");
+                    
+                    // Rimuovi dalla lista di deduplica
                     lock (_queueLock)
                     {
                         _filesInQueue.Remove(filePath);
                     }
 
-                    // THROTTLE: Aspetta il semaforo (max 2 scansioni live contemporanee)
-                    // Questo evita di saturare clamd e bloccare le scansioni manuali
-                    await _liveScanLimiter.WaitAsync();
-
+                    bool semaphoreAcquired = false;
                     try
                     {
-                        // Attendi che il file sia completamente scritto (max 3 secondi)
-                        bool isReady = await WaitForFileReadyQuick(filePath, 3000);
+                        // Attendi che il file sia completamente scritto (max 5 secondi)
+                        bool isReady = await WaitForFileReadyQuick(filePath, 5000);
                         
                         if (!isReady)
                         {
-                            continue; // File bloccato, salta
+                            Debug.WriteLine($"[LIVE] File non divenuto ready, saltato: {filePath}");
+                            continue; // File bloccato o rimosso, salta
                         }
 
-                        // Usa il client ClamAV con timeout breve
+                        Debug.WriteLine($"[LIVE] File ready, acquisendo semaforo: {filePath}");
+
+                        // IMPORTANTE: Acquisisci il semaforo SOLO se il file è ready
+                        await _liveScanLimiter.WaitAsync();
+                        semaphoreAcquired = true;
+                        
+                        Debug.WriteLine($"[LIVE] Semaforo acquisito, scanning: {filePath}");
+
                         try
                         {
                             var clamClient = new ClamClient("localhost", 3310);
                             var scanResult = await clamClient.ScanFileOnServerAsync(filePath).ConfigureAwait(false);
+                            
+                            Debug.WriteLine($"[LIVE] Scan completato: {Path.GetFileName(filePath)} -> {scanResult.Result}");
 
                             this.Invoke((MethodInvoker)delegate
                             {
@@ -212,7 +345,7 @@ namespace SalDefender
                                     switch (scanResult.Result)
                                     {
                                         case ClamScanResults.Clean:
-                                            // Log solo è minaccia, non per ogni file pulito (troppo spam)
+                                            resultsList.Items.Insert(0, $"<Live> File Pulito: {Path.GetFileName(filePath)}");                                            
                                             break;
 
                                         case ClamScanResults.VirusDetected:
@@ -227,63 +360,94 @@ namespace SalDefender
                                             break;
 
                                         case ClamScanResults.Error:
-                                            // Errore silenzioso per file inaccessibili durante live protection
+                                            Debug.WriteLine($"[LIVE] Errore scan: {filePath}");
                                             break;
                                     }
                                 }
-                                catch { }
+                                catch (Exception ex)
+                                {
+                                    Debug.WriteLine($"[LIVE] Errore UI: {ex.Message}");
+                                }
                             });
                         }
                         catch (TaskCanceledException)
                         {
-                            // Timeout sulla scansione, salta il file
+                            Debug.WriteLine($"[LIVE] Timeout scan: {filePath}");
                         }
                         catch (Exception ex)
                         {
-                            Debug.WriteLine($"Errore scansione live: {ex.Message}");
+                            Debug.WriteLine($"[LIVE] Errore scansione: {ex.Message}");
                         }
                     }
                     finally
                     {
-                        // Rilascia lo slot per la prossima scansione live
-                        _liveScanLimiter.Release();
+                        // Rilascia il semaforo SOLO se è stato acquisito
+                        if (semaphoreAcquired)
+                        {
+                            _liveScanLimiter.Release();
+                            Debug.WriteLine($"[LIVE] Semaforo rilasciato");
+                        }
+                        
                         await Task.Delay(50); // Piccola pausa per non sovraccaricare
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[LIVE] Errore ProcessQueue: {ex.Message}");
+            }
             finally
             {
                 _isProcessing = false;
+                Debug.WriteLine($"[LIVE] ProcessQueue terminato");
             }
         }
 
-        // Versione veloce e senza log della verifica file ready
+        // Versione veloce con retry migliorato
         private async Task<bool> WaitForFileReadyQuick(string filePath, int timeoutMs)
         {
             int elapsed = 0;
-            const int checkInterval = 150;
+            const int checkInterval = 200;
 
             while (elapsed < timeoutMs)
             {
                 try
                 {
-                    using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
+                    // Controlla se il file esiste ancora
+                    if (!File.Exists(filePath))
                     {
+                        Debug.WriteLine($"[LIVE] File non trovato: {filePath}");
+                        return false;
+                    }
+
+                    // Usa FileShare.ReadWrite (più permissivo) per permettere accesso durante la scrittura
+                    using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                    {
+                        Debug.WriteLine($"[LIVE] File ready: {Path.GetFileName(filePath)}");
                         return true;
                     }
                 }
                 catch (FileNotFoundException)
                 {
+                    Debug.WriteLine($"[LIVE] FileNotFound: {filePath}");
                     return false;
                 }
                 catch (IOException)
                 {
                     elapsed += checkInterval;
+                    Debug.WriteLine($"[LIVE] Retry {elapsed}ms: {Path.GetFileName(filePath)} - IO locked");
+                    
                     if (elapsed < timeoutMs)
                         await Task.Delay(checkInterval);
                 }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"[LIVE] Unexpected error: {ex.Message}");
+                    return false;
+                }
             }
 
+            Debug.WriteLine($"[LIVE] Timeout raggiunto per: {Path.GetFileName(filePath)}");
             return false;
         }
 
@@ -292,19 +456,17 @@ namespace SalDefender
         {
             if (!isLiveProtectionEnabled)
             {
-                // Esempio: monitora la cartella dell'utente
-                string userPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-                SetupLiveProtection(userPath);
-                isLiveProtectionEnabled = true;
+                SetupMultipleLiveProtection();
                 resultsList.Items.Insert(0, ">>> Protezione Live ATTIVATA");
             }
             else
             {
-                if (liveWatcher != null)
+                foreach (var watcher in liveWatchers)
                 {
-                    liveWatcher.EnableRaisingEvents = false;
-                    liveWatcher.Dispose();
+                    watcher.EnableRaisingEvents = false;
+                    watcher.Dispose();
                 }
+                liveWatchers.Clear();
                 isLiveProtectionEnabled = false;
                 resultsList.Items.Insert(0, ">>> Protezione Live DISATTIVATA");
             }
@@ -358,6 +520,15 @@ namespace SalDefender
 
             InitUI();
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            
+            // Setup live protection after form handle is created
+            SetupMultipleLiveProtection();
+        }
+
         private void StartClamd()
         {
             try
@@ -459,12 +630,13 @@ namespace SalDefender
 
             try
             {
-                // Disabilita live watcher
-                if (liveWatcher != null)
+                // Disabilita tutti i live watchers
+                foreach (var watcher in liveWatchers)
                 {
-                    liveWatcher.EnableRaisingEvents = false;
-                    liveWatcher.Dispose();
+                    watcher.EnableRaisingEvents = false;
+                    watcher.Dispose();
                 }
+                liveWatchers.Clear();
 
                 // Rimuove l'icona dalla tray prima di chiudere (evita icone fantasma)
                 if (trayIcon != null)
@@ -703,17 +875,6 @@ namespace SalDefender
             liveStatusLabel.ForeColor = Color.Red;
             liveStatusLabel.Location = new Point(350, 200); // Regola la posizione
             mainLayout.Controls.Add(liveStatusLabel);
-
-            string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
-            if (Directory.Exists(downloadsPath))
-            {
-                SetupLiveProtection(downloadsPath);
-                // --- SEGNA L'ATTIVAZIONE QUI ---
-                liveStatusLabel.Text = "Live: ATTIVO";
-                liveStatusLabel.ForeColor = Color.Green;
-            }
-
-
 
             LoadDrives();
         }
