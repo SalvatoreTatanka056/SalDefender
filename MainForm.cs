@@ -119,6 +119,27 @@ namespace SalDefender
         }
 
         /// <summary>
+        /// Verifica se una directory è scrivibile
+        /// </summary>
+        private static bool IsDirectoryWritable(string dirPath)
+        {
+            try
+            {
+                if (!Directory.Exists(dirPath))
+                    Directory.CreateDirectory(dirPath);
+                    
+                string testFile = Path.Combine(dirPath, ".writetest");
+                File.WriteAllText(testFile, "test");
+                File.Delete(testFile);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Ricerca automatica di freshclam.conf in percorsi comuni
         /// Se non trovato, lo crea automaticamente
         /// </summary>
@@ -144,13 +165,36 @@ namespace SalDefender
                 }
             }
 
-            // Se non trovato, crea un nuovo file nella directory dell'applicazione
-            string defaultConfigPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf");
+            // Se non trovato, determina il percorso dove creare il file
+            // Priorità: BaseDirectory (se scrivibile) → AppData (fallback per Program Files)
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string defaultConfigPath;
+
+            if (IsDirectoryWritable(baseDir))
+            {
+                defaultConfigPath = Path.Combine(baseDir, "freshclam.conf");
+                Debug.WriteLine($"[CONFIG] BaseDirectory scrivibile, userò: {defaultConfigPath}");
+            }
+            else
+            {
+                // Fallback a AppData se BaseDirectory non è scrivibile (típicamente Program Files)
+                string appDataDir = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                    "SalDefender", ".clamav");
+                defaultConfigPath = Path.Combine(appDataDir, "freshclam.conf");
+                Debug.WriteLine($"[CONFIG] BaseDirectory NON scrivibile. Fallback a AppData: {defaultConfigPath}");
+            }
             
             try
             {
-                string dbDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_db");
-                string logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_logs");
+                // Determina i directories per database e log basandosi su dove mettiamo freshclam.conf
+                string configDir = Path.GetDirectoryName(defaultConfigPath) ?? AppDomain.CurrentDomain.BaseDirectory;
+                string dbDir = Path.Combine(configDir, "clamav_db");
+                string logDir = Path.Combine(configDir, "clamav_logs");
+                
+                Debug.WriteLine($"[CONFIG] Config dir: {configDir}");
+                Debug.WriteLine($"[CONFIG] DB dir: {dbDir}");
+                Debug.WriteLine($"[CONFIG] Log dir: {logDir}");
                 
                 // Crea le directory se non esistono
                 if (!Directory.Exists(dbDir))
@@ -179,7 +223,7 @@ namespace SalDefender
                         }
                         catch (Exception permEx)
                         {
-                            Debug.WriteLine($"[CONFIG] Impossibile assegnare permessi: {permEx.Message}");
+                            Debug.WriteLine($"[CONFIG] Impossibile assegnare permessi a dbDir: {permEx.Message}");
                         }
                     }
                     catch (Exception ex)
@@ -214,7 +258,7 @@ namespace SalDefender
                         }
                         catch (Exception permEx)
                         {
-                            Debug.WriteLine($"[CONFIG] Impossibile assegnare permessi: {permEx.Message}");
+                            Debug.WriteLine($"[CONFIG] Impossibile assegnare permessi a logDir: {permEx.Message}");
                         }
                     }
                     catch (Exception ex)
