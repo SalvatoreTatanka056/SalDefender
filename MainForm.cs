@@ -252,6 +252,7 @@ namespace SalDefender
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.MaximizeBox = true;
             this.MinimumSize = new Size(500, 650);
+            this.ControlBox = false;
 
 
             this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga

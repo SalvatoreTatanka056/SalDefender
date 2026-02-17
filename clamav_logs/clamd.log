@@ -3097,3 +3097,780 @@ XMLDOCS support enabled.
 HWP3 support enabled.
 OneNote support enabled.
 Self checking every 600 seconds.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\DumpStack.log
+WARNING: File path check failure for: C:\DumpStack.log.tmp
+WARNING: File path check failure on: C:\DumpStack.log.tmp
+WARNING: File path check failure for: C:\pagefile.sys
+WARNING: File path check failure on: C:\pagefile.sys
+WARNING: File path check failure for: C:\swapfile.sys
+WARNING: File path check failure on: C:\swapfile.sys
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\DolbyLaboratories.DolbyAccess_rz1tebttyb220\LocalCache\appservice_20260213.log
+SelfCheck: Database modification detected. Forcing reload.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Database correctly reloaded (3627519 signatures)
+Activating the newly loaded database...
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.MicrosoftPCManager_8wekyb3d8bbwe\SystemAppData\Helium\User.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.MicrosoftPCManager_8wekyb3d8bbwe\SystemAppData\Helium\User.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.MicrosoftPCManager_8wekyb3d8bbwe\SystemAppData\Helium\User.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.MicrosoftPCManager_8wekyb3d8bbwe\SystemAppData\Helium\UserClasses.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.MicrosoftPCManager_8wekyb3d8bbwe\SystemAppData\Helium\UserClasses.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.MicrosoftPCManager_8wekyb3d8bbwe\SystemAppData\Helium\UserClasses.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\AC\393335b2850948ef465af70523e70e4907b08c1b2707ee71b3c6fc5b60b0ed82
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\AC\c14fd165653b4c381000040a9dd8962bf1b37d98bede764b0eb612992ec3848b
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\Settings\settings.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\Settings\settings.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\Settings\settings.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.WidgetsPlatformRuntime_8wekyb3d8bbwe\SystemAppData\Helium\User.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.WidgetsPlatformRuntime_8wekyb3d8bbwe\SystemAppData\Helium\User.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.WidgetsPlatformRuntime_8wekyb3d8bbwe\SystemAppData\Helium\User.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.WidgetsPlatformRuntime_8wekyb3d8bbwe\SystemAppData\Helium\UserClasses.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.WidgetsPlatformRuntime_8wekyb3d8bbwe\SystemAppData\Helium\UserClasses.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.WidgetsPlatformRuntime_8wekyb3d8bbwe\SystemAppData\Helium\UserClasses.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AC\467d024e9fa9e33f4c586bd1e4daf553b73fbdc7ee4175cc8f3bedd29cb386fe
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy\AC\b8d9c065d6952d75bcbe0882b78fdf32fc4a09be3d4c6dd66873e0c8085c9a32
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\Settings\settings.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\Settings\settings.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\Settings\settings.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\TempState\TileCache_100_3_PNGEncoded_Data.bin
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\TempState\TileCache_100_3_PNGEncoded_Header.bin
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\TempState\TileCache_100_4_PNGEncoded_Data.bin
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\TempState\TileCache_100_4_PNGEncoded_Header.bin
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Comms\UnistoreDB\store.jfm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Comms\UnistoreDB\store.vol
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Comms\UnistoreDB\tmp.edb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Comms\UnistoreDB\USS.jtx
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\4436a0f49fe66776\ActivitiesCache.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\4436a0f49fe66776\ActivitiesCache.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\4436a0f49fe66776\ActivitiesCache.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\AAD.a5e5427a-ba43-4b37-93cc-b546e0a2a9bf\ActivitiesCache.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\AAD.a5e5427a-ba43-4b37-93cc-b546e0a2a9bf\ActivitiesCache.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\ConnectedDevicesPlatform\AAD.a5e5427a-ba43-4b37-93cc-b546e0a2a9bf\ActivitiesCache.db-wal
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\CrashpadMetrics-active.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\lockfile
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\BrowserMetrics\BrowserMetrics-698ED879-2CD4.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\BrowsingTopicsSiteData
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DashTrackerDatabase
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DIPS
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DIPS-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\ExtensionActivityComp
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\ExtensionActivityEdge
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Favicons
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\heavy_ad_intervention_opt_out.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\History
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\History-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Login Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Login Data For Account
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network Action Predictor
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network Action Predictor-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\ServerCertificate
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\SharedStorage
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\SharedStorage-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Top Sites
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Vpn Tokens
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Web Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Web Data-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Cache\Cache_Data\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Cache\Cache_Data\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Cache\Cache_Data\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Cache\Cache_Data\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Cache\Cache_Data\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Cache\No_Vary_Search\journal.baj
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnGraphiteCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnGraphiteCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnGraphiteCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnGraphiteCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnGraphiteCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnWebGPUCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnWebGPUCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnWebGPUCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnWebGPUCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\DawnWebGPUCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Extension State\000003.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Extension State\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Extension State\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Extension State\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\GPUCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\GPUCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\GPUCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\GPUCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\GPUCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb\000011.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\IndexedDB\https_www.bing.com_0.indexeddb.leveldb\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Local Storage\leveldb\000142.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Local Storage\leveldb\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Local Storage\leveldb\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Local Storage\leveldb\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network\Cookies
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network\Cookies-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network\Reporting and NEL
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network\Reporting and NEL-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Network\Trust Tokens
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Safe Browsing Network\Safe Browsing Cookies
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\0217d48983405c37_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\0217d48983405c37_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\1b253b58c9a87e4b_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\1b253b58c9a87e4b_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\216b336877170d1d_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\216b336877170d1d_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\27af5bf692004ca0_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\27af5bf692004ca0_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\283df284fc76dcd1_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\283df284fc76dcd1_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\2b5d3698d68860d4_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\35bed211f716c812_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\35bed211f716c812_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\36f43fc7fdfe84d8_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\4dc579a1251f7f81_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\4dc579a1251f7f81_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\6dd167c1d0b6344a_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\6dd167c1d0b6344a_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\703a9a4961122e80_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\703a9a4961122e80_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\758c16d90a2fe752_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\758c16d90a2fe752_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\83b038b0a7cfd3ba_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\83b038b0a7cfd3ba_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\8979af78ab23119f_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\8b4736245b329c8f_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\8b4736245b329c8f_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\900cdb7dcb014c50_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\9dfb571c969f84b2_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\9dfb571c969f84b2_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\9ed76774ced27e71_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\9ed76774ced27e71_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\9efb71a972912b6c_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\9efb71a972912b6c_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\a1d8d12d166e59cb_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\a1d8d12d166e59cb_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\a906cc261fab361f_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\a906cc261fab361f_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\bf623127e7547ed1_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\bf623127e7547ed1_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\cf2cbb67a13ae320_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\cf2cbb67a13ae320_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\d0e0a47e82d63112_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\d0e0a47e82d63112_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\d97299d07b067264_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\d97299d07b067264_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\e45e0a7abf554a69_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\eb8c68707e58235c_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\eb8c68707e58235c_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\ecedae92dc2a36db_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\ecedae92dc2a36db_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\f26bd39c964eabf6_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\CacheStorage\3b278e44f1419f0b07a0417a936be8182ad635d4\35b36476-7087-474a-a058-c1b971bac475\f26bd39c964eabf6_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\Database\000004.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\Database\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\Database\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Service Worker\Database\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Session Storage\000003.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Session Storage\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Session Storage\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Session Storage\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Shared Dictionary\db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\000003.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\metadata\000003.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\metadata\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\metadata\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\shared_proto_db\metadata\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Site Characteristics Database\000003.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Site Characteristics Database\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Site Characteristics Database\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Site Characteristics Database\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Sync Data\LevelDB\000003.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Sync Data\LevelDB\LOCK
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Sync Data\LevelDB\LOG
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\Sync Data\LevelDB\MANIFEST-000001
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GraphiteDawnCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GraphiteDawnCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GraphiteDawnCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GraphiteDawnCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GraphiteDawnCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GrShaderCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GrShaderCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GrShaderCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GrShaderCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\GrShaderCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\ShaderCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\ShaderCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\ShaderCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\ShaderCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\EBWebView\ShaderCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\settings.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\settings.db-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\settings.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Settings\settings.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Settings\settings.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Settings\settings.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\TileCache_100_3_PNGEncoded_Data.bin
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\TileCache_100_3_PNGEncoded_Header.bin
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\Settings\settings.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\Settings\settings.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\Settings\settings.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\SystemAppData\Helium\User.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\SystemAppData\Helium\User.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\SystemAppData\Helium\User.dat.LOG2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\SystemAppData\Helium\UserClasses.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\SystemAppData\Helium\UserClasses.dat.LOG1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy\SystemAppData\Helium\UserClasses.dat.LOG2
+C:\Users\Avangarde\OneDrive - Engineering Ingegneria Informatica S.p.A\App\Microsoft Edge\Edge Workspaces\preferences.edge: Can't allocate memory ERROR
+C:\Users\Avangarde\OneDrive - Engineering Ingegneria Informatica S.p.A\Microsoft Teams Data\Wiki\Avangarde - Engineering - 2.mht: Can't allocate memory ERROR
+WARNING: File path check failure for: C:\Windows\bootstat.dat
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\first_party_sets.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\first_party_sets.db-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\lockfile
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GraphiteDawnCache\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\data_3
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_0014d7
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_0014d7
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_0014de
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_0014de
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001533
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001533
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001534
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001534
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001535
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001535
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001536
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001536
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001537
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001537
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001538
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001538
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001539
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001539
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153a
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153a
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153b
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153b
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153c
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153c
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153d
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153d
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153e
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153e
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153f
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_00153f
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001540
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001540
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001541
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001541
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001542
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001542
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001543
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001543
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001544
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001544
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001545
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001545
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001546
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001546
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001547
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\f_001547
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\GrShaderCache\index
+C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\OptGuideOnDeviceModel\2025.8.8.1141\weights.bin: Can't get file status ERROR
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Account Web Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Affiliation Database
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\AggregationService
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\BrowsingTopicsSiteData
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Conversions
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\DIPS
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\DIPS-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Favicons
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Favicons-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\heavy_ad_intervention_opt_out.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\History
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\History-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\InterestGroups
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Login Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Login Data For Account
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Login Data-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\MediaDeviceSalts
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\MediaDeviceSalts-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Network Action Predictor
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Network Action Predictor-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\ServerCertificate
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\SharedStorage
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\SharedStorage-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Shortcuts
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Top Sites
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Web Data
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Web Data-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Cache\Cache_Data\data_0
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Cache\Cache_Data\data_1
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Cache\Cache_Data\data_2
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Cache\Cache_Data\data_3
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Cache\Cache_Data\index
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\Cache\No_Vary_Search\journal.baj
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
++++ Started at Sat Feb 14 16:52:12 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\740111b6-ddc7-4e47-8bb6-e935e9082ba6.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\740111b6-ddc7-4e47-8bb6-e935e9082ba6.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\Non confermato 669324.crdownload
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\affe4fb4-4a9c-451a-bcf8-60604d2fdd1d.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\affe4fb4-4a9c-451a-bcf8-60604d2fdd1d.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\Non confermato 441637.crdownload
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\Non confermato 441637.crdownload
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
++++ Started at Sat Feb 14 22:29:33 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
++++ Started at Sun Feb 15 11:23:15 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\3ec493fa-7e97-422e-a1d9-377d1a93b4df.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\3ec493fa-7e97-422e-a1d9-377d1a93b4df.tmp
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\Senza nome 1.docx
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\Senza nome 1.docx
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\Senza nome 1.docx
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\081537e6-1920-441f-bb0b-d0ab1c7a4a57.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\081537e6-1920-441f-bb0b-d0ab1c7a4a57.tmp
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
++++ Started at Mon Feb 16 09:48:57 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\Non confermato 361731.crdownload
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\4d72931b-e724-40d0-a120-1866ff6a73ae.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\4d72931b-e724-40d0-a120-1866ff6a73ae.tmp
+SelfCheck: Database modification detected. Forcing reload.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Database correctly reloaded (3627519 signatures)
+Activating the newly loaded database...
+SelfCheck: Database status OK.
++++ Started at Mon Feb 16 10:51:57 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
++++ Started at Mon Feb 16 10:56:05 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\cb452863-76ef-4a7a-a779-e1f9f23800ad.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\cb452863-76ef-4a7a-a779-e1f9f23800ad.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\Downloads\479ce70f-9d44-4854-ae36-de3d9f91a529.tmp
+WARNING: File path check failure on: C:\Users\Avangarde\Downloads\479ce70f-9d44-4854-ae36-de3d9f91a529.tmp
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
++++ Started at Tue Feb 17 08:27:15 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627519 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
+SelfCheck: Database status OK.
