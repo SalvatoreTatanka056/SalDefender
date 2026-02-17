@@ -29,27 +29,27 @@ namespace SalDefender
         private readonly Color DarkText = Color.WhiteSmoke;
         private readonly Color LightBg = Color.White;
         private readonly Color LightText = Color.FromArgb(45, 45, 45);
-        private Button scanButton;
-        private Button updateButton;
-        private Button settingsButton;
-        private ListBox resultsList;
-        private Label titleLabel;
-        private PictureBox logoBox;
-        private TextBox urlTextBox;
-        private Button downloadScanButton;
-        private Button diskScanButton;
-        private ComboBox driveComboBox;
-        private ProgressBar scanProgressBar;
-        private Label progressLabel;
-        private Button cancelScanButton;
-        private CancellationTokenSource cancellationTokenSource;
+        private Button scanButton = null!;
+        private Button updateButton = null!;
+        private Button settingsButton = null!;
+        private ListBox resultsList = null!;
+        private Label titleLabel = null!;
+        private PictureBox logoBox = null!;
+        private TextBox urlTextBox = null!;
+        private Button downloadScanButton = null!;
+        private Button diskScanButton = null!;
+        private ComboBox driveComboBox = null!;
+        private ProgressBar scanProgressBar = null!;
+        private Label progressLabel = null!;
+        private Button cancelScanButton = null!;
+        private CancellationTokenSource? cancellationTokenSource;
 
         // Dichiarazione in alto con le altre variabili
-        private Label liveStatusLabel;
+        private Label liveStatusLabel = null!;
 
-        private NotifyIcon trayIcon;
-        private ContextMenuStrip trayMenu;
-        private Process clamdProcess; // Questa è la variabile che mancava
+        private NotifyIcon trayIcon = null!;
+        private ContextMenuStrip trayMenu = null!;
+        private Process? clamdProcess; // Questa è la variabile che mancava
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
@@ -64,14 +64,14 @@ namespace SalDefender
         private const int WS_EX_LAYERED = 0x80000;
         private const int LWA_ALPHA = 0x2;
 
-        private FileSystemWatcher liveWatcher;
+        private FileSystemWatcher? liveWatcher;
         private bool isLiveProtectionEnabled = false;
 
 
-        private StatusStrip statusStrip;
-        private ToolStripStatusLabel statusTimeLabel;
-        private System.Windows.Forms.Timer displayTimer;
-        private Stopwatch stopwatch;
+        private StatusStrip statusStrip = null!;
+        private ToolStripStatusLabel statusTimeLabel = null!;
+        private System.Windows.Forms.Timer displayTimer = null!;
+        private Stopwatch stopwatch = null!;
 
 
         private void SetupLiveProtection(string pathToCheck)
@@ -118,7 +118,7 @@ namespace SalDefender
                         return; // Il file è pronto e accessibile
                     }
                 }
-                catch (IOException ex)
+                catch (IOException)
                 {
                     // Il file è ancora bloccato, attendi un po' prima di riprovare
                     await Task.Delay(2000);
@@ -128,72 +128,163 @@ namespace SalDefender
         }
 
 
-        // 1. Definisci una coda sicura per i thread
+        // Coda sicura per i thread con deduplicazione e throttling
         private ConcurrentQueue<string> _filesToScan = new ConcurrentQueue<string>();
+        private HashSet<string> _filesInQueue = new HashSet<string>();
+        private SemaphoreSlim _liveScanLimiter = new SemaphoreSlim(2); // MAX 2 scansioni live simultanee per non bloccare altri scan
+        private object _queueLock = new object();
         private bool _isProcessing = false;
 
         private void OnFileCreated(object sender, FileSystemEventArgs e)
         {
-            // L'unica cosa che fa l'evento è aggiungere alla coda e uscire subito
-            _filesToScan.Enqueue(e.FullPath);
-            
+            if (string.IsNullOrEmpty(e.FullPath)) return;
 
-            // Avvia il processore se non è già attivo
-            if (!_isProcessing)
+            try
             {
-                Task.Run(() => ProcessQueue());
+                // Filtro: ignora extension temporanee e di sistema
+                string extension = Path.GetExtension(e.FullPath).ToLower();
+                if (extension == ".tmp" || extension == ".part" || extension == ".lnk" || 
+                    extension == ".sys" || extension == ".temp")
+                    return;
+
+                // Evita duplicati nella coda
+                lock (_queueLock)
+                {
+                    if (_filesInQueue.Contains(e.FullPath))
+                        return;
+
+                    _filesInQueue.Add(e.FullPath);
+                }
+
+                _filesToScan.Enqueue(e.FullPath);
+
+                // Avvia il processore se non è già attivo
+                if (!_isProcessing)
+                {
+                    _isProcessing = true;
+                    Task.Run(() => ProcessQueue());
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Errore in OnFileCreated: {ex.Message}");
             }
         }
 
         private async Task ProcessQueue()
         {
-            _isProcessing = true;
+            try
+            {
+                while (_filesToScan.TryDequeue(out string? filePath))
+                {
+                    if (string.IsNullOrEmpty(filePath)) continue;
+                    
+                    // Rimuovi dalla lista di deduplicazione
+                    lock (_queueLock)
+                    {
+                        _filesInQueue.Remove(filePath);
+                    }
 
-            while (_filesToScan.TryDequeue(out string filePath))
+                    // THROTTLE: Aspetta il semaforo (max 2 scansioni live contemporanee)
+                    // Questo evita di saturare clamd e bloccare le scansioni manuali
+                    await _liveScanLimiter.WaitAsync();
+
+                    try
+                    {
+                        // Attendi che il file sia completamente scritto (max 3 secondi)
+                        bool isReady = await WaitForFileReadyQuick(filePath, 3000);
+                        
+                        if (!isReady)
+                        {
+                            continue; // File bloccato, salta
+                        }
+
+                        // Usa il client ClamAV con timeout breve
+                        try
+                        {
+                            var clamClient = new ClamClient("localhost", 3310);
+                            var scanResult = await clamClient.ScanFileOnServerAsync(filePath).ConfigureAwait(false);
+
+                            this.Invoke((MethodInvoker)delegate
+                            {
+                                try
+                                {
+                                    switch (scanResult.Result)
+                                    {
+                                        case ClamScanResults.Clean:
+                                            // Log solo è minaccia, non per ogni file pulito (troppo spam)
+                                            break;
+
+                                        case ClamScanResults.VirusDetected:
+                                            resultsList.Items.Insert(0, $"[!!!] MINACCIA: {Path.GetFileName(filePath)} - {scanResult.RawResult}");
+                                            System.Media.SystemSounds.Exclamation.Play();
+                                            if (trayIcon != null)
+                                                trayIcon.ShowBalloonTip(5000, "⚠️ VIRUS RILEVATO!", 
+                                                    $"Minaccia: {Path.GetFileName(filePath)}", ToolTipIcon.Error);
+                                            
+                                            // Metti in quarantena
+                                            _ = MoveToQuarantineAsync(filePath, @"C:\Quarantine\", scanResult.RawResult);
+                                            break;
+
+                                        case ClamScanResults.Error:
+                                            // Errore silenzioso per file inaccessibili durante live protection
+                                            break;
+                                    }
+                                }
+                                catch { }
+                            });
+                        }
+                        catch (TaskCanceledException)
+                        {
+                            // Timeout sulla scansione, salta il file
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine($"Errore scansione live: {ex.Message}");
+                        }
+                    }
+                    finally
+                    {
+                        // Rilascia lo slot per la prossima scansione live
+                        _liveScanLimiter.Release();
+                        await Task.Delay(50); // Piccola pausa per non sovraccaricare
+                    }
+                }
+            }
+            finally
+            {
+                _isProcessing = false;
+            }
+        }
+
+        // Versione veloce e senza log della verifica file ready
+        private async Task<bool> WaitForFileReadyQuick(string filePath, int timeoutMs)
+        {
+            int elapsed = 0;
+            const int checkInterval = 150;
+
+            while (elapsed < timeoutMs)
             {
                 try
                 {
-                    var clamClient = new ClamClient("localhost", 3310);
-                    var scanResult = await clamClient.ScanFileOnServerAsync(filePath);
-
-                    this.Invoke((MethodInvoker)delegate
+                    using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
                     {
-                        switch (scanResult.Result)
-                        {
-                            case ClamScanResults.Clean:
-                                resultsList.Items.Insert(0, $"[LIVE] Pulito: {filePath}");
-                                break;
-
-                            case ClamScanResults.VirusDetected:
-                                // --- AGGIUNTA: Notifica e Suono ---
-                                resultsList.Items.Insert(0, $"[!!!] MINACCIA: {filePath} -> {scanResult.RawResult}");
-
-                                // Riproduce il suono di sistema (Beep o Asterisk)
-                                System.Media.SystemSounds.Exclamation.Play();
-
-                                // Mostra il fumetto (Balloon Tip) se la trayIcon è configurata
-                                if (trayIcon != null)
-                                {
-                                    trayIcon.ShowBalloonTip(5000, "Virus Rilevato!", $"Minaccia trovata in: {filePath}", ToolTipIcon.Error);
-                                }
-                                // ----------------------------------
-                                break;
-
-                            case ClamScanResults.Error:
-                                resultsList.Items.Insert(0, $"[ERRORE] Scansione fallita: {filePath}");
-                                break;
-                        }
-                    });
+                        return true;
+                    }
                 }
-                catch (Exception ex)
+                catch (FileNotFoundException)
                 {
-                    this.Invoke((MethodInvoker)delegate
-                    {
-                        resultsList.Items.Insert(0, $"[ERRORE LIVE] {ex.Message}");
-                    });
+                    return false;
+                }
+                catch (IOException)
+                {
+                    elapsed += checkInterval;
+                    if (elapsed < timeoutMs)
+                        await Task.Delay(checkInterval);
                 }
             }
-            _isProcessing = false;
+
+            return false;
         }
 
 
@@ -209,8 +300,11 @@ namespace SalDefender
             }
             else
             {
-                liveWatcher.EnableRaisingEvents = false;
-                liveWatcher.Dispose();
+                if (liveWatcher != null)
+                {
+                    liveWatcher.EnableRaisingEvents = false;
+                    liveWatcher.Dispose();
+                }
                 isLiveProtectionEnabled = false;
                 resultsList.Items.Insert(0, ">>> Protezione Live DISATTIVATA");
             }
@@ -353,7 +447,7 @@ namespace SalDefender
             SetLayeredWindowAttributes(hWnd, 0, alpha, LWA_ALPHA);
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainForm_FormClosing(object? sender, FormClosingEventArgs e)
         {
 
             // Impedisce la chiusura tramite il pulsante X (disabilita la X)
@@ -365,6 +459,13 @@ namespace SalDefender
 
             try
             {
+                // Disabilita live watcher
+                if (liveWatcher != null)
+                {
+                    liveWatcher.EnableRaisingEvents = false;
+                    liveWatcher.Dispose();
+                }
+
                 // Rimuove l'icona dalla tray prima di chiudere (evita icone fantasma)
                 if (trayIcon != null)
                 {
@@ -435,7 +536,7 @@ namespace SalDefender
             }
         }
 
-        private void SettingsButton_Click(object sender, EventArgs e)
+        private void SettingsButton_Click(object? sender, EventArgs e)
         {
             // Creazione di un menu contestuale rapido per le impostazioni
             ContextMenuStrip settingsMenu = new ContextMenuStrip();
@@ -536,8 +637,8 @@ namespace SalDefender
             };
 
             // Rimosso scanButton da qui
-            StyleActionButton(updateButton = new Button { Text = "Aggiorna Firme", Width = 140 }, UpdateButton_Click);
-            StyleActionButton(settingsButton = new Button { Text = "Impostazioni", Width = 140 }, SettingsButton_Click);
+            StyleActionButton(updateButton = new Button { Text = "Aggiorna Firme", Width = 140 }, UpdateButton_Click!);
+            StyleActionButton(settingsButton = new Button { Text = "Impostazioni", Width = 140 }, SettingsButton_Click!);
 
             actionBar.Controls.AddRange(new Control[] { updateButton, settingsButton });
             mainLayout.Controls.Add(actionBar, 0, 1);
@@ -688,7 +789,7 @@ namespace SalDefender
             // --- Riga 0: URL Download ---
             urlTextBox = new TextBox { PlaceholderText = "URL file...", Dock = DockStyle.Fill, Margin = new Padding(0, 8, 5, 0) };
             downloadScanButton = new Button { Text = "Download & Scan", Dock = DockStyle.Fill, Height = 30 };
-            downloadScanButton.Click += DownloadScanButton_Click;
+            downloadScanButton.Click += DownloadScanButton_Click!;
 
             layout.Controls.Add(urlTextBox, 0, 0);
             layout.Controls.Add(downloadScanButton, 1, 0);
@@ -704,8 +805,8 @@ namespace SalDefender
             diskScanButton = new Button { Text = "Scan Disco", Dock = DockStyle.Fill, Margin = new Padding(2) };
             cancelScanButton = new Button { Text = "Annulla", Dock = DockStyle.Fill, Enabled = false, Margin = new Padding(2) };
 
-            diskScanButton.Click += DiskScanButton_Click;
-            cancelScanButton.Click += CancelScanButton_Click;
+            diskScanButton.Click += DiskScanButton_Click!;
+            cancelScanButton.Click += CancelScanButton_Click!;
 
             diskButtonsTable.Controls.Add(diskScanButton, 0, 0);
             diskButtonsTable.Controls.Add(cancelScanButton, 1, 0);
@@ -716,7 +817,7 @@ namespace SalDefender
             // --- Riga 2: Scansione Cartella ---
             Label folderLabel = new Label { Text = "Analizza una cartella specifica:", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill };
             scanButton = new Button { Text = "Sfoglia Cartella", Dock = DockStyle.Fill, Height = 30 };
-            scanButton.Click += ScanButton_Click;
+            scanButton.Click += ScanButton_Click!;
 
             layout.Controls.Add(folderLabel, 0, 2);
             layout.Controls.Add(scanButton, 1, 2);
@@ -776,7 +877,7 @@ namespace SalDefender
             if (driveComboBox.Items.Count > 0) driveComboBox.SelectedIndex = 0;
         }
 
-        private async void ScanButton_Click(object sender, EventArgs e)
+        private async void ScanButton_Click(object? sender, EventArgs e)
         {
             resultsList.Items.Clear();
             using var folderDialog = new FolderBrowserDialog();
@@ -825,7 +926,7 @@ namespace SalDefender
                 // 2. Scansione parallela ottimizzata
                 int filesScanned = 0;
                 int threatsFound = 0;
-                var clam = new ClamClient("localhost", 3310);
+                var clamClient = new ClamClient("localhost", 3310); // 30 secondi per scansioni manuali
 
                 var parallelOptions = new ParallelOptions
                 {
@@ -838,7 +939,7 @@ namespace SalDefender
                     try
                     {
                         // Scansione veloce (invia solo il path)
-                        var scanResult = clam.ScanFileOnServerAsync(file).Result;
+                        var scanResult = clamClient.ScanFileOnServerAsync(file).Result;
                         Interlocked.Increment(ref filesScanned);
 
                         // Calcolo percentuale
@@ -887,7 +988,7 @@ namespace SalDefender
                 SetUiState(true); // Riabilita l'interfaccia
                 SetScanningMode(false);
                 cancellationTokenSource?.Dispose();
-                cancellationTokenSource = null;
+                cancellationTokenSource = null!;
             }
         }
 
@@ -920,7 +1021,7 @@ namespace SalDefender
             return files;
         }
 
-        private async void DownloadScanButton_Click(object sender, EventArgs e)
+        private async void DownloadScanButton_Click(object? sender, EventArgs e)
         {
             resultsList.Items.Clear();
             string url = urlTextBox.Text.Trim();
@@ -931,7 +1032,7 @@ namespace SalDefender
                 return;
             }
 
-            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri uriResult) ||
+            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri? uriResult) ||
                 !(uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps))
             {
                 resultsList.Items.Add("URL non valido. Assicurati che inizi con http:// o https://");
@@ -966,8 +1067,8 @@ namespace SalDefender
                     }
                 }
 
-                resultsList.Items.Add($"Download completato in: {tempFilePath}");
-                resultsList.Items.Add("Avvio scansione del file scaricato...");
+                resultsList?.Items.Add($"Download completato in: {tempFilePath}");
+                resultsList?.Items.Add("Avvio scansione del file scaricato...");
                 Application.DoEvents();
 
                 ClamClient clam = new ClamClient("localhost", 3310);
@@ -976,16 +1077,16 @@ namespace SalDefender
                 switch (scanResult.Result)
                 {
                     case ClamScanResults.Clean:
-                        resultsList.Items.Add($"File scaricato pulito: {tempFilePath}");
+                        resultsList?.Items.Add($"File scaricato pulito: {tempFilePath}");
                         break;
                     case ClamScanResults.VirusDetected:
-                        resultsList.Items.Add($"MINACCIA RILEVATA NEL DOWNLOAD: {tempFilePath} - {scanResult.RawResult}");
+                        resultsList?.Items.Add($"MINACCIA RILEVATA NEL DOWNLOAD: {tempFilePath} - {scanResult.RawResult}");
                         break;
                     case ClamScanResults.Error:
-                        resultsList.Items.Add($"ERRORE durante la scansione del download {tempFilePath}: {scanResult.RawResult}");
+                        resultsList?.Items.Add($"ERRORE durante la scansione del download {tempFilePath}: {scanResult.RawResult}");
                         break;
                     case ClamScanResults.Unknown:
-                        resultsList.Items.Add($"Sconosciuto (download): {tempFilePath}");
+                        resultsList?.Items.Add($"Sconosciuto (download): {tempFilePath}");
                         break;
                 }
             }
@@ -1014,7 +1115,7 @@ namespace SalDefender
             }
         }
 
-        private async void UpdateButton_Click(object sender, EventArgs e)
+        private async void UpdateButton_Click(object? sender, EventArgs e)
         {
             updateButton.Enabled = false;
             scanButton.Enabled = false;
@@ -1053,8 +1154,9 @@ namespace SalDefender
                         CreateNoWindow = true
                     };
 
-                    using (Process process = Process.Start(psi))
+                    using (Process? process = Process.Start(psi))
                     {
+                        if (process == null) return;
                         process.OutputDataReceived += (s, args) =>
                         {
                             if (args.Data != null)
@@ -1098,7 +1200,7 @@ namespace SalDefender
         }
 
 
-        private async void DiskScanButton_Click(object sender, EventArgs e)
+        private async void DiskScanButton_Click(object? sender, EventArgs e)
         {
             if (driveComboBox.SelectedItem == null)
             {
@@ -1106,10 +1208,8 @@ namespace SalDefender
                 return;
             }
 
-
-
             resultsList.Items.Clear();
-            string drivePath = driveComboBox.SelectedItem.ToString().Substring(0, 3);
+            string drivePath = driveComboBox.SelectedItem.ToString()?.Substring(0, 3) ?? "C:\\";
             cancellationTokenSource = new CancellationTokenSource();
             var token = cancellationTokenSource.Token;
 
@@ -1218,9 +1318,9 @@ namespace SalDefender
         // Classe di supporto per il progresso
         public class ScanProgress
         {
-            public string Message { get; set; }
+            public string? Message { get; set; }
             public int Percent { get; set; }
-            public string NewLog { get; set; }
+            public string? NewLog { get; set; }
         }
 
         private List<string> GetAllFilesRecursive(string path, CancellationToken token)
@@ -1249,7 +1349,7 @@ namespace SalDefender
             return files;
         }
 
-        private void CancelScanButton_Click(object sender, EventArgs e)
+        private void CancelScanButton_Click(object? sender, EventArgs e)
         {
             if (cancellationTokenSource != null && !cancellationTokenSource.IsCancellationRequested)
             {
