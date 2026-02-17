@@ -18,6 +18,41 @@ using System.Collections.Concurrent;
 
 namespace SalDefender
 {
+    /// <summary>
+    /// Classe statica per la configurazione centrale dell'applicazione
+    /// </summary>
+    internal static class AppConfig
+    {
+        // Percorsi ClamAV
+        public static readonly string ClamAVPath = @"C:\Program Files\ClamAV\clamd.exe";
+        public static readonly string FreshclamPath = @"C:\Program Files\ClamAV\freshclam.exe";
+        
+        // Percorsi quarantena e configurazione
+        public static readonly string QuarantineDirectory = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "SalDefender", "Quarantine");
+        
+        public static readonly int ClamAVPort = 3310;
+        public static readonly string ClamAVHost = "localhost";
+
+        /// <summary>
+        /// Valida che ClamAV sia disponibile sul sistema
+        /// </summary>
+        public static bool ValidateClamAVInstallation()
+        {
+            return File.Exists(ClamAVPath) && File.Exists(FreshclamPath);
+        }
+
+        /// <summary>
+        /// Inizializza le directory necessarie
+        /// </summary>
+        public static void InitializeDirectories()
+        {
+            if (!Directory.Exists(QuarantineDirectory))
+                Directory.CreateDirectory(QuarantineDirectory);
+        }
+    }
+
     public class MainForm : Form
     {
 
@@ -190,29 +225,7 @@ namespace SalDefender
             }
         }
 
-        private async Task WaitForFileReady(string filePath)
-        {
 
-            int attempts = 0;
-            while (attempts < 1)
-            {
-                try
-                {
-                    using (FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
-                    {
-                        resultsList.Items.Insert(0, $"file non bloccato {filePath}");
-                        attempts++;
-                        return; // Il file è pronto e accessibile
-                    }
-                }
-                catch (IOException)
-                {
-                    // Il file è ancora bloccato, attendi un po' prima di riprovare
-                    await Task.Delay(2000);
-                    attempts++;
-                }
-            }
-        }
 
 
         // Coda sicura per i thread con deduplicazione e throttling
@@ -351,7 +364,7 @@ namespace SalDefender
 
                             try
                             {
-                                var clamClient = new ClamClient("localhost", 3310);
+                                var clamClient = new ClamClient(AppConfig.ClamAVHost, AppConfig.ClamAVPort);
                                 var scanResult = await clamClient.ScanFileOnServerAsync(filePath).ConfigureAwait(false);
                                 
                                 Debug.WriteLine($"[LIVE] Scan completato: {Path.GetFileName(filePath)} -> {scanResult.Result}");
@@ -374,7 +387,7 @@ namespace SalDefender
                                                         $"Minaccia: {Path.GetFileName(filePath)}", ToolTipIcon.Error);
                                                 
                                                 // Metti in quarantena
-                                                _ = MoveToQuarantineAsync(filePath, @"C:\Quarantine\", scanResult.RawResult);
+                                                _ = MoveToQuarantineAsync(filePath, AppConfig.QuarantineDirectory, scanResult.RawResult);
                                                 break;
 
                                             case ClamScanResults.Error:
@@ -523,6 +536,9 @@ namespace SalDefender
                 return;
             }
 
+            // Inizializza le directory necessarie (quarantena, etc.)
+            AppConfig.InitializeDirectories();
+
             // Creazione della StatusStrip
             statusStrip = new StatusStrip();
             statusTimeLabel = new ToolStripStatusLabel { Text = "Pronto" };
@@ -566,6 +582,20 @@ namespace SalDefender
         {
             base.OnLoad(e);
             
+            // Validazione ClamAV
+            if (!AppConfig.ValidateClamAVInstallation())
+            {
+                MessageBox.Show(
+                    "Avviso: ClamAV non sembra essere installato correttamente.\n\n" +
+                    "Percorsi cercati:\n" +
+                    $"- {AppConfig.ClamAVPath}\n" +
+                    $"- {AppConfig.FreshclamPath}\n\n" +
+                    "Scarica e installa ClamAV da: https://www.clamav.net/",
+                    "SalDefender - Configurazione ClamAV",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            
             // Setup live protection after form handle is created
             SetupMultipleLiveProtection();
         }
@@ -580,12 +610,12 @@ namespace SalDefender
                     try { proc.Kill(); } catch { }
                 }
 
-                string exePath = @"C:\Program Files\ClamAV\clamd.exe";
+                string exePath = AppConfig.ClamAVPath;
                 string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamd.conf");
 
                 if (!File.Exists(exePath))
                 {
-                    MessageBox.Show($"File non trovato: {exePath}");
+                    MessageBox.Show($"ClamAV non trovato in: {exePath}\nAssicurati che ClamAV sia installato in C:\\Program Files\\ClamAV\\");
                     return;
                 }
 
@@ -629,20 +659,28 @@ namespace SalDefender
             // Cerchiamo i processi attivi con il nome "clamd"
             var processes = Process.GetProcessesByName("clamd");
 
-            while (processes.Length < 0)
+            int retries = 0;
+            while (processes.Length == 0 && retries < 10)
             {
                 resultsList.Items.Add("Attendere avvio clamd...");
-                System.Threading.Thread.Sleep(2000); // Attende mezzo secondo prima di ricontrollare
+                System.Threading.Thread.Sleep(500); // Attende 500ms prima di ricontrollare
+                processes = Process.GetProcessesByName("clamd");
+                retries++;
             }
 
-            var proc = processes[0];
-            // Verifichiamo che non sia bloccato o in fase di chiusura
-            if (!proc.HasExited)
+            if (processes.Length > 0)
             {
-                resultsList.Items.Add($"CLAMD -> ATTIVO (PID: {proc.Id}, RAM: {proc.WorkingSet64 / 1024 / 1024} MB)");
-
+                var proc = processes[0];
+                // Verifichiamo che non sia bloccato o in fase di chiusura
+                if (!proc.HasExited)
+                {
+                    resultsList.Items.Add($"CLAMD -> ATTIVO (PID: {proc.Id}, RAM: {proc.WorkingSet64 / 1024 / 1024} MB)");
+                }
             }
-
+            else
+            {
+                resultsList.Items.Add("⚠️ AVVISO: ClamAV (clamd) non riuscito ad avviarsi.");
+            }
         }
 
         private void SetShellTransparency(bool transparent)
@@ -936,25 +974,54 @@ namespace SalDefender
                 string newFileName = $"{timestamp}_{fileId}.quarantine";
                 string destinationPath = Path.Combine(quarantineDir, newFileName);
 
-                // 1. Sposta il file fisico
-                File.Move(originalPath, destinationPath);
+                // Prova a spostare il file con retry per file bloccati
+                int moveAttempts = 0;
+                bool movingSucceeded = false;
+                while (moveAttempts < 3 && !movingSucceeded)
+                {
+                    try
+                    {
+                        File.Move(originalPath, destinationPath, overwrite: true);
+                        movingSucceeded = true;
+                        Debug.WriteLine($"[QUARANTINE] File spostato: {originalPath} -> {destinationPath}");
+                    }
+                    catch (IOException) when (moveAttempts < 2)
+                    {
+                        moveAttempts++;
+                        await Task.Delay(500);
+                    }
+                }
 
-                // 2. Crea un file di metadata (Opzionale ma consigliato)
-                // Ti permette di sapere cos'era il file originale senza toccare quello infetto
-                string metadataPath = destinationPath + ".json";
-                string info = $@"{{
-            ""OriginalPath"": ""{originalPath.Replace("\\", "\\\\")}"",
-            ""Detection"": ""{virusName}"",
-            ""Date"": ""{DateTime.Now}""
-        }}";
+                if (movingSucceeded)
+                {
+                    // Crea un file di metadata
+                    string metadataPath = destinationPath + ".json";
+                    string info = $@"{{
+    ""OriginalPath"": ""{originalPath.Replace("\\", "\\\\")}"",
+    ""Detection"": ""{virusName}"",
+    ""Date"": ""{DateTime.Now:yyyy-MM-dd HH:mm:ss}"",
+    ""FileSize"": {(File.Exists(originalPath) ? new FileInfo(originalPath).Length : 0)}
+}}";
 
-                await File.WriteAllTextAsync(metadataPath, info);
+                    try
+                    {
+                        await File.WriteAllTextAsync(metadataPath, info);
+                    }
+                    catch (Exception metaEx)
+                    {
+                        Debug.WriteLine($"[QUARANTINE] Avvertimento: metadata non scritto - {metaEx.Message}");
+                    }
 
-                Console.WriteLine($"[SICUREZZA] File isolato con ID: {fileId}");
+                    Debug.WriteLine($"[QUARANTINE] File isolato con ID: {fileId}");
+                }
+                else
+                {
+                    Debug.WriteLine($"[QUARANTINE] ERRORE: Impossibile spostare {originalPath} dopo 3 tentativi");
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[ERRORE] Impossibile isolare il file: {ex.Message}");
+                Debug.WriteLine($"[QUARANTINE] Errore critico: {ex.Message}\n{ex.StackTrace}");
             }
         }
 
@@ -1142,7 +1209,7 @@ namespace SalDefender
                 // 2. Scansione parallela ottimizzata
                 int filesScanned = 0;
                 int threatsFound = 0;
-                var clamClient = new ClamClient("localhost", 3310);
+                var clamClient = new ClamClient(AppConfig.ClamAVHost, AppConfig.ClamAVPort);
 
                 var parallelOptions = new ParallelOptions
                 {
@@ -1166,7 +1233,7 @@ namespace SalDefender
                         if (scanResult.Result == ClamScanResults.VirusDetected)
                         {
                             Interlocked.Increment(ref threatsFound);
-                            _ = MoveToQuarantineAsync(file, @"C:\Quarantine\", scanResult.RawResult);
+                            _ = MoveToQuarantineAsync(file, AppConfig.QuarantineDirectory, scanResult.RawResult);
 
                             ((IProgress<ScanProgress>)progress).Report(new ScanProgress
                             {
@@ -1211,6 +1278,15 @@ namespace SalDefender
                     cancellationTokenSource?.Dispose();
                     cancellationTokenSource = null!;
                 });
+
+                // Riavvia il ProcessQueue della live protection se era attivo
+                // (potrebbe essersi bloccato durante la scansione della cartella)
+                if (_liveProtectionRunning && !_isProcessing && _filesToScan.Count > 0)
+                {
+                    _isProcessing = true;
+                    Debug.WriteLine($"[LIVE] Riavvio ProcessQueue dopo scansione cartella");
+                    Task.Run(() => ProcessQueue());
+                }
             }
         }
 
@@ -1301,7 +1377,7 @@ namespace SalDefender
                     resultsList?.Items.Add("Avvio scansione del file scaricato...");
                 });
 
-                ClamClient clam = new ClamClient("localhost", 3310);
+                ClamClient clam = new ClamClient(AppConfig.ClamAVHost, AppConfig.ClamAVPort);
                 var scanResult = await clam.ScanFileOnServerAsync(tempFilePath);
 
                 this.Invoke((MethodInvoker)delegate
@@ -1361,12 +1437,12 @@ namespace SalDefender
             progressLabel.Text = "Aggiornamento in corso...";
             Application.DoEvents();
 
-            string freshclamPath = @"C:\Program Files\ClamAV\freshclam.exe";
-            string configPath = @"c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\freshclam.conf";
+            string freshclamPath = AppConfig.FreshclamPath;
+            string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf");
 
             if (!File.Exists(freshclamPath))
             {
-                resultsList.Items.Add("ERRORE: freshclam.exe non trovato in C:\\Program Files\\ClamAV\\");
+                resultsList.Items.Add($"ERRORE: freshclam.exe non trovato in {AppConfig.FreshclamPath}\nAssicurati che ClamAV sia installato correttamente.");
                 updateButton.Enabled = true;
                 scanButton.Enabled = true;
                 downloadScanButton.Enabled = true;
@@ -1485,7 +1561,7 @@ namespace SalDefender
                 // 2. Scansione Parallela
                 int filesScanned = 0;
                 int threatsFound = 0;
-                var clam = new ClamClient("localhost", 3310);
+                var clam = new ClamClient(AppConfig.ClamAVHost, AppConfig.ClamAVPort);
 
                 var parallelOptions = new ParallelOptions
                 {
@@ -1545,6 +1621,15 @@ namespace SalDefender
                     cancellationTokenSource?.Dispose();
                     cancellationTokenSource = null!;
                 });
+
+                // Riavvia il ProcessQueue della live protection se era attivo
+                // (potrebbe essersi bloccato durante la scansione del disco)
+                if (_liveProtectionRunning && !_isProcessing && _filesToScan.Count > 0)
+                {
+                    _isProcessing = true;
+                    Debug.WriteLine($"[LIVE] Riavvio ProcessQueue dopo scansione disco");
+                    Task.Run(() => ProcessQueue());
+                }
             }
         }
 
