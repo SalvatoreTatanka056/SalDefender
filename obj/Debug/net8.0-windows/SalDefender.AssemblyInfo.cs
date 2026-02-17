@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SalDefender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccbcac9e10c4a8ad878ec6ffe6e30e16c39e9d0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7af3eebfcca6fa3eae7a911c0100ed56c560b87")]
 [assembly: System.Reflection.AssemblyProductAttribute("SalDefender")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SalDefender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

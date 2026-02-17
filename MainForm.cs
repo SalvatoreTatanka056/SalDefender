@@ -23,9 +23,40 @@ namespace SalDefender
     /// </summary>
     internal static class AppConfig
     {
-        // Percorsi ClamAV
-        public static readonly string ClamAVPath = @"C:\Program Files\ClamAV\clamd.exe";
-        public static readonly string FreshclamPath = @"C:\Program Files\ClamAV\freshclam.exe";
+        // Percorsi ClamAV (configurabili)
+        private static string? _clamAVPath;
+        private static string? _freshclamPath;
+        private static string? _freshclamConfigPath;
+
+        public static string ClamAVPath
+        {
+            get
+            {
+                if (_clamAVPath == null)
+                    _clamAVPath = FindClamAV() ?? @"C:\Program Files\ClamAV\clamd.exe";
+                return _clamAVPath;
+            }
+        }
+
+        public static string FreshclamPath
+        {
+            get
+            {
+                if (_freshclamPath == null)
+                    _freshclamPath = FindFreshclam() ?? @"C:\Program Files\ClamAV\freshclam.exe";
+                return _freshclamPath;
+            }
+        }
+
+        public static string FreshclamConfigPath
+        {
+            get
+            {
+                if (_freshclamConfigPath == null)
+                    _freshclamConfigPath = FindFreshclamConfig() ?? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf");
+                return _freshclamConfigPath;
+            }
+        }
         
         // Percorsi quarantena e configurazione
         public static readonly string QuarantineDirectory = Path.Combine(
@@ -36,11 +67,150 @@ namespace SalDefender
         public static readonly string ClamAVHost = "localhost";
 
         /// <summary>
+        /// Ricerca automatica di clamd.exe in percorsi comuni
+        /// </summary>
+        private static string? FindClamAV()
+        {
+            var percorsiComuni = new[]
+            {
+                @"C:\Program Files\ClamAV\clamd.exe",
+                @"C:\Program Files (x86)\ClamAV\clamd.exe",
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamd.exe"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "ClamAV", "clamd.exe"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "ClamAV", "clamd.exe"),
+            };
+
+            foreach (var percorso in percorsiComuni)
+            {
+                if (File.Exists(percorso))
+                {
+                    Debug.WriteLine($"[CONFIG] ClamAV trovato: {percorso}");
+                    return percorso;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Ricerca automatica di freshclam.exe in percorsi comuni
+        /// </summary>
+        private static string? FindFreshclam()
+        {
+            var percorsiComuni = new[]
+            {
+                @"C:\Program Files\ClamAV\freshclam.exe",
+                @"C:\Program Files (x86)\ClamAV\freshclam.exe",
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.exe"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "ClamAV", "freshclam.exe"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "ClamAV", "freshclam.exe"),
+            };
+
+            foreach (var percorso in percorsiComuni)
+            {
+                if (File.Exists(percorso))
+                {
+                    Debug.WriteLine($"[CONFIG] Freshclam trovato: {percorso}");
+                    return percorso;
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Ricerca automatica di freshclam.conf in percorsi comuni
+        /// Se non trovato, lo crea automaticamente
+        /// </summary>
+        private static string? FindFreshclamConfig()
+        {
+            var percorsiComuni = new[]
+            {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf"),
+                @"C:\Program Files\ClamAV\freshclam.conf",
+                @"C:\Program Files (x86)\ClamAV\freshclam.conf",
+                @"C:\ProgramData\clamav\freshclam.conf",
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "ClamAV", "freshclam.conf"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "ClamAV", "freshclam.conf"),
+            };
+
+            // Cerca il file nei percorsi comuni
+            foreach (var percorso in percorsiComuni)
+            {
+                if (File.Exists(percorso))
+                {
+                    Debug.WriteLine($"[CONFIG] Freshclam config trovato: {percorso}");
+                    return percorso;
+                }
+            }
+
+            // Se non trovato, crea un nuovo file nella directory dell'applicazione
+            string defaultConfigPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf");
+            
+            try
+            {
+                string dbDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_db");
+                string logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_logs");
+                
+                // Crea le directory se non esistono
+                if (!Directory.Exists(dbDir))
+                    Directory.CreateDirectory(dbDir);
+                if (!Directory.Exists(logDir))
+                    Directory.CreateDirectory(logDir);
+
+                // Contenuto del file freshclam.conf (configurazione minimale e valida)
+                string configContent = $@"# ClamAV Freshclam Configuration File
+# Auto-generated by SalDefender
+
+# Path to the database directory
+DatabaseDirectory {dbDir}
+
+# Path for the log file
+UpdateLogFile {logDir}/freshclam.log
+
+# Log file max size (0 = unlimited)
+LogFileMaxSize 0
+
+# Primary database mirror
+DatabaseMirror database.clamav.net
+
+# Alternative mirrors
+DatabaseMirror db.de.clamav.net
+DatabaseMirror db.us.clamav.net
+
+# Check for updates (24 volte al giorno = ogni ora)
+Checks 24
+
+# Connection timeout in seconds
+ConnectTimeout 30
+
+# Receive timeout in seconds
+ReceiveTimeout 30
+";
+
+                // Scrivi il file SENZA BOM UTF-8 (freshclam non legge bene con BOM)
+                File.WriteAllText(defaultConfigPath, configContent, new UTF8Encoding(false));
+                Debug.WriteLine($"[CONFIG] Freshclam config creato: {defaultConfigPath}");
+                return defaultConfigPath;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[CONFIG] ERRORE creazione freshclam.conf: {ex.Message}");
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Valida che ClamAV sia disponibile sul sistema
         /// </summary>
         public static bool ValidateClamAVInstallation()
         {
-            return File.Exists(ClamAVPath) && File.Exists(FreshclamPath);
+            bool clamdExists = File.Exists(ClamAVPath);
+            bool freshclamExists = File.Exists(FreshclamPath);
+            
+            Debug.WriteLine($"[CONFIG] Validazione ClamAV: clamd={clamdExists}, freshclam={freshclamExists}");
+            
+            return clamdExists && freshclamExists;
         }
 
         /// <summary>
@@ -596,8 +766,322 @@ namespace SalDefender
                     MessageBoxIcon.Warning);
             }
             
-            // Setup live protection after form handle is created
-            SetupMultipleLiveProtection();
+            // Sequence: 1. Aspetta clamd.exe, 2. Scarica firme, 3. Setup live protection
+            Task.Run(async () => await InitializationSequence());
+        }
+
+        /// <summary>
+        /// Sequenza inizializzazione: clamd → freshclam → live protection
+        /// </summary>
+        private async Task InitializationSequence()
+        {
+            try
+            {
+                // 1. ASPETTA CHE CLAMD SIA PRONTO
+                resultsList.Items.Clear();
+                resultsList.Items.Add("🚀 Sequenza avvio SalDefender");
+                resultsList.Items.Add("─────────────────────────────");
+                resultsList.Items.Add("");
+                resultsList.Items.Add("1️⃣ Attesa avvio clamd.exe...");
+                
+                if (await WaitForClamdReadyAsync())
+                {
+                    resultsList.Items.Add("✅ clamd.exe PRONTO");
+                    resultsList.Items.Add("");
+                    
+                    // 1.5 REGISTRA SCHEDULED TASK PER FRESHCLAM
+                    resultsList.Items.Add("1️⃣.5️⃣ Registrazione aggiornamento automatico delle firme...");
+                    await RegisterFreshclamScheduledTask();
+                    resultsList.Items.Add("");
+                    
+                    // 2. SCARICA FIRME
+                    string configPath = AppConfig.FreshclamConfigPath;
+                    if (File.Exists(configPath))
+                    {
+                        resultsList.Items.Add("2️⃣ Aggiornamento firme ClamAV...");
+                        resultsList.Items.Add("─────────────────────────────");
+                        await AutoUpdateFreshclam();
+                    }
+                    else
+                    {
+                        resultsList.Items.Add("2️⃣ Nessuna config. Skipping update...");
+                    }
+                    
+                    resultsList.Items.Add("");
+                    resultsList.Items.Add("3️⃣ Inizializzazione protezione live...");
+                    resultsList.Items.Add("─────────────────────────────");
+                    
+                    // 3. SETUP LIVE PROTECTION
+                    SetupMultipleLiveProtection();
+                }
+                else
+                {
+                    resultsList.Items.Add("❌ clamd.exe non disponibile");
+                    resultsList.Items.Add("");
+                    resultsList.Items.Add("Tenta comunque di avviare protezione live...");
+                    SetupMultipleLiveProtection();
+                }
+            }
+            catch (Exception ex)
+            {
+                this.Invoke(new Action(() =>
+                {
+                    resultsList.Items.Add($"❌ Errore sequenza: {ex.Message}");
+                    SetupMultipleLiveProtection(); // Continua comunque
+                }));
+            }
+        }
+
+        /// <summary>
+        /// Registra uno Scheduled Task di Windows per aggiornare freshclam ogni 6 ore
+        /// </summary>
+        private async Task RegisterFreshclamScheduledTask()
+        {
+            try
+            {
+                string freshclamPath = AppConfig.FreshclamPath;
+                string configPath = AppConfig.FreshclamConfigPath;
+                
+                if (!File.Exists(freshclamPath) || !File.Exists(configPath))
+                {
+                    this.Invoke(new Action(() =>
+                    {
+                        resultsList.Items.Add("⚠️ Task Scheduler: file non trovati");
+                    }));
+                    return;
+                }
+
+                // PowerShell script per registrare il task
+                string psScript = $@"
+$TaskName = 'SalDefender-UpdateFreshclam'
+$TaskPath = '\SalDefender\'
+$FullTaskName = $TaskPath + $TaskName
+
+# Verifica se il task esiste già
+$existingTask = Get-ScheduledTask -TaskName $TaskName -TaskPath $TaskPath -ErrorAction SilentlyContinue
+
+if ($existingTask) {{
+    Write-Output 'Task già registrato'
+    exit 0
+}}
+
+# Crea l'azione: esegui freshclam
+$action = New-ScheduledTaskAction `
+    -Execute '{freshclamPath}' `
+    -Argument '--config-file=""{Path.GetFullPath(configPath)}""'
+
+# Crea un trigger: ogni 6 ore
+$trigger = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Hours 6) -RepetitionDuration (New-TimeSpan -Days 365)
+
+# Crea il principal con privilegi di sistema
+$principal = New-ScheduledTaskPrincipal -UserID 'NT AUTHORITY\SYSTEM' -LogonType ServiceAccount -RunLevel Highest
+
+# Registra il task
+Register-ScheduledTask `
+    -TaskName $TaskName `
+    -TaskPath $TaskPath `
+    -Action $action `
+    -Trigger $trigger `
+    -Principal $principal `
+    -Description 'Aggiornamento automatico delle firme ClamAV ogni 6 ore' `
+    -Force
+
+Write-Output 'Task registrato con successo'
+";
+
+                // Esegui lo script PowerShell
+                await Task.Run(() =>
+                {
+                    ProcessStartInfo psi = new ProcessStartInfo
+                    {
+                        FileName = "powershell.exe",
+                        Arguments = $"-NoProfile -ExecutionPolicy Bypass -Command \"{psScript}\"",
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    };
+
+                    using (Process? process = Process.Start(psi))
+                    {
+                        if (process != null)
+                        {
+                            string output = process.StandardOutput.ReadToEnd();
+                            string error = process.StandardError.ReadToEnd();
+                            process.WaitForExit();
+
+                            this.Invoke(new Action(() =>
+                            {
+                                if (process.ExitCode == 0)
+                                {
+                                    resultsList.Items.Add("✅ Scheduled Task registrato");
+                                    resultsList.Items.Add("   Aggiornamenti ogni 6 ore");
+                                }
+                                else
+                                {
+                                    resultsList.Items.Add("⚠️ Task Scheduler: errore registrazione");
+                                    if (!string.IsNullOrEmpty(error))
+                                        resultsList.Items.Add($"   {error}");
+                                }
+                            }));
+                        }
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                this.Invoke(new Action(() =>
+                {
+                    resultsList.Items.Add($"⚠️ Task Scheduler errore: {ex.Message}");
+                }));
+            }
+        }
+
+        /// <summary>
+        /// Aspetta che clamd.exe sia avviato e pronto (max 10 secondi)
+        /// </summary>
+        private async Task<bool> WaitForClamdReadyAsync()
+        {
+            int retries = 0;
+            const int maxRetries = 20; // 20 * 500ms = 10 secondi
+            
+            while (retries < maxRetries)
+            {
+                try
+                {
+                    var processes = Process.GetProcessesByName("clamd");
+                    if (processes.Length > 0 && !processes[0].HasExited)
+                    {
+                        return true; // clamd è pronto
+                    }
+                }
+                catch { }
+                
+                await Task.Delay(500);
+                retries++;
+            }
+            
+            return false; // Timeout
+        }
+
+        /// <summary>
+        /// Esegue l'aggiornamento automatico delle firme all'avvio
+        /// </summary>
+        private async Task AutoUpdateFreshclam()
+        {
+            try
+            {
+                string freshclamPath = AppConfig.FreshclamPath;
+                string configPath = AppConfig.FreshclamConfigPath;
+
+                if (!File.Exists(freshclamPath) || !File.Exists(configPath))
+                {
+                    this.Invoke(new Action(() =>
+                    {
+                        resultsList.Items.Add("⚠️ Aggiornamento automatico: file non trovati");
+                        SetupMultipleLiveProtection(); // Continua comunque
+                    }));
+                    return;
+                }
+
+                this.Invoke(new Action(() =>
+                {
+                    resultsList.Items.Add("📥 Esecuzione freshclam in background...");
+                }));
+
+                await Task.Run(() =>
+                {
+                    ProcessStartInfo psi = new ProcessStartInfo
+                    {
+                        FileName = freshclamPath,
+                        Arguments = $"--config-file=\"{Path.GetFullPath(configPath)}\"",
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        UseShellExecute = false,
+                        CreateNoWindow = true,
+                        WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory
+                    };
+
+                    int exitCode = -1;
+                    using (Process? process = Process.Start(psi))
+                    {
+                        if (process == null)
+                        {
+                            this.Invoke(new Action(() =>
+                            {
+                                resultsList.Items.Add("❌ Impossibile avviare freshclam");
+                            }));
+                            return;
+                        }
+
+                        var output = new StringBuilder();
+                        var errors = new StringBuilder();
+
+                        process.OutputDataReceived += (s, args) =>
+                        {
+                            if (args.Data != null)
+                            {
+                                output.AppendLine(args.Data);
+                                this.Invoke(new Action(() =>
+                                {
+                                    resultsList.Items.Add(args.Data);
+                                    if (resultsList.Items.Count > 0)
+                                        resultsList.TopIndex = resultsList.Items.Count - 1;
+                                }));
+                            }
+                        };
+
+                        process.ErrorDataReceived += (s, args) =>
+                        {
+                            if (args.Data != null)
+                            {
+                                errors.AppendLine(args.Data);
+                                this.Invoke(new Action(() =>
+                                {
+                                    resultsList.Items.Add("⚠️ " + args.Data);
+                                    if (resultsList.Items.Count > 0)
+                                        resultsList.TopIndex = resultsList.Items.Count - 1;
+                                }));
+                            }
+                        };
+
+                        process.BeginOutputReadLine();
+                        process.BeginErrorReadLine();
+                        process.WaitForExit(120000); // Timeout 2 minuti
+                        exitCode = process.ExitCode;
+                    }
+
+                    this.Invoke(new Action(() =>
+                    {
+                        if (exitCode == 0)
+                        {
+                            resultsList.Items.Add("✅ Aggiornamento completato con successo!");
+                        }
+                        else
+                        {
+                            resultsList.Items.Add($"⚠️ Aggiornamento terminato con codice: {exitCode}");
+                        }
+                        
+                        resultsList.Items.Add("");
+                        resultsList.Items.Add("🚀 Inizializzazione protezione live in corso...");
+                        
+                        // Ora continua con il setup della protezione live
+                        SetupMultipleLiveProtection();
+                    }));
+                });
+            }
+            catch (Exception ex)
+            {
+                this.Invoke(new Action(() =>
+                {
+                    resultsList.Items.Add($"❌ Errore aggiornamento automatico: {ex.Message}");
+                    resultsList.Items.Add("");
+                    resultsList.Items.Add("🚀 Inizializzazione protezione live in corso...");
+                    
+                    // Continua comunque
+                    SetupMultipleLiveProtection();
+                }));
+            }
         }
 
         private void StartClamd()
@@ -647,39 +1131,6 @@ namespace SalDefender
             catch (Exception ex)
             {
                 MessageBox.Show("Errore durante l'avvio di clamd: " + ex.Message);
-            }
-
-            VerifyClamdStatus();
-
-
-        }
-
-        private void VerifyClamdStatus()
-        {
-            // Cerchiamo i processi attivi con il nome "clamd"
-            var processes = Process.GetProcessesByName("clamd");
-
-            int retries = 0;
-            while (processes.Length == 0 && retries < 10)
-            {
-                resultsList.Items.Add("Attendere avvio clamd...");
-                System.Threading.Thread.Sleep(500); // Attende 500ms prima di ricontrollare
-                processes = Process.GetProcessesByName("clamd");
-                retries++;
-            }
-
-            if (processes.Length > 0)
-            {
-                var proc = processes[0];
-                // Verifichiamo che non sia bloccato o in fase di chiusura
-                if (!proc.HasExited)
-                {
-                    resultsList.Items.Add($"CLAMD -> ATTIVO (PID: {proc.Id}, RAM: {proc.WorkingSet64 / 1024 / 1024} MB)");
-                }
-            }
-            else
-            {
-                resultsList.Items.Add("⚠️ AVVISO: ClamAV (clamd) non riuscito ad avviarsi.");
             }
         }
 
@@ -810,6 +1261,115 @@ namespace SalDefender
             settingsMenu.Show(settingsButton, new Point(0, settingsButton.Height));
         }
 
+        private void DiagnosticsButton_Click(object? sender, EventArgs e)
+        {
+            resultsList.Items.Clear();
+            resultsList.Items.Add("=== 🔧 DIAGNOSTICA CLAMAV ===");
+            resultsList.Items.Add("");
+
+            // 1. Verifica file exe
+            resultsList.Items.Add("1️⃣ VERIFICA FILE ESEGUIBILI");
+            resultsList.Items.Add("─────────────────────────────────");
+            
+            string clamdPath = AppConfig.ClamAVPath;
+            string freshclamPath = AppConfig.FreshclamPath;
+            
+            bool clamdExists = File.Exists(clamdPath);
+            bool freshclamExists = File.Exists(freshclamPath);
+            
+            resultsList.Items.Add($"{(clamdExists ? "✓" : "✗")} clamd.exe: {clamdPath}");
+            resultsList.Items.Add($"{(freshclamExists ? "✓" : "✗")} freshclam.exe: {freshclamPath}");
+            resultsList.Items.Add("");
+
+            // 2. Verifica config
+            resultsList.Items.Add("2️⃣ VERIFICA FILE CONFIGURAZIONE");
+            resultsList.Items.Add("─────────────────────────────────");
+            
+            string configPath = AppConfig.FreshclamConfigPath;
+            bool configExists = File.Exists(configPath);
+            
+            resultsList.Items.Add($"{(configExists ? "✓" : "✗")} freshclam.conf: {configPath}");
+            resultsList.Items.Add("");
+
+            // 3. Verifica directory
+            resultsList.Items.Add("3️⃣ VERIFICA DIRECTORY NECESSARIE");
+            resultsList.Items.Add("─────────────────────────────────");
+            
+            string dbDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_db");
+            string logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_logs");
+            
+            bool dbDirExists = Directory.Exists(dbDir);
+            bool logDirExists = Directory.Exists(logDir);
+            
+            resultsList.Items.Add($"{(dbDirExists ? "✓" : "✗")} Database dir: {dbDir}");
+            resultsList.Items.Add($"{(logDirExists ? "✓" : "✗")} Log dir: {logDir}");
+            resultsList.Items.Add("");
+
+            // 4. Verifica connessione
+            resultsList.Items.Add("4️⃣ VERIFICA CONNESSIONE INTERNET");
+            resultsList.Items.Add("─────────────────────────────────");
+            
+            Task.Run(async () =>
+            {
+                try
+                {
+                    using (var client = new HttpClient { Timeout = TimeSpan.FromSeconds(5) })
+                    {
+                        var response = await client.GetAsync("https://database.clamav.net/");
+                        if (response.IsSuccessStatusCode)
+                        {
+                            this.Invoke(new Action(() =>
+                            {
+                                resultsList.Items.Add("✓ Connessione a database.clamav.net: OK");
+                            }));
+                        }
+                    }
+                }
+                catch
+                {
+                    this.Invoke(new Action(() =>
+                    {
+                        resultsList.Items.Add("✗ Connessione a database.clamav.net: FALLITA");
+                        resultsList.Items.Add("   Verifica la tua connessione internet");
+                    }));
+                }
+
+                this.Invoke(new Action(() =>
+                {
+                    resultsList.Items.Add("");
+                    resultsList.Items.Add("5️⃣ RIEPILOGO DIAGNOSTICA");
+                    resultsList.Items.Add("─────────────────────────────────");
+                    
+                    int problemCount = (clamdExists ? 0 : 1) + (freshclamExists ? 0 : 1) + 
+                                      (configExists ? 0 : 1) + (dbDirExists ? 0 : 1) + (logDirExists ? 0 : 1);
+                    
+                    if (problemCount == 0)
+                    {
+                        resultsList.Items.Add("✅ TUTTO OK! Sistema pronto.");
+                    }
+                    else
+                    {
+                        resultsList.Items.Add($"⚠️ PROBLEMI RILEVATI: {problemCount}");
+                        resultsList.Items.Add("");
+                        resultsList.Items.Add("💡 SOLUZIONI CONSIGLIATE:");
+                        
+                        if (!clamdExists || !freshclamExists)
+                        {
+                            resultsList.Items.Add("• Installa ClamAV da: https://www.clamav.net/");
+                        }
+                        if (!configExists)
+                        {
+                            resultsList.Items.Add("• Clicca 'Aggiorna Firme' per generare freshclam.conf");
+                        }
+                        if (!dbDirExists || !logDirExists)
+                        {
+                            resultsList.Items.Add("• Clicca 'Aggiorna Firme' per creare le directory");
+                        }
+                    }
+                }));
+            });
+        }
+
 
 
 
@@ -893,8 +1453,10 @@ namespace SalDefender
             // Rimosso scanButton da qui
             StyleActionButton(updateButton = new Button { Text = "Aggiorna Firme", Width = 140 }, UpdateButton_Click!);
             StyleActionButton(settingsButton = new Button { Text = "Impostazioni", Width = 140 }, SettingsButton_Click!);
+            var diagnosticsButton = new Button { Text = "🔧 Diagnostica", Width = 140 };
+            StyleActionButton(diagnosticsButton, DiagnosticsButton_Click!);
 
-            actionBar.Controls.AddRange(new Control[] { updateButton, settingsButton });
+            actionBar.Controls.AddRange(new Control[] { updateButton, settingsButton, diagnosticsButton });
             mainLayout.Controls.Add(actionBar, 0, 1);
 
             // --- 2: OPZIONI DI SCANSIONE (Incluso pulsante Cartella) ---
@@ -1438,35 +2000,93 @@ namespace SalDefender
             Application.DoEvents();
 
             string freshclamPath = AppConfig.FreshclamPath;
-            string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf");
+            string configPath = AppConfig.FreshclamConfigPath;
 
             // Validazioni preliminari
             resultsList.Items.Add($"🔍 Verifica percorsi...");
             resultsList.Items.Add($"   freshclam.exe: {freshclamPath}");
             resultsList.Items.Add($"   freshclam.conf: {configPath}");
+            resultsList.Items.Add("");
 
             if (!File.Exists(freshclamPath))
             {
-                resultsList.Items.Add($"❌ ERRORE: freshclam.exe non trovato in {freshclamPath}");
-                resultsList.Items.Add("   Assicurati che ClamAV sia installato in C:\\Program Files\\ClamAV\\");
-                updateButton.Enabled = true;
-                scanButton.Enabled = true;
-                downloadScanButton.Enabled = true;
-                diskScanButton.Enabled = true;
-                return;
+                resultsList.Items.Add($"❌ ERRORE: freshclam.exe non trovato!");
+                resultsList.Items.Add($"   Cercati in:");
+                resultsList.Items.Add($"   - C:\\Program Files\\ClamAV\\");
+                resultsList.Items.Add($"   - C:\\Program Files (x86)\\ClamAV\\");
+                resultsList.Items.Add($"   - {AppDomain.CurrentDomain.BaseDirectory}");
+                resultsList.Items.Add($"");
+                resultsList.Items.Add($"💡 Soluzione:");
+                resultsList.Items.Add($"   1. Installa ClamAV da: https://www.clamav.net/");
+                resultsList.Items.Add($"   2. O seleziona il file manualmente...");
+                resultsList.Items.Add($"");
+                
+                // Chiedi all'utente di selezionare il file manualmente
+                using (var dialog = new OpenFileDialog())
+                {
+                    dialog.Filter = "freshclam.exe|freshclam.exe";
+                    dialog.Title = "Seleziona freshclam.exe";
+                    dialog.CheckFileExists = true;
+                    
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        freshclamPath = dialog.FileName;
+                        resultsList.Items.Add($"✓ File selezionato: {freshclamPath}");
+                        resultsList.Items.Add($"");
+                    }
+                    else
+                    {
+                        resultsList.Items.Add($"⚠️ Operazione annullata dall'utente.");
+                        updateButton.Enabled = true;
+                        scanButton.Enabled = true;
+                        downloadScanButton.Enabled = true;
+                        diskScanButton.Enabled = true;
+                        return;
+                    }
+                }
             }
 
             if (!File.Exists(configPath))
             {
-                resultsList.Items.Add($"❌ ERRORE: File config non trovato: {configPath}");
-                updateButton.Enabled = true;
-                scanButton.Enabled = true;
-                downloadScanButton.Enabled = true;
-                diskScanButton.Enabled = true;
-                return;
+                resultsList.Items.Add($"ℹ️ File freshclam.conf non trovato.");
+                resultsList.Items.Add($"   Creazione automatica in corso...");
+                
+                // Il file verrà creato automaticamente da AppConfig.FreshclamConfigPath
+                configPath = AppConfig.FreshclamConfigPath;
+                
+                if (File.Exists(configPath))
+                {
+                    resultsList.Items.Add($"✓ File creato: {configPath}");
+                    resultsList.Items.Add($"");
+                    
+                    // Mostra il contenuto per debug
+                    try
+                    {
+                        string content = File.ReadAllText(configPath);
+                        resultsList.Items.Add($"📄 Contenuto config:");
+                        foreach (var line in content.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None))
+                        {
+                            if (!string.IsNullOrWhiteSpace(line))
+                                resultsList.Items.Add($"   {line}");
+                        }
+                        resultsList.Items.Add($"");
+                    }
+                    catch { }
+                }
+                else
+                {
+                    resultsList.Items.Add($"❌ ERRORE: Impossibile creare {configPath}");
+                    resultsList.Items.Add($"   Verifica i permessi di scrittura sulla cartella");
+                    updateButton.Enabled = true;
+                    scanButton.Enabled = true;
+                    downloadScanButton.Enabled = true;
+                    diskScanButton.Enabled = true;
+                    return;
+                }
             }
 
             resultsList.Items.Add("✓ File trovati, avvio aggiornamento...");
+            resultsList.Items.Add("");
 
             try
             {
@@ -1487,14 +2107,14 @@ namespace SalDefender
                         Directory.CreateDirectory(logDir);
                         resultsList.Items.Add($"✓ Creata cartella log: {logDir}");
                     }
+                    resultsList.Items.Add("");
                 }
                 catch (Exception dirEx)
                 {
                     resultsList.Items.Add($"⚠️ Avvertimento creazione cartelle: {dirEx.Message}");
                 }
 
-                resultsList.Items.Add("");
-                resultsList.Items.Add("📥 Output di freshclam:");
+                resultsList.Items.Add("📥 Esecuzione freshclam:");
                 resultsList.Items.Add("─────────────────────────────────");
 
                 await Task.Run(() =>
@@ -1502,14 +2122,17 @@ namespace SalDefender
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
                         FileName = freshclamPath,
-                        // Usiamo il percorso assoluto per il config file
                         Arguments = $"--config-file=\"{Path.GetFullPath(configPath)}\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         UseShellExecute = false,
                         CreateNoWindow = true,
-                        WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory
+                        WorkingDirectory = Path.GetDirectoryName(freshclamPath) ?? AppDomain.CurrentDomain.BaseDirectory
                     };
+
+                    Debug.WriteLine($"[UPDATE] Comando: {freshclamPath}");
+                    Debug.WriteLine($"[UPDATE] Args: {psi.Arguments}");
+                    Debug.WriteLine($"[UPDATE] WorkDir: {psi.WorkingDirectory}");
 
                     int exitCode = -1;
                     using (Process? process = Process.Start(psi))
@@ -1526,45 +2149,68 @@ namespace SalDefender
                         process.OutputDataReceived += (s, args) =>
                         {
                             if (args.Data != null)
+                            {
+                                Debug.WriteLine($"[UPDATE-OUT] {args.Data}");
                                 this.Invoke(new Action(() =>
                                 {
                                     resultsList.Items.Add(args.Data);
                                     if (resultsList.Items.Count > 0)
                                         resultsList.TopIndex = resultsList.Items.Count - 1;
                                 }));
+                            }
                         };
 
                         process.ErrorDataReceived += (s, args) =>
                         {
                             if (args.Data != null)
+                            {
+                                Debug.WriteLine($"[UPDATE-ERR] {args.Data}");
                                 this.Invoke(new Action(() =>
                                 {
                                     resultsList.Items.Add("⚠️ " + args.Data);
                                     if (resultsList.Items.Count > 0)
                                         resultsList.TopIndex = resultsList.Items.Count - 1;
                                 }));
+                            }
                         };
 
                         process.BeginOutputReadLine();
                         process.BeginErrorReadLine();
-                        process.WaitForExit(120000); // Timeout 2 minuti
+                        bool exited = process.WaitForExit(120000); // Timeout 2 minuti
+                        
+                        if (!exited)
+                        {
+                            this.Invoke(new Action(() =>
+                            {
+                                resultsList.Items.Add("⚠️ TIMEOUT: freshclam ha impiegato troppo tempo");
+                            }));
+                            try { process.Kill(); } catch { }
+                        }
+                        
                         exitCode = process.ExitCode;
                     }
 
                     this.Invoke(new Action(() =>
                     {
                         resultsList.Items.Add("─────────────────────────────────");
+                        resultsList.Items.Add("");
                         
                         if (exitCode == 0)
                         {
                             resultsList.Items.Add("✅ Aggiornamento completato con successo!");
                             progressLabel.Text = "Aggiornamento completato.";
                         }
+                        else if (exitCode == 1)
+                        {
+                            resultsList.Items.Add($"⚠️ Codice {exitCode}: Update disponibili (normale)");
+                            progressLabel.Text = "Aggiornamento completato con update.";
+                        }
                         else
                         {
-                            resultsList.Items.Add($"⚠️ Aggiornamento terminato con codice: {exitCode}");
-                            resultsList.Items.Add($"   (0=successo, 1=update disponibili, >1=errore)");
-                            progressLabel.Text = $"Aggiornamento terminato (codice: {exitCode})";
+                            resultsList.Items.Add($"❌ ERRORE: Codice di uscita {exitCode}");
+                            resultsList.Items.Add($"   Controlla i log di freshclam in:");
+                            resultsList.Items.Add($"   {Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_logs")}");
+                            progressLabel.Text = $"Errore aggiornamento (codice: {exitCode})";
                         }
                     }));
                 });
@@ -1576,6 +2222,7 @@ namespace SalDefender
                 if (ex.InnerException != null)
                     resultsList.Items.Add($"   Dettaglio: {ex.InnerException.Message}");
                 progressLabel.Text = "Errore aggiornamento.";
+                Debug.WriteLine($"[UPDATE] Errore: {ex}");
             }
             finally
             {

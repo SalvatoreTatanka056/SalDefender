@@ -1524,3 +1524,739 @@ WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\bra
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db-wal
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
++++ Started at Tue Feb 17 22:46:55 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
++++ Started at Tue Feb 17 22:48:48 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
++++ Started at Tue Feb 17 22:50:25 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
++++ Started at Tue Feb 17 22:52:42 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
++++ Started at Tue Feb 17 22:55:08 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
++++ Started at Tue Feb 17 22:58:06 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
++++ Started at Tue Feb 17 23:02:39 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal: Can't allocate memory ERROR
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
++++ Started at Tue Feb 17 23:07:12 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
++++ Started at Tue Feb 17 23:12:18 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\GCM Store\000016.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\GCM Store\000016.log
++++ Started at Tue Feb 17 23:12:52 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Temp\{56be3d8d-ffec-45f7-a2f0-6567647792b2}.png
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Local\Temp\{56be3d8d-ffec-45f7-a2f0-6567647792b2}.png
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
++++ Started at Tue Feb 17 23:14:34 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\.git\refs\remotes\origin\HEAD.lock
+WARNING: File path check failure on: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\.git\refs\remotes\origin\HEAD.lock
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
++++ Started at Tue Feb 17 23:18:49 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
++++ Started at Tue Feb 17 23:20:24 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\.git\refs\remotes\origin\HEAD.lock
+WARNING: File path check failure on: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\.git\refs\remotes\origin\HEAD.lock
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
