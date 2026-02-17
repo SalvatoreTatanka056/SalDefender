@@ -154,9 +154,74 @@ namespace SalDefender
                 
                 // Crea le directory se non esistono
                 if (!Directory.Exists(dbDir))
-                    Directory.CreateDirectory(dbDir);
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(dbDir);
+                        Debug.WriteLine($"[CONFIG] Directory creata: {dbDir}");
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                        Debug.WriteLine($"[CONFIG] ERRORE permessi su: {dbDir}");
+                        // Tenta di dare permessi di lettura/scrittura al directory
+                        try
+                        {
+                            var dirInfo = new DirectoryInfo(dbDir);
+                            var dirSecurity = dirInfo.GetAccessControl();
+                            dirSecurity.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(
+                                System.Security.Principal.WindowsIdentity.GetCurrent().User,
+                                System.Security.AccessControl.FileSystemRights.FullControl,
+                                System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
+                                System.Security.AccessControl.PropagationFlags.None,
+                                System.Security.AccessControl.AccessControlType.Allow));
+                            dirInfo.SetAccessControl(dirSecurity);
+                            Debug.WriteLine($"[CONFIG] Permessi assegnati a: {dbDir}");
+                        }
+                        catch (Exception permEx)
+                        {
+                            Debug.WriteLine($"[CONFIG] Impossibile assegnare permessi: {permEx.Message}");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"[CONFIG] ERRORE creazione directory {dbDir}: {ex.Message}");
+                    }
+                }
+
                 if (!Directory.Exists(logDir))
-                    Directory.CreateDirectory(logDir);
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(logDir);
+                        Debug.WriteLine($"[CONFIG] Directory creata: {logDir}");
+                    }
+                    catch (UnauthorizedAccessException)
+                    {
+                        Debug.WriteLine($"[CONFIG] ERRORE permessi su: {logDir}");
+                        // Tenta di dare permessi di lettura/scrittura al directory
+                        try
+                        {
+                            var dirInfo = new DirectoryInfo(logDir);
+                            var dirSecurity = dirInfo.GetAccessControl();
+                            dirSecurity.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(
+                                System.Security.Principal.WindowsIdentity.GetCurrent().User,
+                                System.Security.AccessControl.FileSystemRights.FullControl,
+                                System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
+                                System.Security.AccessControl.PropagationFlags.None,
+                                System.Security.AccessControl.AccessControlType.Allow));
+                            dirInfo.SetAccessControl(dirSecurity);
+                            Debug.WriteLine($"[CONFIG] Permessi assegnati a: {logDir}");
+                        }
+                        catch (Exception permEx)
+                        {
+                            Debug.WriteLine($"[CONFIG] Impossibile assegnare permessi: {permEx.Message}");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"[CONFIG] ERRORE creazione directory {logDir}: {ex.Message}");
+                    }
+                }
 
                 // Contenuto del file freshclam.conf (configurazione minimale e valida)
                 string configContent = $@"# ClamAV Freshclam Configuration File
