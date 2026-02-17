@@ -1342,3 +1342,9 @@ WARNING: File path check failure on: C:\swapfile.sys
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002162.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
