@@ -252,7 +252,6 @@ namespace SalDefender
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.MaximizeBox = true;
             this.MinimumSize = new Size(500, 650);
-            this.ControlBox = false;
 
 
             this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
@@ -356,6 +355,14 @@ namespace SalDefender
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+
+            // Impedisce la chiusura tramite il pulsante X (disabilita la X)
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                return;
+            }
+
             try
             {
                 // Rimuove l'icona dalla tray prima di chiudere (evita icone fantasma)
