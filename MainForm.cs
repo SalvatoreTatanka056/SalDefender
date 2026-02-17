@@ -1433,16 +1433,22 @@ namespace SalDefender
             diskScanButton.Enabled = false;
 
             resultsList.Items.Clear();
-            resultsList.Items.Add("Avvio aggiornamento firme (freshclam)...");
+            resultsList.Items.Add("=== Aggiornamento Firme ClamAV ===");
             progressLabel.Text = "Aggiornamento in corso...";
             Application.DoEvents();
 
             string freshclamPath = AppConfig.FreshclamPath;
             string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "freshclam.conf");
 
+            // Validazioni preliminari
+            resultsList.Items.Add($"🔍 Verifica percorsi...");
+            resultsList.Items.Add($"   freshclam.exe: {freshclamPath}");
+            resultsList.Items.Add($"   freshclam.conf: {configPath}");
+
             if (!File.Exists(freshclamPath))
             {
-                resultsList.Items.Add($"ERRORE: freshclam.exe non trovato in {AppConfig.FreshclamPath}\nAssicurati che ClamAV sia installato correttamente.");
+                resultsList.Items.Add($"❌ ERRORE: freshclam.exe non trovato in {freshclamPath}");
+                resultsList.Items.Add("   Assicurati che ClamAV sia installato in C:\\Program Files\\ClamAV\\");
                 updateButton.Enabled = true;
                 scanButton.Enabled = true;
                 downloadScanButton.Enabled = true;
@@ -1450,54 +1456,125 @@ namespace SalDefender
                 return;
             }
 
+            if (!File.Exists(configPath))
+            {
+                resultsList.Items.Add($"❌ ERRORE: File config non trovato: {configPath}");
+                updateButton.Enabled = true;
+                scanButton.Enabled = true;
+                downloadScanButton.Enabled = true;
+                diskScanButton.Enabled = true;
+                return;
+            }
+
+            resultsList.Items.Add("✓ File trovati, avvio aggiornamento...");
+
             try
             {
+                // Assicurati che le directory di destinazione esistano
+                try
+                {
+                    string dbDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_db");
+                    string logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "clamav_logs");
+                    
+                    if (!Directory.Exists(dbDir))
+                    {
+                        Directory.CreateDirectory(dbDir);
+                        resultsList.Items.Add($"✓ Creata cartella database: {dbDir}");
+                    }
+                    
+                    if (!Directory.Exists(logDir))
+                    {
+                        Directory.CreateDirectory(logDir);
+                        resultsList.Items.Add($"✓ Creata cartella log: {logDir}");
+                    }
+                }
+                catch (Exception dirEx)
+                {
+                    resultsList.Items.Add($"⚠️ Avvertimento creazione cartelle: {dirEx.Message}");
+                }
+
+                resultsList.Items.Add("");
+                resultsList.Items.Add("📥 Output di freshclam:");
+                resultsList.Items.Add("─────────────────────────────────");
+
                 await Task.Run(() =>
                 {
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
                         FileName = freshclamPath,
-                        Arguments = $"--config-file=\"{configPath}\"",
+                        // Usiamo il percorso assoluto per il config file
+                        Arguments = $"--config-file=\"{Path.GetFullPath(configPath)}\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         UseShellExecute = false,
-                        CreateNoWindow = true
+                        CreateNoWindow = true,
+                        WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory
                     };
 
+                    int exitCode = -1;
                     using (Process? process = Process.Start(psi))
                     {
-                        if (process == null) return;
+                        if (process == null)
+                        {
+                            this.Invoke(new Action(() =>
+                            {
+                                resultsList.Items.Add("❌ ERRORE: Impossibile avviare freshclam");
+                            }));
+                            return;
+                        }
+
                         process.OutputDataReceived += (s, args) =>
                         {
                             if (args.Data != null)
                                 this.Invoke(new Action(() =>
                                 {
                                     resultsList.Items.Add(args.Data);
-                                    resultsList.TopIndex = resultsList.Items.Count - 1;
+                                    if (resultsList.Items.Count > 0)
+                                        resultsList.TopIndex = resultsList.Items.Count - 1;
                                 }));
                         };
+
                         process.ErrorDataReceived += (s, args) =>
                         {
                             if (args.Data != null)
                                 this.Invoke(new Action(() =>
                                 {
-                                    resultsList.Items.Add("ERR: " + args.Data);
-                                    resultsList.TopIndex = resultsList.Items.Count - 1;
+                                    resultsList.Items.Add("⚠️ " + args.Data);
+                                    if (resultsList.Items.Count > 0)
+                                        resultsList.TopIndex = resultsList.Items.Count - 1;
                                 }));
                         };
 
                         process.BeginOutputReadLine();
                         process.BeginErrorReadLine();
-                        process.WaitForExit();
+                        process.WaitForExit(120000); // Timeout 2 minuti
+                        exitCode = process.ExitCode;
                     }
-                });
 
-                resultsList.Items.Add("Processo di aggiornamento terminato.");
-                progressLabel.Text = "Aggiornamento completato.";
+                    this.Invoke(new Action(() =>
+                    {
+                        resultsList.Items.Add("─────────────────────────────────");
+                        
+                        if (exitCode == 0)
+                        {
+                            resultsList.Items.Add("✅ Aggiornamento completato con successo!");
+                            progressLabel.Text = "Aggiornamento completato.";
+                        }
+                        else
+                        {
+                            resultsList.Items.Add($"⚠️ Aggiornamento terminato con codice: {exitCode}");
+                            resultsList.Items.Add($"   (0=successo, 1=update disponibili, >1=errore)");
+                            progressLabel.Text = $"Aggiornamento terminato (codice: {exitCode})";
+                        }
+                    }));
+                });
             }
             catch (Exception ex)
             {
-                resultsList.Items.Add($"Errore esecuzione freshclam: {ex.Message}");
+                resultsList.Items.Add($"❌ Errore critico: {ex.GetType().Name}");
+                resultsList.Items.Add($"   {ex.Message}");
+                if (ex.InnerException != null)
+                    resultsList.Items.Add($"   Dettaglio: {ex.InnerException.Message}");
                 progressLabel.Text = "Errore aggiornamento.";
             }
             finally
