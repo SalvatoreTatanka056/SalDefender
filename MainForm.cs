@@ -360,6 +360,7 @@ ReceiveTimeout 30
 
         // Dichiarazione in alto con le altre variabili
         private Label liveStatusLabel = null!;
+        private ListBox threatsListBox = null!;
 
         private NotifyIcon trayIcon = null!;
         private ContextMenuStrip trayMenu = null!;
@@ -384,6 +385,7 @@ ReceiveTimeout 30
 
         private StatusStrip statusStrip = null!;
         private ToolStripStatusLabel statusTimeLabel = null!;
+        private ToolStripStatusLabel statusFileLabel = null!;
         private System.Windows.Forms.Timer displayTimer = null!;
         private Stopwatch stopwatch = null!;
 
@@ -655,11 +657,12 @@ ReceiveTimeout 30
                                         switch (scanResult.Result)
                                         {
                                             case ClamScanResults.Clean:
-                                                resultsList.Items.Insert(0, $"<Live> File Pulito: {Path.GetFileName(filePath)}");                                            
+                                                statusFileLabel.Text = $"✓ File Pulito: {Path.GetFileName(filePath)}";
                                                 break;
 
                                             case ClamScanResults.VirusDetected:
                                                 resultsList.Items.Insert(0, $"[!!!] MINACCIA: {Path.GetFileName(filePath)} - {scanResult.RawResult}");
+                                                threatsListBox.Items.Insert(0, $"{Path.GetFileName(filePath)} - {scanResult.RawResult}");
                                                 System.Media.SystemSounds.Exclamation.Play();
                                                 if (trayIcon != null)
                                                     trayIcon.ShowBalloonTip(5000, "⚠️ VIRUS RILEVATO!", 
@@ -821,7 +824,9 @@ ReceiveTimeout 30
             // Creazione della StatusStrip
             statusStrip = new StatusStrip();
             statusTimeLabel = new ToolStripStatusLabel { Text = "Pronto" };
+            statusFileLabel = new ToolStripStatusLabel { Text = "Nessun file", AutoSize = true, Spring = true };
             statusStrip.Items.Add(statusTimeLabel);
+            statusStrip.Items.Add(statusFileLabel);
             this.Controls.Add(statusStrip); // La aggiunge alla Form
 
             // Inizializzazione Timer e Stopwatch
@@ -1536,14 +1541,15 @@ Write-Output 'Task registrato con successo'
             {
                 Dock = DockStyle.Fill,
                 ColumnCount = 1,
-                RowCount = 5
+                RowCount = 6
             };
             // All'interno di InitUI()...
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80f));  // Header
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Action Bar
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 200f)); // <--- Alzato a 200f per sicurezza visiva
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 200f)); // Scan Options
             mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Progress
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100f));  // Results
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));   // Results
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));   // Threats
 
             this.Controls.Add(mainLayout);
 
@@ -1589,6 +1595,18 @@ Write-Output 'Task registrato con successo'
                 SelectionMode = SelectionMode.MultiExtended
             };
             mainLayout.Controls.Add(resultsList, 0, 4);
+
+            // --- 5: THREATS ---
+            threatsListBox = new ListBox
+            {
+                Dock = DockStyle.Fill,
+                BorderStyle = BorderStyle.FixedSingle,
+                Font = new Font("Consolas", 9f),
+                SelectionMode = SelectionMode.MultiExtended,
+                BackColor = Color.FromArgb(255, 220, 220),
+                ForeColor = Color.FromArgb(139, 0, 0)
+            };
+            mainLayout.Controls.Add(threatsListBox, 0, 5);
 
             // --- All'interno di InitUI() ---
 

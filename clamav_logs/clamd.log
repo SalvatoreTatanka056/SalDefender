@@ -2458,3 +2458,536 @@ WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
 WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
++++ Started at Tue Feb 17 23:40:07 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir\WinGetCOM-2026-02-17-23-41-06.448.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb-journal
+WARNING: File path check failure on: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Temp\csdevkit\sessions\deactivated\39029400-2aad-4fa3-b872-29c2771cc1101771363804542.txt
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Temp\servicehub\logs\6FF540A0-VsHubClient-22444-iyxv5gdb-1.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\BrowserMetrics\BrowserMetrics-6994D940-3E4C.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Temp\clamav-ece824b386b461644556d2b59b736be4.tmp
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Google\Chrome\User Data\Profile 2\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002180.log
++++ Started at Wed Feb 18 08:50:16 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\LocalLow\ae041c25525bbe6afd99ea871d1126949a6d363558141cd3ef4f61adbf6dfd32
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\D3DSCache\80d9c76ce4780bf6\6F75932F-7DFC-4FB0-B4B8-12DE1AC415DA_VEN_8086&DEV_9A49&SUBSYS_ADB&REV_1.dxcache-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\BrowserMetrics\BrowserMetrics-69956F19-324C.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\CrashpadMetrics-active.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\BrowserMetrics\BrowserMetrics-69956F19-324C.pma
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Notion Calendar\SharedStorage-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\LocalLow\Intel\ShaderCache\7787a36344a9181696e787e201256ef58ad44475fffbc33beff982beffa6b406
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\LocalLow\Intel\ShaderCache\09a330b77df431063933c14fd3b6074d601f2c7602e9548b9718edc785385c4f
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Network\Reporting and NEL-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Network\Reporting and NEL-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Network\Reporting and NEL
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\SpotifyAB.SpotifyMusic_zpdnekdrzrea0\LocalCache\Spotify\segmentation_platform\ukm_db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\LocalLow\3be8992392a827d3bfbd0e1a8454f511f9e4439e1e83718f876d93c81e27ee6b
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\AC\Temp\mat-debug-1860.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\LocalState\HxCommAlwaysOnLog.etl
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\LocalState\HxStore.hxd
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\LocalState\HxStore.hxd
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\ExtensionActivityEdge-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\ExtensionActivityEdge
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Network\Reporting and NEL-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\Network\Reporting and NEL
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager-journal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\WebStorage\QuotaManager
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalCache\EBWebView\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb\002199.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
++++ Started at Wed Feb 18 08:59:57 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
++++ Started at Wed Feb 18 09:02:34 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir\WinGetCOM-2026-02-18-09-03-00.383.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\Windows\Themes\Custom.theme
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\OneDrive\logs\Common\FileCoAuth-2026-02-18.0803.9232.2.aodl
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\OneDrive\logs\Common\telemetryCache.otc-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Microsoft\OneDrive\logs\Common\telemetryCache.otc-shm
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir\WinGetCOM-2026-02-18-09-08-00.349.log
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+SelfCheck: Database status OK.
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\.git\refs\remotes\origin\HEAD.lock
+WARNING: File path check failure on: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\.git\refs\remotes\origin\HEAD.lock
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\workspaceStorage\1cb13111a2b0b02639b8e400df46dbf5\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\LocalState\AccountsRoot\9a7a1015f3ab4ec3a5cecd5faa8121fc\todosqlite.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\LocalState\AccountsRoot\9a7a1015f3ab4ec3a5cecd5faa8121fc\todosqlite.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\LocalState\AccountsRoot\9a7a1015f3ab4ec3a5cecd5faa8121fc\todosqlite.db-wal
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Local\Packages\Microsoft.Todos_8wekyb3d8bbwe\LocalState\AccountsRoot\9a7a1015f3ab4ec3a5cecd5faa8121fc\todosqlite.db
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Pantum\pt2500\pt2500Csm.dat
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
++++ Started at Wed Feb 18 09:19:25 2026
+Received 0 file descriptor(s) from systemd.
+clamd daemon 1.5.1 (OS: Windows, ARCH: AMD64, CPU: AMD64)
+Log file size limited to 1048576 bytes.
+Reading databases from c:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_db
+Not loading PUA signatures.
+Bytecode: Security mode set to "TrustSigned".
+Loaded 3627525 signatures.
+TCP: Bound to [127.0.0.1]:3310
+TCP: Setting connection queue length to 50
+Limits: Global time limit set to 120000 milliseconds.
+Limits: Global size limit set to 157286400 bytes.
+Limits: File size limit set to 104857600 bytes.
+Limits: Recursion level limit set to 17.
+Limits: Files limit set to 10000.
+Limits: MaxEmbeddedPE limit set to 41943040 bytes.
+Limits: MaxHTMLNormalize limit set to 41943040 bytes.
+Limits: MaxHTMLNoTags limit set to 8388608 bytes.
+Limits: MaxScriptNormalize limit set to 20971520 bytes.
+Limits: MaxZipTypeRcg limit set to 1048576 bytes.
+Limits: MaxPartitions limit set to 50.
+Limits: MaxIconsPE limit set to 100.
+Limits: MaxRecHWP3 limit set to 16.
+Limits: PCREMatchLimit limit set to 100000.
+Limits: PCRERecMatchLimit limit set to 2000.
+Limits: PCREMaxFileSize limit set to 104857600.
+Archive support enabled.
+Image (graphics) scanning support enabled.
+Detection using image fuzzy hash enabled.
+AlertExceedsMax heuristic detection disabled.
+Heuristic alerts enabled.
+Portable Executable support enabled.
+ELF support enabled.
+Mail files support enabled.
+OLE2 support enabled.
+PDF support enabled.
+SWF support enabled.
+HTML support enabled.
+XMLDOCS support enabled.
+HWP3 support enabled.
+OneNote support enabled.
+Self checking every 600 seconds.
+WARNING: File path check failure for: C:\Users\Avangarde\.gemini\antigravity\brain\32811d22-ea56-4491-97c9-c2b605c08512\SalDefender\clamav_logs\clamd.log
+WARNING: File path check failure for: C:\Users\Avangarde\AppData\Roaming\Code\User\globalStorage\state.vscdb
