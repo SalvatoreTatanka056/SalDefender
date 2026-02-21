@@ -16,7 +16,7 @@ using System.Linq.Expressions;
 using System.Collections.Concurrent;
 
 
-namespace SalDefender
+namespace TatankaDefender
 {
     /// <summary>
     /// Classe statica per la configurazione centrale dell'applicazione
@@ -180,7 +180,7 @@ namespace SalDefender
                 // Fallback a AppData se BaseDirectory non è scrivibile (típicamente Program Files)
                 string appDataDir = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                    "SalDefender", ".clamav");
+                    "Tatanka Defender", ".clamav");
                 defaultConfigPath = Path.Combine(appDataDir, "freshclam.conf");
                 Debug.WriteLine($"[CONFIG] BaseDirectory NON scrivibile. Fallback a AppData: {defaultConfigPath}");
             }
@@ -212,14 +212,18 @@ namespace SalDefender
                         {
                             var dirInfo = new DirectoryInfo(dbDir);
                             var dirSecurity = dirInfo.GetAccessControl();
-                            dirSecurity.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(
-                                System.Security.Principal.WindowsIdentity.GetCurrent().User,
-                                System.Security.AccessControl.FileSystemRights.FullControl,
-                                System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
-                                System.Security.AccessControl.PropagationFlags.None,
-                                System.Security.AccessControl.AccessControlType.Allow));
-                            dirInfo.SetAccessControl(dirSecurity);
-                            Debug.WriteLine($"[CONFIG] Permessi assegnati a: {dbDir}");
+                            var currentUser = System.Security.Principal.WindowsIdentity.GetCurrent().User;
+                            if (currentUser != null)
+                            {
+                                dirSecurity.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(
+                                    currentUser,
+                                    System.Security.AccessControl.FileSystemRights.FullControl,
+                                    System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
+                                    System.Security.AccessControl.PropagationFlags.None,
+                                    System.Security.AccessControl.AccessControlType.Allow));
+                                dirInfo.SetAccessControl(dirSecurity);
+                                Debug.WriteLine($"[CONFIG] Permessi assegnati a: {dbDir}");
+                            }
                         }
                         catch (Exception permEx)
                         {
@@ -247,14 +251,18 @@ namespace SalDefender
                         {
                             var dirInfo = new DirectoryInfo(logDir);
                             var dirSecurity = dirInfo.GetAccessControl();
-                            dirSecurity.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(
-                                System.Security.Principal.WindowsIdentity.GetCurrent().User,
-                                System.Security.AccessControl.FileSystemRights.FullControl,
-                                System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
-                                System.Security.AccessControl.PropagationFlags.None,
-                                System.Security.AccessControl.AccessControlType.Allow));
-                            dirInfo.SetAccessControl(dirSecurity);
-                            Debug.WriteLine($"[CONFIG] Permessi assegnati a: {logDir}");
+                            var currentUser = System.Security.Principal.WindowsIdentity.GetCurrent().User;
+                            if (currentUser != null)
+                            {
+                                dirSecurity.AddAccessRule(new System.Security.AccessControl.FileSystemAccessRule(
+                                    currentUser,
+                                    System.Security.AccessControl.FileSystemRights.FullControl,
+                                    System.Security.AccessControl.InheritanceFlags.ContainerInherit | System.Security.AccessControl.InheritanceFlags.ObjectInherit,
+                                    System.Security.AccessControl.PropagationFlags.None,
+                                    System.Security.AccessControl.AccessControlType.Allow));
+                                dirInfo.SetAccessControl(dirSecurity);
+                                Debug.WriteLine($"[CONFIG] Permessi assegnati a: {logDir}");
+                            }
                         }
                         catch (Exception permEx)
                         {
@@ -269,7 +277,7 @@ namespace SalDefender
 
                 // Contenuto del file freshclam.conf (configurazione minimale e valida)
                 string configContent = $@"# ClamAV Freshclam Configuration File
-# Auto-generated by SalDefender
+# Auto-generated by Tatanka Defender
 
 # Path to the database directory
 DatabaseDirectory {dbDir}
@@ -334,15 +342,25 @@ ReceiveTimeout 30
 
     public class MainForm : Form
     {
+        // TATANKA DEFENDER - Palette di colori professionale
+        private bool isDarkMode = true; // Default: Dark Mode elegante
 
-        private bool isDarkMode = false;
-
-        // Definizione Palette
-        private readonly Color DarkBg = Color.FromArgb(32, 32, 32);
-        private readonly Color DarkPanel = Color.FromArgb(45, 45, 45);
-        private readonly Color DarkText = Color.WhiteSmoke;
-        private readonly Color LightBg = Color.White;
-        private readonly Color LightText = Color.FromArgb(45, 45, 45);
+        // Tema DARK MODE (Default - Profesionale)
+        private readonly Color DarkBg = Color.FromArgb(20, 20, 24);           // Nero profondo
+        private readonly Color DarkPanel = Color.FromArgb(32, 32, 38);        // Panel scuro
+        private readonly Color DarkSurface = Color.FromArgb(40, 40, 48);      // Surface elevato
+        private readonly Color DarkText = Color.FromArgb(238, 238, 242);      // Bianco leggero
+        private readonly Color AccentPrimary = Color.FromArgb(212, 175, 55);  // Oro Tatanka
+        private readonly Color AccentLight = Color.FromArgb(230, 200, 100);   // Oro chiaro
+        private readonly Color SuccessColor = Color.FromArgb(76, 175, 80);    // Verde success
+        private readonly Color WarningColor = Color.FromArgb(255, 152, 0);    // Arancio warning
+        private readonly Color ErrorColor = Color.FromArgb(244, 67, 54);      // Rosso error
+        
+        // Tema LIGHT MODE
+        private readonly Color LightBg = Color.FromArgb(249, 249, 251);       // Bianco leggero
+        private readonly Color LightPanel = Color.White;
+        private readonly Color LightSurface = Color.FromArgb(240, 240, 245);
+        private readonly Color LightText = Color.FromArgb(33, 33, 33);        // Nero
         private Button scanButton = null!;
         private Button updateButton = null!;
         private Button settingsButton = null!;
@@ -430,7 +448,7 @@ ReceiveTimeout 30
                     // Aggiorna il fumetto sulla Tray Icon (se presente)
                     if (trayIcon != null)
                     {
-                        trayIcon.BalloonTipTitle = "SalDefender";
+                        trayIcon.BalloonTipTitle = "Tatanka Defender";
                         trayIcon.BalloonTipText = "Protezione Live attivata correttamente.";
                         trayIcon.ShowBalloonTip(3000);
                     }
@@ -810,54 +828,59 @@ ReceiveTimeout 30
 
         public MainForm()
         {
-
-            if (Program.IsAlreadyRunning())
+            if (global::TatankaDefender.Program.IsAlreadyRunning())
             {
-                MessageBox.Show("Il programma è già in esecuzione.", "SalDefender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Environment.Exit(0); // Chiude l'istanza corrente
+                MessageBox.Show("Il programma è già in esecuzione.", "🦬 Tatanka Defender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Environment.Exit(0);
                 return;
             }
 
-            // Inizializza le directory necessarie (quarantena, etc.)
+            // Inizializza directory
             AppConfig.InitializeDirectories();
 
-            // Creazione della StatusStrip
-            statusStrip = new StatusStrip();
-            statusTimeLabel = new ToolStripStatusLabel { Text = "Pronto" };
-            statusFileLabel = new ToolStripStatusLabel { Text = "Nessun file", AutoSize = true, Spring = true };
+            // Creazione della StatusStrip elegante
+            statusStrip = new StatusStrip
+            {
+                BackColor = isDarkMode ? DarkSurface : LightSurface,
+                ForeColor = isDarkMode ? DarkText : LightText
+            };
+            statusTimeLabel = new ToolStripStatusLabel 
+            { 
+                Text = "⏱️ Pronto",
+                ForeColor = AccentLight,
+                Font = new Font("Segoe UI", 9f)
+            };
+            statusFileLabel = new ToolStripStatusLabel 
+            { 
+                Text = "Nessun file", 
+                AutoSize = true, 
+                Spring = true,
+                ForeColor = isDarkMode ? DarkText : LightText
+            };
             statusStrip.Items.Add(statusTimeLabel);
             statusStrip.Items.Add(statusFileLabel);
-            this.Controls.Add(statusStrip); // La aggiunge alla Form
+            this.Controls.Add(statusStrip);
 
-            // Inizializzazione Timer e Stopwatch
+            // Timer e Stopwatch
             stopwatch = new Stopwatch();
             displayTimer = new System.Windows.Forms.Timer { Interval = 1000 };
             displayTimer.Tick += (s, e) =>
             {
-                statusTimeLabel.Text = $"Tempo scansione: {stopwatch.Elapsed:mm\\:ss}";
+                statusTimeLabel.Text = $"⏱️ Tempo: {stopwatch.Elapsed:mm\\:ss}";
             };
 
-
-
-            // Aggiorna il colore della barra in base al tema
-            statusStrip.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.Control);
-            statusTimeLabel.ForeColor = isDarkMode ? DarkText : LightText;
-
-            this.Text = "SalDefender";
-            this.Size = new Size(500, 650);
+            // Form principale
+            this.Text = "🦬 Tatanka Defender - Security Suite";
+            this.Size = new Size(900, 1000);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.MaximizeBox = true;
-            this.MinimumSize = new Size(500, 650);
+            this.MinimumSize = new Size(750, 850);
+            this.BackColor = isDarkMode ? DarkBg : LightBg;
+            this.ForeColor = isDarkMode ? DarkText : LightText;
+            this.Font = new Font("Segoe UI", 9.5f);
 
-
-            this.FormClosing += MainForm_FormClosing; // Aggiungi questa riga
-
-
-
-            // Aggiorna il colore della barra in base al tema
-            statusStrip.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.Control);
-            statusTimeLabel.ForeColor = isDarkMode ? DarkText : LightText;
+            this.FormClosing += MainForm_FormClosing;
 
             InitUI();
         }
@@ -875,7 +898,7 @@ ReceiveTimeout 30
                     $"- {AppConfig.ClamAVPath}\n" +
                     $"- {AppConfig.FreshclamPath}\n\n" +
                     "Scarica e installa ClamAV da: https://www.clamav.net/",
-                    "SalDefender - Configurazione ClamAV",
+                    "Tatanka Defender - Configurazione ClamAV",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
@@ -893,7 +916,7 @@ ReceiveTimeout 30
             {
                 // 1. ASPETTA CHE CLAMD SIA PRONTO
                 resultsList.Items.Clear();
-                resultsList.Items.Add("🚀 Sequenza avvio SalDefender");
+                resultsList.Items.Add("🚀 Sequenza avvio Tatanka Defender");
                 resultsList.Items.Add("─────────────────────────────");
                 resultsList.Items.Add("");
                 resultsList.Items.Add("1️⃣ Attesa avvio clamd.exe...");
@@ -967,8 +990,8 @@ ReceiveTimeout 30
 
                 // PowerShell script per registrare il task
                 string psScript = $@"
-$TaskName = 'SalDefender-UpdateFreshclam'
-$TaskPath = '\SalDefender\'
+$TaskName = 'TatankaDefender-UpdateFreshclam'
+$TaskPath = '\TatankaDefender\'
 $FullTaskName = $TaskPath + $TaskName
 
 # Verifica se il task esiste già
@@ -1319,13 +1342,22 @@ Write-Output 'Task registrato con successo'
         private void ApplyTheme()
         {
             this.BackColor = isDarkMode ? DarkBg : LightBg;
-            this.ForeColor = isDarkMode ? DarkText : Color.Black;
+            this.ForeColor = isDarkMode ? DarkText : LightText;
 
-            // Aggiorna titolo
-            titleLabel.ForeColor = isDarkMode ? Color.White : LightText;
+            // Aggiorna titolo con colore accent
+            titleLabel.ForeColor = isDarkMode ? AccentLight : AccentPrimary;
 
-            // Aggiorna controlli specifici
+            // Aggiorna controlli
             UpdateControlTheme(this);
+            
+            // Aggiorna statusStrip
+            if (statusStrip != null)
+            {
+                statusStrip.BackColor = isDarkMode ? DarkSurface : LightSurface;
+                statusStrip.ForeColor = isDarkMode ? DarkText : LightText;
+                statusTimeLabel.ForeColor = isDarkMode ? AccentLight : AccentPrimary;
+                statusFileLabel.ForeColor = isDarkMode ? DarkText : LightText;
+            }
         }
 
         private void UpdateControlTheme(Control parent)
@@ -1334,33 +1366,87 @@ Write-Output 'Task registrato con successo'
             {
                 if (c is Button btn)
                 {
-                    btn.BackColor = isDarkMode ? DarkPanel : Color.FromKnownColor(KnownColor.ControlLight);
-                    btn.ForeColor = isDarkMode ? Color.White : Color.Black;
-                    btn.FlatAppearance.BorderColor = isDarkMode ? Color.Gray : Color.LightGray;
+                    // Styling moderno per pulsanti
+                    btn.BackColor = isDarkMode ? DarkSurface : LightSurface;
+                    btn.ForeColor = isDarkMode ? DarkText : LightText;
+                    btn.FlatAppearance.BorderColor = isDarkMode ? AccentPrimary : AccentLight;
+                    btn.FlatAppearance.BorderSize = 1;
+                    btn.FlatAppearance.MouseOverBackColor = isDarkMode ? DarkPanel : Color.FromArgb(230, 230, 235);
+                    btn.FlatAppearance.MouseDownBackColor = isDarkMode ? AccentPrimary : AccentLight;
                 }
-                else if (c is ListBox || c is TextBox || c is ComboBox)
+                else if (c is ListBox lb)
                 {
-                    c.BackColor = isDarkMode ? Color.FromArgb(60, 60, 60) : Color.White;
-                    c.ForeColor = isDarkMode ? Color.White : Color.Black;
+                    lb.BackColor = isDarkMode ? DarkSurface : LightPanel;
+                    lb.ForeColor = isDarkMode ? DarkText : LightText;
+                    lb.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else if (c is TextBox tb)
+                {
+                    tb.BackColor = isDarkMode ? Color.FromArgb(50, 50, 56) : LightPanel;
+                    tb.ForeColor = isDarkMode ? DarkText : LightText;
+                    tb.BorderStyle = BorderStyle.FixedSingle;
+                }
+                else if (c is ComboBox cb)
+                {
+                    cb.BackColor = isDarkMode ? Color.FromArgb(50, 50, 56) : LightPanel;
+                    cb.ForeColor = isDarkMode ? DarkText : LightText;
                 }
                 else if (c is GroupBox gb)
                 {
-                    gb.ForeColor = isDarkMode ? Color.SkyBlue : Color.Black;
-                    UpdateControlTheme(gb); // Ricorsivo per i controlli dentro il GroupBox
+                    gb.ForeColor = isDarkMode ? AccentLight : AccentPrimary;
+                    gb.BackColor = isDarkMode ? DarkBg : LightBg;
+                    UpdateControlTheme(gb);
                 }
                 else if (c is Panel || c is TableLayoutPanel || c is FlowLayoutPanel)
                 {
-                    UpdateControlTheme(c); // Ricorsivo
+                    c.BackColor = isDarkMode ? DarkBg : LightBg;
+                    UpdateControlTheme(c);
+                }
+                else if (c is Label lbl)
+                {
+                    lbl.BackColor = isDarkMode ? DarkBg : LightBg;
+                    lbl.ForeColor = isDarkMode ? DarkText : LightText;
+                }
+                else if (c is ProgressBar pb)
+                {
+                    pb.BackColor = isDarkMode ? DarkSurface : LightSurface;
                 }
             }
         }
 
+        private void StyleModernButton(Button btn, EventHandler handler, bool isPrimary = false)
+        {
+            btn.Height = 38;
+            btn.Font = new Font("Segoe UI", 10f, FontStyle.Regular);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 1;
+            btn.FlatAppearance.BorderColor = isPrimary ? AccentPrimary : (isDarkMode ? Color.FromArgb(80, 80, 88) : Color.FromArgb(200, 200, 210));
+            btn.BackColor = isPrimary ? AccentPrimary : (isDarkMode ? DarkSurface : LightSurface);
+            btn.ForeColor = isPrimary ? Color.FromArgb(32, 32, 38) : (isDarkMode ? DarkText : LightText);
+            btn.Cursor = Cursors.Hand;
+            btn.Click += handler;
+            btn.MouseEnter += (s, e) => {
+                if (!isPrimary) btn.BackColor = isDarkMode ? DarkPanel : Color.FromArgb(240, 240, 245);
+            };
+            btn.MouseLeave += (s, e) => {
+                btn.BackColor = isPrimary ? AccentPrimary : (isDarkMode ? DarkSurface : LightSurface);
+            };
+        }
+
         private void SettingsButton_Click(object? sender, EventArgs e)
         {
-            // Creazione di un menu contestuale rapido per le impostazioni
-            ContextMenuStrip settingsMenu = new ContextMenuStrip();
+            // Creazione di un menu contestuale rafforzato
+            ContextMenuStrip settingsMenu = new ContextMenuStrip
+            {
+                BackColor = isDarkMode ? DarkSurface : LightPanel,
+                ForeColor = isDarkMode ? DarkText : LightText
+            };
 
-            var themeToggle = new ToolStripMenuItem(isDarkMode ? "Passa a Tema Chiaro" : "Passa a Tema Scuro");
+            var themeToggle = new ToolStripMenuItem(isDarkMode ? "🌞 Tema Chiaro" : "🌙 Tema Scuro")
+            {
+                BackColor = isDarkMode ? DarkSurface : LightPanel,
+                ForeColor = isDarkMode ? DarkText : LightText
+            };
             themeToggle.Click += (s, args) =>
             {
                 isDarkMode = !isDarkMode;
@@ -1369,7 +1455,7 @@ Write-Output 'Task registrato con successo'
 
             settingsMenu.Items.Add(themeToggle);
             settingsMenu.Items.Add(new ToolStripSeparator());
-            settingsMenu.Items.Add("Info SalDefender", null, (s, args) => MessageBox.Show("SalDefender v1.0\nProtezione basata su ClamAV", "Informazioni"));
+            settingsMenu.Items.Add("Info Tatanka Defender", null, (s, args) => MessageBox.Show("Tatanka Defender v1.0\nProtezione basata su ClamAV", "Informazioni"));
 
             // Mostra il menu sopra il pulsante
             settingsMenu.Show(settingsButton, new Point(0, settingsButton.Height));
@@ -1489,17 +1575,17 @@ Write-Output 'Task registrato con successo'
 
         private void InitUI()
         {
-            // --- CONFIGURAZIONE TRAY ICON & ICONA FORM ---
-            trayMenu = new ContextMenuStrip();
-            trayMenu.Items.Add("Apri SalDefender", null, (s, e) => { this.Show(); this.WindowState = FormWindowState.Normal; });
+            // --- CONFIGURAZIONE TRAY ICON ---
+            trayMenu = new ContextMenuStrip
+            {
+                BackColor = isDarkMode ? DarkSurface : LightPanel,
+                ForeColor = isDarkMode ? DarkText : LightText
+            };
+            trayMenu.Items.Add("📂 Apri Tatanka Defender", null, (s, e) => { this.Show(); this.WindowState = FormWindowState.Normal; });
             trayMenu.Items.Add("-");
-            trayMenu.Items.Add("Esci", null, (s, e) => Application.Exit());
-
-
-
+            trayMenu.Items.Add("❌ Esci", null, (s, e) => Application.Exit());
 
             string iconPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bison_logo-removebg-preview.ico");
-
             if (File.Exists(iconPath))
             {
                 this.Icon = new Icon(iconPath, 32, 32);
@@ -1509,7 +1595,7 @@ Write-Output 'Task registrato con successo'
             {
                 Icon = this.Icon,
                 ContextMenuStrip = trayMenu,
-                Text = "SalDefender - Protezione Attiva",
+                Text = "🦬 Tatanka Defender - Protezione Attiva",
                 Visible = true
             };
 
@@ -1524,114 +1610,207 @@ Write-Output 'Task registrato con successo'
                 if (this.WindowState == FormWindowState.Minimized)
                 {
                     this.Hide();
-                    trayIcon.ShowBalloonTip(3000, "SalDefender", "L'app è ora attiva in background.", ToolTipIcon.Info);
+                    trayIcon.ShowBalloonTip(3000, "🦬 Tatanka Defender", "Protezione attiva in background", ToolTipIcon.Info);
                 }
             };
 
             // --- CONFIGURAZIONE FORM PRINCIPALE ---
-            this.Text = "SalDefender - Security Suite";
-            this.MinimumSize = new Size(600, 750); // Leggermente più alto per le nuove opzioni
-            this.Padding = new Padding(15);
-            this.Font = new Font("Segoe UI", 9f);
-            this.BackColor = Color.White;
+            this.Text = "🦬 Tatanka Defender - Security Suite";
+            this.MinimumSize = new Size(750, 850);
+            this.Size = new Size(900, 1000);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Padding = new Padding(0);
+            this.Font = new Font("Segoe UI", 9.5f);
+            this.BackColor = isDarkMode ? DarkBg : LightBg;
+            this.ForeColor = isDarkMode ? DarkText : LightText;
 
-
-            // 2. Layout Radice
+            // --- LAYOUT PRINCIPALE ---
             var mainLayout = new TableLayoutPanel
             {
                 Dock = DockStyle.Fill,
                 ColumnCount = 1,
-                RowCount = 6
+                RowCount = 7,
+                AutoSize = false,
+                Margin = new Padding(0)
             };
-            // All'interno di InitUI()...
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 80f));  // Header
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Action Bar
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 200f)); // Scan Options
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 60f));  // Progress
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));   // Results
-            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));   // Threats
+
+            mainLayout.RowStyles.Clear();
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 100f));   // Header
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 1f));     // Separator
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 55f));    // Action Bar
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 240f));   // Scan Options
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Absolute, 70f));    // Progress
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));     // Results
+            mainLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50f));     // Threats
 
             this.Controls.Add(mainLayout);
 
-            // --- 0: HEADER SECTION ---
-            var headerPanel = new Panel { Dock = DockStyle.Fill };
+            // --- 0: HEADER SEZIONE PREMIUM ---
+            var headerPanel = new Panel 
+            { 
+                Dock = DockStyle.Fill,
+                BackColor = isDarkMode ? DarkSurface : LightSurface,
+                Margin = new Padding(0)
+            };
             SetupHeader(headerPanel);
             mainLayout.Controls.Add(headerPanel, 0, 0);
 
-            // --- 1: ACTION BAR (Solo pulsanti di sistema) ---
+            // --- 1: SEPARATOR ---
+            var separator = new Panel 
+            { 
+                Dock = DockStyle.Fill,
+                BackColor = AccentPrimary,
+                Height = 1,
+                Margin = new Padding(0)
+            };
+            mainLayout.Controls.Add(separator, 0, 1);
+
+            // --- 2: ACTION BAR MODERNO ---
             var actionBar = new FlowLayoutPanel
             {
                 Dock = DockStyle.Fill,
-                Padding = new Padding(0, 10, 0, 0)
+                Padding = new Padding(15, 8, 15, 8),
+                BackColor = isDarkMode ? DarkBg : LightBg,
+                AutoScroll = false
             };
 
-            // Rimosso scanButton da qui
-            StyleActionButton(updateButton = new Button { Text = "Aggiorna Firme", Width = 140 }, UpdateButton_Click!);
-            StyleActionButton(settingsButton = new Button { Text = "Impostazioni", Width = 140 }, SettingsButton_Click!);
-            var diagnosticsButton = new Button { Text = "🔧 Diagnostica", Width = 140 };
-            StyleActionButton(diagnosticsButton, DiagnosticsButton_Click!);
+            updateButton = new Button { Text = "📥 Aggiorna Firme", Width = 160, Height = 38 };
+            settingsButton = new Button { Text = "⚙️ Impostazioni", Width = 160, Height = 38 };
+            var diagnosticsButton = new Button { Text = "🔧 Diagnostica", Width = 160, Height = 38 };
+
+            StyleModernButton(updateButton, UpdateButton_Click!, isPrimary: true);
+            StyleModernButton(settingsButton, SettingsButton_Click!, isPrimary: false);
+            StyleModernButton(diagnosticsButton, DiagnosticsButton_Click!, isPrimary: false);
 
             actionBar.Controls.AddRange(new Control[] { updateButton, settingsButton, diagnosticsButton });
-            mainLayout.Controls.Add(actionBar, 0, 1);
+            mainLayout.Controls.Add(actionBar, 0, 2);
 
-            // --- 2: OPZIONI DI SCANSIONE (Incluso pulsante Cartella) ---
-            var optionsPanel = new GroupBox { Text = "Opzioni di Scansione", Dock = DockStyle.Fill, Padding = new Padding(10) };
+            // --- 3: SCAN OPTIONS SEZIONE ---
+            var optionsPanel = new GroupBox 
+            { 
+                Text = "🔍 Opzioni di Scansione",
+                Dock = DockStyle.Fill,
+                Padding = new Padding(12),
+                Margin = new Padding(10, 8, 10, 8),
+                Font = new Font("Segoe UI", 10f, FontStyle.Bold),
+                ForeColor = AccentLight
+            };
+            optionsPanel.BackColor = isDarkMode ? DarkBg : LightBg;
             SetupScanOptions(optionsPanel);
-            mainLayout.Controls.Add(optionsPanel, 0, 2);
+            mainLayout.Controls.Add(optionsPanel, 0, 3);
 
-            // --- 3: PROGRESS SECTION ---
-            var progressPanel = new Panel { Dock = DockStyle.Fill };
-            progressLabel = new Label { Text = "Pronto", Dock = DockStyle.Top, Height = 25, ForeColor = Color.DimGray };
-            scanProgressBar = new ProgressBar { Dock = DockStyle.Bottom, Height = 20, Style = ProgressBarStyle.Continuous };
+            // --- 4: PROGRESS SEZIONE ---
+            var progressPanel = new Panel 
+            { 
+                Dock = DockStyle.Fill,
+                Padding = new Padding(10),
+                BackColor = isDarkMode ? DarkBg : LightBg
+            };
+            progressLabel = new Label 
+            { 
+                Text = "✅ Pronto", 
+                Dock = DockStyle.Top, 
+                Height = 25,
+                Font = new Font("Segoe UI", 9f, FontStyle.Regular),
+                ForeColor = SuccessColor,
+                TextAlign = ContentAlignment.MiddleLeft
+            };
+            scanProgressBar = new ProgressBar 
+            { 
+                Dock = DockStyle.Bottom, 
+                Height = 25,
+                Style = ProgressBarStyle.Continuous,
+                BackColor = isDarkMode ? DarkSurface : LightSurface,
+                ForeColor = AccentPrimary
+            };
             progressPanel.Controls.AddRange(new Control[] { progressLabel, scanProgressBar });
-            mainLayout.Controls.Add(progressPanel, 0, 3);
+            mainLayout.Controls.Add(progressPanel, 0, 4);
 
-            // --- 4: RESULTS ---
+            // --- 5: RESULTS ---
+            var resultsLabel = new Label
+            {
+                Text = "📋 Risultati Scansione",
+                Dock = DockStyle.Top,
+                Height = 25,
+                Font = new Font("Segoe UI", 10f, FontStyle.Bold),
+                ForeColor = AccentLight,
+                Padding = new Padding(10, 5, 0, 0),
+                AutoSize = false
+            };
+            
             resultsList = new ListBox
             {
                 Dock = DockStyle.Fill,
                 BorderStyle = BorderStyle.FixedSingle,
                 Font = new Font("Consolas", 9f),
-                SelectionMode = SelectionMode.MultiExtended
+                SelectionMode = SelectionMode.MultiExtended,
+                BackColor = isDarkMode ? DarkSurface : LightPanel,
+                ForeColor = isDarkMode ? DarkText : LightText,
+                Margin = new Padding(10, 0, 10, 10)
             };
-            mainLayout.Controls.Add(resultsList, 0, 4);
 
-            // --- 5: THREATS ---
+            var resultsContainer = new Panel
+            {
+                Dock = DockStyle.Fill,
+                Padding = new Padding(0, 10, 0, 0),
+                BackColor = isDarkMode ? DarkBg : LightBg
+            };
+            resultsContainer.Controls.Add(resultsList);
+            resultsContainer.Controls.Add(resultsLabel);
+            mainLayout.Controls.Add(resultsContainer, 0, 5);
+
+            // --- 6: THREATS ---
+            var threatsLabel = new Label
+            {
+                Text = "⚠️ Minacce Rilevate",
+                Dock = DockStyle.Top,
+                Height = 25,
+                Font = new Font("Segoe UI", 10f, FontStyle.Bold),
+                ForeColor = ErrorColor,
+                Padding = new Padding(10, 5, 0, 0),
+                AutoSize = false
+            };
+
             threatsListBox = new ListBox
             {
                 Dock = DockStyle.Fill,
                 BorderStyle = BorderStyle.FixedSingle,
                 Font = new Font("Consolas", 9f),
                 SelectionMode = SelectionMode.MultiExtended,
-                BackColor = Color.FromArgb(255, 220, 220),
-                ForeColor = Color.FromArgb(139, 0, 0)
+                BackColor = Color.FromArgb(60, 25, 25),
+                ForeColor = ErrorColor,
+                Margin = new Padding(10, 0, 10, 10)
             };
-            mainLayout.Controls.Add(threatsListBox, 0, 5);
 
-            // --- All'interno di InitUI() ---
+            var threatsContainer = new Panel
+            {
+                Dock = DockStyle.Fill,
+                Padding = new Padding(0, 10, 0, 0),
+                BackColor = isDarkMode ? DarkBg : LightBg
+            };
+            threatsContainer.Controls.Add(threatsListBox);
+            threatsContainer.Controls.Add(threatsLabel);
+            mainLayout.Controls.Add(threatsContainer, 0, 6);
 
-            // 1. Avvia il processo
+            // --- INIT UI ELEMENTS ---
             StartClamd();
 
-            // 2. Gestione Riduzione a icona
             this.Resize += (s, e) =>
             {
                 if (this.WindowState == FormWindowState.Minimized)
                 {
                     this.Hide();
-                    SetShellTransparency(true); // Rendi la shell invisibile
+                    SetShellTransparency(true);
                 }
             };
 
-            // 3. Gestione Riapertura (Tray Icon)
             trayIcon.DoubleClick += (s, e) =>
             {
                 this.Show();
                 this.WindowState = FormWindowState.Normal;
-                SetShellTransparency(false); // Rendi la shell visibile
+                SetShellTransparency(false);
             };
 
-            // 4. CHIUSURA TOTALE (Fondamentale!)
             this.FormClosing += (s, e) =>
             {
                 if (clamdProcess != null && !clamdProcess.HasExited)
@@ -1640,13 +1819,15 @@ Write-Output 'Task registrato con successo'
                 }
             };
 
-            // Dentro InitUI()
-            liveStatusLabel = new Label();
-            liveStatusLabel.Text = "Live: Disattivato";
-            liveStatusLabel.ForeColor = Color.Red;
-            liveStatusLabel.Location = new Point(350, 200); // Regola la posizione
-            mainLayout.Controls.Add(liveStatusLabel);
+            liveStatusLabel = new Label
+            {
+                Text = "🛡️ Live: Disattivato",
+                AutoSize = true,
+                Font = new Font("Segoe UI", 9f, FontStyle.Bold),
+                ForeColor = ErrorColor
+            };
 
+            ApplyTheme();
             LoadDrives();
         }
 
@@ -1736,38 +1917,61 @@ Write-Output 'Task registrato con successo'
                 Dock = DockStyle.Fill,
                 ColumnCount = 2,
                 RowCount = 3,
-                Padding = new Padding(5)
+                Padding = new Padding(8),
+                AutoSize = false
             };
 
-            // Proporzioni colonne: 65% input/testo, 35% pulsanti
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65f));
-            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35f));
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60f));
+            layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40f));
 
-            // Altezza uniforme per le 3 righe
             for (int i = 0; i < 3; i++)
-                layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 45f));
+                layout.RowStyles.Add(new RowStyle(SizeType.Absolute, 50f));
 
             // --- Riga 0: URL Download ---
-            urlTextBox = new TextBox { PlaceholderText = "URL file...", Dock = DockStyle.Fill, Margin = new Padding(0, 8, 5, 0) };
-            downloadScanButton = new Button { Text = "Download & Scan", Dock = DockStyle.Fill, Height = 30 };
-            downloadScanButton.Click += DownloadScanButton_Click!;
+            urlTextBox = new TextBox 
+            { 
+                PlaceholderText = "🌐 Inserisci URL del file da scansionare...", 
+                Dock = DockStyle.Fill,
+                Margin = new Padding(0, 5, 8, 5),
+                Font = new Font("Segoe UI", 10f),
+                BackColor = isDarkMode ? Color.FromArgb(50, 50, 56) : LightPanel,
+                ForeColor = isDarkMode ? DarkText : LightText,
+                BorderStyle = BorderStyle.FixedSingle,
+                Height = 35
+            };
+            downloadScanButton = new Button { Text = "⬇️ Scarica & Scansiona", Dock = DockStyle.Fill, Margin = new Padding(0, 5, 0, 5) };
+            StyleModernButton(downloadScanButton, DownloadScanButton_Click!, isPrimary: true);
 
             layout.Controls.Add(urlTextBox, 0, 0);
             layout.Controls.Add(downloadScanButton, 1, 0);
 
-            // --- Riga 1: Disk Scan (Fix per il pulsante Annulla) ---
-            driveComboBox = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill, Margin = new Padding(0, 8, 5, 0) };
+            // --- Riga 1: Disk Scan ---
+            driveComboBox = new ComboBox 
+            { 
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Dock = DockStyle.Fill,
+                Margin = new Padding(0, 5, 8, 5),
+                Font = new Font("Segoe UI", 10f),
+                BackColor = isDarkMode ? Color.FromArgb(50, 50, 56) : LightPanel,
+                ForeColor = isDarkMode ? DarkText : LightText,
+                Height = 35
+            };
 
-            // Usiamo un TableLayoutPanel interno invece di FlowLayoutPanel per precisione millimetrica
-            var diskButtonsTable = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1, Margin = new Padding(0) };
+            var diskButtonsTable = new TableLayoutPanel 
+            { 
+                Dock = DockStyle.Fill,
+                ColumnCount = 2,
+                RowCount = 1,
+                Margin = new Padding(0, 5, 0, 5)
+            };
             diskButtonsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
             diskButtonsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
 
-            diskScanButton = new Button { Text = "Scan Disco", Dock = DockStyle.Fill, Margin = new Padding(2) };
-            cancelScanButton = new Button { Text = "Annulla", Dock = DockStyle.Fill, Enabled = false, Margin = new Padding(2) };
+            diskScanButton = new Button { Text = "💾 Scansiona Disco", Dock = DockStyle.Fill, Margin = new Padding(0, 0, 4, 0) };
+            cancelScanButton = new Button { Text = "⏹️ Annulla", Dock = DockStyle.Fill, Enabled = false, Margin = new Padding(4, 0, 0, 0) };
 
-            diskScanButton.Click += DiskScanButton_Click!;
-            cancelScanButton.Click += CancelScanButton_Click!;
+            StyleModernButton(diskScanButton, DiskScanButton_Click!, isPrimary: true);
+            StyleModernButton(cancelScanButton, CancelScanButton_Click!, isPrimary: false);
 
             diskButtonsTable.Controls.Add(diskScanButton, 0, 0);
             diskButtonsTable.Controls.Add(cancelScanButton, 1, 0);
@@ -1776,9 +1980,17 @@ Write-Output 'Task registrato con successo'
             layout.Controls.Add(diskButtonsTable, 1, 1);
 
             // --- Riga 2: Scansione Cartella ---
-            Label folderLabel = new Label { Text = "Analizza una cartella specifica:", TextAlign = ContentAlignment.MiddleLeft, Dock = DockStyle.Fill };
-            scanButton = new Button { Text = "Sfoglia Cartella", Dock = DockStyle.Fill, Height = 30 };
-            scanButton.Click += ScanButton_Click!;
+            Label folderLabel = new Label 
+            { 
+                Text = "📁 Analizza una cartella specifica:",
+                TextAlign = ContentAlignment.MiddleLeft,
+                Dock = DockStyle.Fill,
+                Font = new Font("Segoe UI", 10f),
+                ForeColor = isDarkMode ? DarkText : LightText,
+                Margin = new Padding(0, 5, 8, 5)
+            };
+            scanButton = new Button { Text = "🔍 Sfoglia Cartella", Dock = DockStyle.Fill, Margin = new Padding(0, 5, 0, 5) };
+            StyleModernButton(scanButton, ScanButton_Click!, isPrimary: true);
 
             layout.Controls.Add(folderLabel, 0, 2);
             layout.Controls.Add(scanButton, 1, 2);
@@ -1787,18 +1999,56 @@ Write-Output 'Task registrato con successo'
         }
         private void SetupHeader(Panel p)
         {
-            logoBox = new PictureBox { Size = new Size(64, 64), Location = new Point(0, 0), SizeMode = PictureBoxSizeMode.Zoom };
+            p.Padding = new Padding(15);
+            p.Dock = DockStyle.Fill;
+
+            // Logo con sizing elegante
+            logoBox = new PictureBox 
+            { 
+                Size = new Size(72, 72),
+                Dock = DockStyle.Left,
+                SizeMode = PictureBoxSizeMode.Zoom,
+                Margin = new Padding(0, 0, 15, 0)
+            };
             LoadLogoWithIcon();
 
+            // Container per titolo e sottotitolo
+            var headerContainer = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                ColumnCount = 1,
+                RowCount = 2,
+                AutoSize = true,
+                Margin = new Padding(0)
+            };
+            headerContainer.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            headerContainer.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            // Titolo principale
             titleLabel = new Label
             {
-                Text = "SalDefender",
-                Font = new Font("Segoe UI Semilight", 22f),
-                Location = new Point(75, 10),
+                Text = "🦬 Tatanka Defender",
+                Font = new Font("Segoe UI", 24f, FontStyle.Bold),
                 AutoSize = true,
-                ForeColor = Color.FromArgb(45, 45, 45)
+                ForeColor = AccentLight,
+                Dock = DockStyle.Top
             };
-            p.Controls.AddRange(new Control[] { logoBox, titleLabel });
+
+            // Sottotitolo
+            var subtitleLabel = new Label
+            {
+                Text = "Protezione Avanzata Basata su ClamAV | Real-time Scanning",
+                Font = new Font("Segoe UI", 9.5f, FontStyle.Regular),
+                AutoSize = true,
+                ForeColor = isDarkMode ? Color.FromArgb(180, 180, 190) : Color.FromArgb(100, 100, 110),
+                Dock = DockStyle.Top
+            };
+
+            headerContainer.Controls.Add(titleLabel, 0, 0);
+            headerContainer.Controls.Add(subtitleLabel, 0, 1);
+
+            p.Controls.Add(headerContainer);
+            p.Controls.Add(logoBox);
         }
 
         private void LoadLogoWithIcon()
@@ -1974,7 +2224,7 @@ Write-Output 'Task registrato con successo'
                 {
                     _isProcessing = true;
                     Debug.WriteLine($"[LIVE] Riavvio ProcessQueue dopo scansione cartella");
-                    Task.Run(() => ProcessQueue());
+                    _ = Task.Run(() => ProcessQueue());
                 }
             }
         }
@@ -2365,7 +2615,7 @@ Write-Output 'Task registrato con successo'
         {
             if (driveComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Seleziona un disco.", "SalDefender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleziona un disco.", "Tatanka Defender", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -2479,7 +2729,7 @@ Write-Output 'Task registrato con successo'
                 {
                     _isProcessing = true;
                     Debug.WriteLine($"[LIVE] Riavvio ProcessQueue dopo scansione disco");
-                    Task.Run(() => ProcessQueue());
+                    _ = Task.Run(() => ProcessQueue());
                 }
             }
         }
@@ -2563,8 +2813,8 @@ Write-Output 'Task registrato con successo'
         public void EnableWeeklyScan(string time, string day)
         {
             // Esempio: time = "09:00", day = "MON"
-            string exePath = AppDomain.CurrentDomain.BaseDirectory + "SalDefender.exe";
-            string cmd = $"/Create /SC WEEKLY /D {day} /TN \"SalDefenderScan\" /TR \"'{exePath}' --silent-scan\" /ST {time} /F";
+            string exePath = AppDomain.CurrentDomain.BaseDirectory + "TatankaDefender.exe";
+            string cmd = $"/Create /SC WEEKLY /D {day} /TN \"TatankaDefenderScan\" /TR \"'{exePath}' --silent-scan\" /ST {time} /F";
 
             Process.Start(new ProcessStartInfo
             {
@@ -2577,7 +2827,7 @@ Write-Output 'Task registrato con successo'
 
         public void DisableWeeklyScan()
         {
-            string cmd = "/Delete /TN \"SalDefenderScan\" /F";
+            string cmd = "/Delete /TN \"TatankaDefenderScan\" /F";
 
             Process.Start(new ProcessStartInfo
             {

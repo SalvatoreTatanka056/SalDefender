@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Forms;
-using SalDefender; // Aggiungi questa riga
+using TatankaDefender; // Aggiungi questa riga
 
-namespace SalDefender
+namespace TatankaDefender
 {
 
      
@@ -14,7 +14,7 @@ namespace SalDefender
 
     public static bool IsAlreadyRunning()
     {
-        const string appName = "SalDefenderUniqueName";
+        const string appName = "TatankaDefenderUniqueName";
         bool createdNew;
 
         // Tenta di creare un Mutex con un nome unico

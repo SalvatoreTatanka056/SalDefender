@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SalDefender")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("TatankaDefender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00c2b81f58bc267735bb5b678230018213a976e1")]
-[assembly: System.Reflection.AssemblyProductAttribute("SalDefender")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SalDefender")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16c4d923fe7b66622bd7cfad64398676985e70ad")]
+[assembly: System.Reflection.AssemblyProductAttribute("TatankaDefender")]
+[assembly: System.Reflection.AssemblyTitleAttribute("TatankaDefender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

@@ -70,3 +70,202 @@ bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builde
 daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
 main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
 bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27916, sigs: 355121, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily database available for update (local version: 27916, remote version: 27917)
+daily.cld updated (version: 27917, sigs: 355131, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+WARNING: Can't query current.cvd.clamav.net
+WARNING: Invalid DNS reply. Falling back to HTTP mode.
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+ERROR: Update failed for database: daily
+--------------------------------------
+WARNING: Can't query current.cvd.clamav.net
+WARNING: Invalid DNS reply. Falling back to HTTP mode.
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+ERROR: Update failed for database: daily
+--------------------------------------
+daily database available for update (local version: 27917, remote version: 27918)
+daily.cld updated (version: 27918, sigs: 355137, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+WARNING: Can't query current.cvd.clamav.net
+WARNING: Invalid DNS reply. Falling back to HTTP mode.
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+ERROR: remote_cvdhead: Download failed (6) ERROR:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Giving up on https://database.clamav.net...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+WARNING: remote_cvdhead: Download failed (6) WARNING:  Message: Could not resolve hostname
+WARNING: Failed to get daily database version information from server: https://database.clamav.net
+ERROR: check_for_new_database_version: Failed to find daily database using server https://database.clamav.net.
+Trying again in 5 secs...
+Trying to retrieve CVD header from https://database.clamav.net/daily.cvd
+daily.cld database is up-to-date (version: 27918, sigs: 355137, f-level: 90, builder: svc.clamav-publisher)
+Trying to retrieve CVD header from https://database.clamav.net/main.cvd
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+Trying to retrieve CVD header from https://database.clamav.net/bytecode.cvd
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27918, sigs: 355137, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27918, sigs: 355137, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily database available for update (local version: 27918, remote version: 27919)
+daily.cld updated (version: 27919, sigs: 355138, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27919, sigs: 355138, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27919, sigs: 355138, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27919, sigs: 355138, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)
+--------------------------------------
+daily.cld database is up-to-date (version: 27919, sigs: 355138, f-level: 90, builder: svc.clamav-publisher)
+main.cvd database is up-to-date (version: 63, sigs: 3287027, f-level: 90, builder: tomjudge)
+bytecode.cvd database is up-to-date (version: 339, sigs: 80, f-level: 90, builder: nrandolp)

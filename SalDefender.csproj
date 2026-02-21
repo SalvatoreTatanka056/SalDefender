@@ -2,6 +2,8 @@
   <PropertyGroup>
   <OutputType>WinExe</OutputType>
   <TargetFramework>net8.0-windows</TargetFramework>
+  <RootNamespace>TatankaDefender</RootNamespace>
+  <AssemblyName>TatankaDefender</AssemblyName>
   <Nullable>enable</Nullable>
   <UseWPF>true</UseWPF> <ApplicationIcon>bison_logo.ico</ApplicationIcon>
   <UseWindowsForms>true</UseWindowsForms>
