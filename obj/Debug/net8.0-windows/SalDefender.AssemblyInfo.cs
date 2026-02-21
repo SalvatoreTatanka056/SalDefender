@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TatankaDefender")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16c4d923fe7b66622bd7cfad64398676985e70ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f35bc2505e6203b48db5094105efc93d7b50a706")]
 [assembly: System.Reflection.AssemblyProductAttribute("TatankaDefender")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TatankaDefender")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
